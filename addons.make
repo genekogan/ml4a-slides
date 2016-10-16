@@ -1,0 +1,7 @@
+ofxCcv
+ofxInstagram
+ofxJSON
+ofxLearn
+ofxOsc
+ofxPwrrPoint
+ofxThreadedImageLoader

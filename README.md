@@ -1,0 +1,1 @@
+all my slides in openframeworks form, using [ofxPwrrPoint](https://github.com/genekogan/ofxPwrrPoint). for personal use only at the moment, none of the media is included. will figure out a better way to package this in the future.
