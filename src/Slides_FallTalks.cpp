@@ -1149,8 +1149,6 @@ void ofApp::Retune() {
     
     
     
-    
-    
     s = slideshow.addSlide("");
     s->addText(h3, ofColor(0,0,20), "Es konnte ein Spiel zum Beispiel ausgehen von einer gegebenen astronomischen Konfiguration, oder vom Thema einer Bachfuge, oder von einem Satz des Leibniz oder der Upanishaden, und es konnte von diesem Thema aus, je nach Absicht und Begabung des Spielers, die wachgerufene Leitidee entweder weiterführen und ausbauen oder auch durch Anklänge an »erwandte Vorstellungen ihren Ausdruck bereichern.... Es bedeutete eine erlesene, symbolhafte Form des Suchens nach dem Vollkommenen, eine sublime Alchimie, ein Sichannähern an den über allen Bildern und Vielheiten in sich einigen Geist, also an Gott.", 0.05, 0.05, 0.75);
     s->addText(h3, ofColor(150), "A Game, for example, might start from a given astronomical configuration, or from the actual theme of a Bach fugue, or from a sentence out of Leibniz or the Upanishads, and from this theme, depending on the intentions and talents of the player, it could either further explore and elaborate the initial motif or else enrich its expressiveness by allusions to kindred concepts... It represented an elite, symbolic form of seeking for perfection, a sublime alchemy, an approach to that Mind which beyond all images and multiplicities is one within itself -- in other words, to God.", 0.05, 0.52, 0.75);
@@ -1221,7 +1219,6 @@ void ofApp::Retune() {
     s = slideshow.addSlide("Can machines think?");
     s->addText(h2, ofColor(0), "\"The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.\" - Edsger Dijkstra", 0.1, 0.1, 0.7);
 
-    
     
     s = slideshow.addSlide("Deep Generator Networks");
     s->addImage("classvis", "/Users/gene/bin/misc/stock/class-synthesis-deepgen.png", 0.0, 0.2, 1, 0.8);
@@ -1413,5 +1410,20 @@ void ofApp::Retune() {
     s->addText(h2, ofColor(0), "ml4a.github.io", 0.6, 0.2, 0.5);
     s->addText(h2, ofColor(0), "@ml4a_", 0.6, 0.3, 0.5);
 
+    
+}
+
+void ofApp::Influencers() {
+    s = slideshow.addSlide("The Influencers");
+    s->addText(h2, ofColor(0), "@genekogan", 0.1, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "genekogan.com", 0.1, 0.3, 0.5);
+    s->addText(h2, ofColor(0), "ml4a.github.io", 0.6, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "@ml4a_", 0.6, 0.3, 0.5);
+    
+    s = slideshow.addSlide("Machine Learning for Activists");
+    s->addImage("workshop1", "/Users/gene/bin/misc/workshops/influencers1.jpg", 0.0, 0.0, 0.6, 0.6);
+    s->addImage("workshop2", "/Users/gene/bin/misc/workshops/influencers3.jpg", 0.4, 0.4, 0.6, 0.6);
+
+    // arts-activism
     
 }

@@ -42,18 +42,19 @@ void ofApp::Kikk() {
     //
     
     
-    
-    
-    
     s = slideshow.addSlide("Adversarial Nets");
     s->addImage("glass bead game", "/Users/gene/bin/misc/glassbead.jpg", 0.0, 0.05, 0.36, 0.9);
     s->addText(h3, ofColor(0,0,20), "A Game, for example, might start from a given astronomical configuration, or from the actual theme of a Bach fugue, or from a sentence out of Leibniz or the Upanishads, and from this theme, depending on the intentions and talents of the player, it could either further explore and elaborate the initial motif or else enrich its expressiveness by allusions to kindred concepts... It represented an elite, symbolic form of seeking for perfection, a sublime alchemy, an approach to that Mind which beyond all images and multiplicities is one within itself -- in other words, to God.", 0.38, 0.2, 0.5);
-    
+    s->addNote("hesse is describing the glass bead game, a game played by an austere order of intellectuals at a monastery-like academy in the highlands of central Europe, centuries into the future. the game is described as this perfect synthesis of art, science, literature, and history. players take turns moving glass stones around the board by making deep connections among the disparate intellectual pursuits of mankind -- for example, finding an analogy between the notes of a mozart sonata to the constellations of the night sky, or contrasting the laws of quantum mechanics with Hegelian economics, and so on.");
+    s->addNote("a curious thing about the book is that nowhere in its nearly 600 pages are the actual rules of the game precisely described. it's as if hesse is hinting at something which can't be expressed... our creativity, the vast interconnectedness of our knowledge, even the very essence of human intelligence itself... something which can't be put into words.");
+    s->start();
     
     s = slideshow.addSlide("Lee Se-dol vs. AlphaGo");
     s->addImage("go", "/Users/gene/bin/misc/stock/alphago-vs-leesedol.jpg", 0, 0.3, 0.8, 0.7);
     s->addImage("go", "/Users/gene/bin/misc/stock/leesedol.jpg", 0.5, 0.0, 0.5, 0.5);
     s->addText(h2, ofColor(0), "\"I will do my best to play a beautiful and interesting game\"", 0.05, 0.06, 0.44);
+    s->addNote("i was reminded of the glass bead game during the match between AlphaGo and Lee Se-dol. for those who don't know, in March of this year, the group DeepMind created an AI which defeated the world's top-ranked Go player, a landmark moment in the history of AI, for reasons that i will return to in just a bit.");
+    s->addNote("Go is a 2-player strategy board game, which is played with stone pieces rather than glass ones, but the similarities between it and the glass bead game go deeper than that. in much the same way as the glass bead game, Go is also described by its players only in abstract, almost Platonic, terms by its top players, again as if its nature can't be put into words. i was struck by this when i saw an interview with Lee in which he said i will do my best to play a beautiful and interesting game. this really resonated with me. as if to Lee the challenge was an aesthetic one, rather than a purely competitive one.");
     
     s = slideshow.addSlide("\"I felt the board\" 이세돌");
     s->addImage("go", "/Users/gene/bin/misc/stock/Go.jpg", 0, 0, 1, 1);
@@ -64,6 +65,7 @@ void ofApp::Kikk() {
     s->addText(h3, ofColor(0), "chess boards: 10^120", 0.01, 0.2, 0.6);
     s->addText(h3, ofColor(0), "go boards: 10^170", 0.01, 0.25, 0.6);
     
+    // include reference to nature papers
     s = slideshow.addSlide("Policy network + Value network");
     s->addImage("gostates", "/Users/gene/bin/misc/stock/alphago-policy-network.jpg", 0, 0.05, 1, 0.8);
     s->addText(h4, ofColor(0), "policy network alone predicts next move 57% of the time!!", 0.2, 0.88, 0.8);

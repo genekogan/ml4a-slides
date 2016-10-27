@@ -12,19 +12,13 @@
 
 
 #define OSC_REMOTE_ENABLED 0
+#define USE_SECOND_SCREEN 1
 
 
 /*
  to-do
- - triangle (art + culture + science)
- - about: mir audio signal processing + obsolete workflow
  - example: rain + spam
  - more about training
- -------
- - Language processing
- - rnn
-   - rnn stacking (deep rnn)
-   - rnn news headlines
  */
 
 
@@ -53,6 +47,10 @@ public:
     void drawBgWhite(ofxPPSlide * & slide);
     void drawBgBlack(ofxPPSlide * & slide);
     
+    /* Gui */
+    void setupGui();
+    void drawGui(ofEventArgs & args);
+    
     /* Content */
     void NeuralNets();
     void FeedforwardNeuralNets();
@@ -64,6 +62,7 @@ public:
     void TSNE();
     void RNNs();
     void ReinforcementLearning();
+    void CriticalIssues();
 
     /* Meta */
     void ML4A();
@@ -84,6 +83,7 @@ public:
     void WithTheBest();
     void Retune();
     void TechCode();
+    void Influencers();
     void Kikk();
     
     /* SchoolOfMaaa */
@@ -100,13 +100,15 @@ public:
     /*Workshops */
     void WorkshopSpektrum();
     void WorkshopRetune();
+    void WorkshopInfluencers();
     
     ////// Assets
     ofxPwrrPoint slideshow;
     ofxPPSlide *s;
-    ofTrueTypeFont h1, h1a, h2, h3, h4, h5;
+    ofTrueTypeFont h1, h2, h3, h4, h5, h6;
     
     ofxOscReceiver osc;
+    int idx=0;
 };
 
 

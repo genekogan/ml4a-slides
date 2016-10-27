@@ -1,6 +1,7 @@
 #include "ofApp.h"
 
 
+
 void ofApp::RNNs(){
     s = slideshow.addSlide("Recurrent Neural Networks");
     s->addText(h3, ofColor(0), "Feedforward neural net", 0.1, 0.0, 0.4);
