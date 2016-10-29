@@ -30,7 +30,6 @@ public:
     }
     
     void setupData() {
-        
         thumbHeight = box.getHeight() * 0.25;
         margin = 5;
         zoom = 1.25;
@@ -55,22 +54,24 @@ public:
         
         random_shuffle(order.begin(), order.end());
         mx = 0;
-        highlighted = -1;
+
+        //highlighted = -1;
+        highlighted = order[0];
+        centerX = 10 + 0.5 * thumbs[order[0]].image.getWidth();
     }
     
     void update() {
     }
     
     void draw() {
-        int centerX;
-        float x = 10 - mx;
         float y = box.getY() + thumbHeight * (zoom - 1.0) * 0.5 + 20;
+        float x = 10 - mx;
         for (int i=0; i<thumbs.size(); i++) {
             if (x > -thumbs[order[i]].image.getWidth() &&
                 x < box.getWidth()) {
                 thumbs[order[i]].image.draw(x, y);
             }
-            if (ofGetMouseX() > x && ofGetMouseX() < x+thumbs[order[i]].image.getWidth()) {
+            if (ofGetMouseX() > x && ofGetMouseX() < x+thumbs[order[i]].image.getWidth() && ofGetMouseY() < box.getY() + thumbHeight * (zoom - 1.0) * 0.5 + 20 + thumbHeight) {
                 highlighted = order[i];
                 centerX = x + 0.5 * thumbs[order[i]].image.getWidth();
             }
@@ -112,8 +113,8 @@ public:
         }
     }
 
-    bool mouseDragged(int x_, int y_) {
-        float newMx = mx + 10 * (ofGetMouseX() - ofGetPreviousMouseX());
+    bool mouseScrolled(float x_, float y_) {
+        float newMx = mx - 10.0 * x_;
         mx = max(0.0f, min(fullWidth - box.getWidth(), newMx));
     }
 
@@ -124,6 +125,7 @@ public:
     
     float fullWidth;
     float mx;
+    int centerX;
     int highlighted;
     float thumbHeight;
     float margin;

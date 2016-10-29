@@ -105,8 +105,6 @@ void ofApp::NetzpolitischerAbend () {
     
     s = slideshow.addSlide("Synthesizing preffered inputs (Nguyen, Dosovitsky, Yosinski, Brox, Clune)");
     s->addScrollableImage("synthesis", "/Users/gene/bin/synthesizing/synthesizing-caffenet-tSNE.png", 0.0, 0.0, 1.0, 1.0);
-
-    slideshow.setPage(s);
     
     
     CubistMirrorDemo *cmd = new CubistMirrorDemo(s, "classifier", 0, 0, 1, 1);

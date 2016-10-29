@@ -3,7 +3,7 @@
 void ofApp::Misc() {
     
     s = slideshow.addSlide("Inbox?");
-    s->addMovie("inbox", "/Users/gene/Writing/_Talks/S4AD-Pioneerworks/05_sequences/dribnet_monwed.png", true, 0.1, 0.1, 0.8, 0.8);
+    s->addImage("inbox", "/Users/gene/Writing/_Talks/S4AD-Pioneerworks/05_sequences/dribnet_monwed.png", 0.1, 0.1, 0.8, 0.8);
     
     s = slideshow.addSlide("Face2Face");
     s->addMovie("Face2Face", "/Users/gene/bin/misc/stock/Face2Face - Real-time Face Capture and Reenactment of RGB Videos (CVPR 2016 Oral)-ohmajJTcpNk.mp4", true, 0.1, 0.1, 0.8, 0.8);
@@ -55,6 +55,7 @@ void ofApp::Archive() {
     s->addImage("gene_vrae", "/Users/gene/bin/misc/stock/gene_vrae.jpg", 0.1, 0.1, 0.8, 0.8);
     s->addText(h2, ofColor(0), "i'm @genekogan", 0.2, 0.0, 0.6);
     s->addText(h3, ofColor(0), "by tom white (@dribnet)", 0.2, 0.91, 0.6);
+    s->start();
 }
 
 void ofApp::GoogleMLArtExperiments() {
@@ -79,8 +80,6 @@ void ofApp::GoogleMLArtExperiments() {
     s->addText(h4, ofColor(0), "Zeiler + Fergus 2013 | arxiv.org/abs/1311.2901", 0.45, 0.0, 1.0);
     s->addText(h4, ofColor(0), "DeepVis Toolbox | yosinski.com/deepvis", 0.2, 0.6, 1.0);
     
-//    slideshow.setPage(s);
-
     // ml4a
     s = slideshow.addSlide("What neural networks see");
     s->addText(h2, ofColor(0), "@genekogan", 0.35, 0.2, 0.5);

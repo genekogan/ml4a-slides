@@ -7,7 +7,7 @@ void ofApp::setup(){
     if (USE_SECOND_SCREEN) {
         ofSetWindowPosition(ofGetScreenWidth(), 0);
     }
-    ofSetFullscreen(true);
+    //ofSetFullscreen(true);
     
     // load fonts
     h1.load("/Users/gene/Code/of_v0.9.0_osx_release/apps/myApps/convnet-canvas/bin/data/fonts/AndaleMono.ttf", 72);
@@ -21,8 +21,8 @@ void ofApp::setup(){
     
     //slideshow.loadFromExported();
     
+
     Kikk();
-    //CriticalIssues();
     
     
     slideshow.setContentRectangle(20, 56, ofGetWidth()-40, ofGetHeight()-56);
@@ -36,6 +36,10 @@ void ofApp::setup(){
     if (OSC_REMOTE_ENABLED) {
         osc.setup(8000);
     }
+    
+    
+    
+    
 }
 
 //--------------------------------------------------------------
@@ -121,7 +125,7 @@ void ofApp::mouseMoved(int x, int y ){
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
     slideshow.mouseDragged(x, y);
-    cout << "DRAG BUTTON " << button << endl;
+ //   cout << "DRAG BUTTON " << button << endl;
 }
 
 //--------------------------------------------------------------
@@ -152,7 +156,8 @@ void ofApp::gotMessage(ofMessage msg){
 
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
-    
+    cout <<"DRAG! " << endl;
+
 }
 
 

@@ -12,7 +12,7 @@
 
 
 #define OSC_REMOTE_ENABLED 0
-#define USE_SECOND_SCREEN 1
+#define USE_SECOND_SCREEN 0
 
 
 /*
