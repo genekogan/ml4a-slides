@@ -50,6 +50,8 @@ public:
     /* Gui */
     void setupGui();
     void drawGui(ofEventArgs & args);
+    void keyPressedGui(ofKeyEventArgs & args);
+    void mouseScrolled(ofMouseEventArgs & args);
     
     /* Content */
     void NeuralNets();

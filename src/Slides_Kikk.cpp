@@ -87,32 +87,27 @@ void ofApp::Kikk() {
     s->addText(h4, ofColor(0), "http://chess.stackexchange.com/questions/518/are-there-consumer-level-game-play-analysis-systems-that-overlay-the-analysis-on", 0.01, 0.98, 0.9);
     
     
-    /*
-     s = slideshow.addSlide("Reinforcement learning + Atari games");
-     s->addImage("autoencoder", "/Users/gene/bin/misc/stock/reinforcement_learning.png", 0, 0.05, 1, 0.95);
-     s->addText(h4, ofColor(0), "http://www.iclr.cc/lib/exe/fetch.php?media=iclr2015:silver-iclr2015.pdf", 0.1, 0.0, 0.9);
-     
-     s = slideshow.addSlide("Convnets playing Atari");
-     s->addMovie("MCTS", "/Users/gene/bin/misc/stock/Deep Q network learning to play Pong-60pwnLB0DqY.mp4", true, 0, 0, 1, 1);
-     s->addText(h4, ofColor(0), "https://www.youtube.com/watch?v=60pwnLB0DqY", 0.1, 0.0, 0.9);
-     
-     s = slideshow.addSlide("Convnets to the rescue");
-     s->addImage("joystick + convnet", "/Users/gene/bin/misc/stock/joystick_convnet.png", 0, 0, 1, 1);
-     s->addText(h4, ofColor(0), "http://home.uchicago.edu/~arij/journalclub/papers/2015_Mnih_et_al.pdf", 0.1, 0.0, 0.9);
-     */
     
-    // creative machines
-    s = slideshow.addSlide("Creativity");
-    s->addText(h2, ofColor(0), "so can machines be creative?", 0.1, 0.2, 0.7);
     
-    s = slideshow.addSlide("Can machines think?");
-    s->addImage("cmt 1", "/Users/gene/bin/misc/turing_cmt_1.png", 0, 0, 1, 1);
     
-    s = slideshow.addSlide("Can machines think?");
-    s->addImage("cmt 1", "/Users/gene/bin/misc/turing_cmt_2.png", 0, 0, 1, 1);
     
-    s = slideshow.addSlide("Can machines think?");
-    s->addText(h2, ofColor(0), "\"The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.\" - Edsger Dijkstra", 0.1, 0.1, 0.7);
+    
+    
+    
+    
+    s = slideshow.addSlide("Neural nets hallucinating");
+    s->addImage("deepdream", "/Users/gene/bin/misc/stock/building-dreams.png", 0, 0.5, 0.5, 0.5);
+    s->addImage("stylenet", "/Users/gene/bin/misc/stock/stylenet-original.png", 0.5, 0.53, 0.5, 0.47);
+    s->addImage("synthesizing original", "/Users/gene/bin/misc/stock/synthesizing-original.jpg", 0.5, 0.025, 0.5, 0.48);
+    s->addText(h5, ofColor(0), "research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html", 0.002, 0.475, 1.0);
+    s->addText(h4, ofColor(0), "https://arxiv.org/abs/1508.06576", 0.6, 0.51, 1.0);
+    s->addText(h4, ofColor(0), "http://www.evolvingai.org/synthesizing", 0.6, 0.0, 1.0);
+    s->start();
+
+    
+    
+    
+    
     
     
     
@@ -147,54 +142,74 @@ void ofApp::Kikk() {
     s = slideshow.addSlide("Deep Generator Networks");
     s->addScrollableImage("classvis", "/Users/gene/bin/synthesizing/synthesizing-caffenet-tSNE.png", 0, 0, 1, 1);
     
-    // Adversarial nets
-    s = slideshow.addSlide("Closed-captioning wavenets");
-    //s->addMovie("CC wavenets", "/Users/gene/bin/misc/Closed-captioning WaveNets.mp4", true, 0, 0, 1, 1);
-    s->addImage("cc wavenets", "/Users/gene/bin/misc/closedcapwavenets.jpg", 0, 0, 1, 1);
-    
-    s = slideshow.addSlide("Adversarial nets");
-    s->addImage("perceptrons top", "/Users/gene/bin/misc/stock/nytimes_perceptron_top.png", 0.0, 0.0, 1, 0.24);
-    s->addImage("perceptrons", "/Users/gene/bin/misc/stock/nytimes_perceptron.png", 0.0, 0.24, 1, 0.76);
-    
-    s = slideshow.addSlide("Adversarial nets");
-    s->addImage("inbox", "/Users/gene/Writing/_Talks/S4AD-Pioneerworks/05_sequences/dribnet_monwed2.png", 0.1, 0.1, 0.8, 0.8);
-    
-    s = slideshow.addSlide("Dense captioning (Li, Karpathy, Johnson)");
-    s->addImage("densecap", "/Users/gene/bin/misc/stock/rnn/densecap.png", 0, 0.06, 1, 0.94);
-    s->addText(h4, ofColor(0), "http://cs.stanford.edu/people/karpathy/densecap/", 0.01, 0.01, 0.99);
-    
-    s = slideshow.addSlide("Dense captioning Atlas, The Next Generation");
-    s->addMovie("densecap", "/Users/gene/bin/densecap/atlas.mp4", true, 0, 0, 1, 1);
-    
-    s = slideshow.addSlide("Dense captioning Pouff's grocery trip");
-    s->addMovie("densecap", "/Users/gene/bin/densecap/deepdream_grocery.mp4", true, 0, 0, 1, 1);
-    s->addText(h4, ofColor(0), "original: https://www.youtube.com/watch?v=DgPaCWJL7XI", 0.01, 0.0, 0.99);
-    
-    s = slideshow.addSlide("Dense captioning Deepdream");
-    s->addMovie("densecap", "/Users/gene/bin/densecap/deepdream.mp4", true, 0, 0, 1, 1);
     
     
-    /////////////////////////
     
-    s = slideshow.addSlide("Action >> philosophy");
-    s->addImage("goboard", "/Users/gene/bin/misc/goboard.jpg", 0, 0.2, 1, 0.8);
-    s->addText(h3, ofColor(0), "inner self vs outer world", 0.1, 0.1, 0.8);
     
-    ///////////////
     
-    s = slideshow.addSlide("The Neural Aesthetic (brainbow by Katie Matho)");
-    s->addImage("neural net", "/Users/gene/bin/misc/stock/brainbow.jpg", 0, 0, 1, 1);
+    
+    
+    s = slideshow.addSlide("Generative models");
+    s->addMovie("MNIST interpolations", "/Users/gene/bin/dcgan/summary/digits.mov", true, 0.55, 0.05, 0.3, 0.3);
+    s->addMovie("interpolations", "/Users/gene/bin/dcgan/public/interpolations.mp4", true, 0.0, 0.4, 1.0, 0.6);
+    s->addText(h2, ofColor(0), "Deep Convolutional Generative Adversarial Networks", 0.1, 0.05, 0.35);
+    s->addText(h3, ofColor(0), "arxiv.org/abs/1511.06434", 0.1, 0.2, 0.4);
+    s->addText(h2, ofColor(0), "A Book from the Sky", 0.1, 0.3, 1.0);
+    s->addText(h3, ofColor(0), "genekogan.com/works/a-book-from-the-sky.html", 0.1, 0.36, 1.0);
+
+    
+    
+    
+    
+    
+    
+    
+    
+    s = slideshow.addSlide("Deepdream: Jaaga");
+    s->addImage("Jaaga", "/Users/gene/bin/deepdream/jaaga/_jaaga.jpg", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("Jaaga", "/Users/gene/bin/deepdream/jaaga/jaaga_1_8_4_1.4(13).jpg", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("Jaaga", "/Users/gene/bin/deepdream/jaaga/jaaga(2)__10_4_1.4(5).jpg", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("Jaaga", "/Users/gene/bin/deepdream/jaaga/jaaga(2)__16_5_1.2(11).jpg", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Deepdream: Leonardo Da Vinci");
+    s->addImage("Da Vinci", "/Users/gene/bin/deepdream/painters/_davinci.jpg", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("Da Vinci", "/Users/gene/bin/deepdream/painters/davinci_drawing(0)0002_i5_o8_os1.1_j32.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Deepzoom");
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/deepzoom.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Oscillating which layer to enhance");
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_content/deeptrain2.mp4", true, 0.0, 0.0, 0.6, 0.35);
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/testOtherl4_1.mp4", true, 0.0, 0.35, 0.5, 0.65);
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/makeMid_blur_2a_imovie.mp4", true, 0.4, 0.0, 0.6, 0.6);
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/theFrame7.mov", true, 0.5, 0.5, 0.5, 0.5);
+
+    
+    
+    
+//    slideshow.setPage(s);
+    
+    
+    
+    
+    
+    
     
     s = slideshow.addSlide("Training our neural network");
     s->addMovie("mnist", "/Users/gene/bin/misc/stock/mnist_weights_demo.mp4", true, 0, 0, 1, 1)->setLoop(false);
+    
+    s = slideshow.addSlide("CNN demo");
+    CcvForwardPassDemo *ccvd = new CcvForwardPassDemo(s, "ccv", 0, 0, 1, 1);
+    s->addAction(ccvd);
     
     s = slideshow.addSlide("Reverse image search");
     ReverseImageSearchDemo *risd = new ReverseImageSearchDemo(s, "rims", 0, 0, 1, 1);
     s->addAction(risd);
     s->start();
-    
-    //    s = slideshow.addSlide("t-SNE colors converging in 2d");
-    //    s->addMovie("t-SNE convergence", "/Users/gene/Downloads/imgs/tsne_manual.mp4", true, 0, 0, 1, 1);
     
     s = slideshow.addSlide("convnet -> t-SNE");
     s->addScrollableImage("animal t-sne", "/Users/gene/bin/tsne/tsne-animals.png", 0.0, 0.0, 1.0, 1.0);
@@ -209,26 +224,22 @@ void ofApp::Kikk() {
     slideshow.addSlide("t-SNE :: CalTech-256 animals")->addScrollableImage("t-SNE animals", "/Users/gene/bin/tsne/grid_animals2.png", 0, 0, 1, 1);
     slideshow.addSlide("t-SNE :: Ikea catalog (by Golan Levin + Aman Tiwari)")->addScrollableImage("t-SNE ikea", "/Users/gene/bin/tsne/contributions/ikea_golan_aman.jpg", 0, 0, 1, 1);
     
-    s = slideshow.addSlide("Create mappings between sensors and synthesis parameters");
-    s->addImage("kinect", "/Users/gene/bin/misc/stock/kinect-skeleton.png", 0, 0, 0.3333, 0.3333);
-    s->addImage("leap", "/Users/gene/bin/misc/stock/leap-hands.jpg", 0, 0.33333, 0.3333, 0.33333);
-    //    s->addImage("face", "/Users/gene/bin/misc/stock/face-osc.png", 0, 0.66666, 0.3333, 0.33333);
-    s->addMovie("faceosc + ableton", "/Users/gene/Desktop/faceosc_ableton.mp4", true, 0, 0.66666, 0.3333, 0.33333);
-    s->addImage("arrow", "/Users/gene/bin/misc/stock/arrow.png", 0.4, 0.4, 0.2, 0.3);
-    s->addImage("leap", "/Users/gene/bin/misc/stock/ableton-params.png", 0.66666, 0.0, 0.3333, 0.5);
-    s->addImage("leap", "/Users/gene/bin/images/vjing/vj_160.jpg", 0.66666, 0.5, 0.3333, 0.5);
+
     
-    s = slideshow.addSlide("Deepdream: Leonardo Da Vinci");
-    s->addImage("Da Vinci", "/Users/gene/bin/deepdream/painters/_davinci.jpg", 0, 0, 1, 1);
-    s->addBreakpoint();
-    s->addImage("Da Vinci", "/Users/gene/bin/deepdream/painters/davinci_drawing(0)0002_i5_o8_os1.1_j32.png", 0, 0, 1, 1);
     
-    s = slideshow.addSlide("Video style with optical flow loss term (Ruder et al, 2016)");
-    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
-    s->addMovie("video style", "/Users/gene/bin/style-transfer/10_optical_flow/video-style-transfer-x4-reordered.mp4", true, 0, 0, 1, 1);
+    
+    
+    
+    
+    
+    
     
     s = slideshow.addSlide("Style Transfer");
     s->addImage("Mona Lisa -> Cubist/Expressionist/Impressionist", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_cubist_expressionist_impressionist.jpg", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Video style transfer");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addMovie("video style", "/Users/gene/bin/style-transfer/10_optical_flow/video-style-transfer-x4-reordered.mp4", true, 0, 0, 1, 1);
     
     s = slideshow.addSlide("Mona Lisa x Google Maps (1)");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0.0, 0.0, 0.55, 1.0);
@@ -250,24 +261,73 @@ void ofApp::Kikk() {
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps3.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps3.jpg", 0.6, 0.0, 0.4, 1.0);
     
-    s = slideshow.addSlide("A Book from the Sky");
-    s->addMovie("interplations", "/Users/gene/bin/dcgan/public/interpolations_3.mp4", true, 0.2, 0.15, 0.6, 0.6);
+
     
-    s = slideshow.addSlide("Radical interpolations");
-    s->addText(h3, ofColor(0), "interpolations across characters sharing the same radical often appear to preserve it", 0.1, 0.0, 0.8);
-    s->addMovie("radical interpolations", "/Users/gene/bin/dcgan/summary/radinterpolation.mp4", true, 0, 0.2, 1, 0.8);
+    // WAVENETS
+    s = slideshow.addSlide("WaveNets");
+    s->addText(h3, ofColor(0), "https://deepmind.com/blog/wavenet-generative-model-raw-audio/", 0.05, 0.01, 0.9);
+    s->addMovie("wavenet zoom", "/Users/gene/bin/wavenet/blogpost/wavenet-zoom.mp4", true, 0.05, 0.1, 0.4, 0.4);
+    s->addMovie("wavenet conv", "/Users/gene/bin/wavenet/blogpost/wavenet-dilated-convolutions.mp4", true, 0.55, 0.1, 0.4, 0.4);
+    s->addSound("wavenet 1", "/Users/gene/bin/wavenet/blogpost/wavenet-1.wav", h4, false, false, 0.05, 0.6, 0.25, 0.04);
+    s->addSound("wavenet 2", "/Users/gene/bin/wavenet/blogpost/wavenet-2.wav", h4, false, false, 0.05, 0.66, 0.25, 0.04);
+    s->addSound("voice 1", "/Users/gene/bin/wavenet/blogpost/avocado-1.wav", h4, false, false, 0.05, 0.76, 0.25, 0.04);
+    s->addSound("voice 2", "/Users/gene/bin/wavenet/blogpost/avocado-2.wav", h4, false, false, 0.05, 0.82, 0.25, 0.04);
+    s->addSound("babble 1", "/Users/gene/bin/wavenet/blogpost/speaker-1.wav", h4, false, false, 0.35, 0.6, 0.25, 0.04);
+    s->addSound("babble 2", "/Users/gene/bin/wavenet/blogpost/speaker-2.wav", h4, false, false, 0.35, 0.66, 0.25, 0.04);
+    s->addSound("babble 3", "/Users/gene/bin/wavenet/blogpost/speaker-3.wav", h4, false, false, 0.35, 0.72, 0.25, 0.04);
+    s->addSound("babble 4", "/Users/gene/bin/wavenet/blogpost/speaker-4.wav", h4, false, false, 0.35, 0.78, 0.25, 0.04);
+    s->addSound("babble 5", "/Users/gene/bin/wavenet/blogpost/speaker-5.wav", h4, false, false, 0.35, 0.84, 0.25, 0.04);
+    s->addSound("babble 6", "/Users/gene/bin/wavenet/blogpost/speaker-6.wav", h4, false, false, 0.35, 0.9, 0.25, 0.04);
+    s->addSound("jazz 1", "/Users/gene/bin/wavenet/blogpost/sample_1.wav", h4, false, false, 0.65, 0.6, 0.25, 0.04);
+    s->addSound("jazz 2", "/Users/gene/bin/wavenet/blogpost/sample_2.wav", h4, false, false, 0.65, 0.66, 0.25, 0.04);
+    s->addSound("jazz 3", "/Users/gene/bin/wavenet/blogpost/sample_3.wav", h4, false, false, 0.65, 0.72, 0.25, 0.04);
+    s->addSound("jazz 4", "/Users/gene/bin/wavenet/blogpost/sample_4.wav", h4, false, false, 0.65, 0.78, 0.25, 0.04);
+    s->addSound("jazz 5", "/Users/gene/bin/wavenet/blogpost/sample_5.wav", h4, false, false, 0.65, 0.84, 0.25, 0.04);
+    s->addSound("jazz 6", "/Users/gene/bin/wavenet/blogpost/sample_6.wav", h4, false, false, 0.65, 0.9, 0.25, 0.04);
     
-    // THE FUTURE
-    // what happens when things go real-time
+    s = slideshow.addSlide("WaveNets");
+    s->addText(h3, ofColor(0), "https://ibab", 0.05, 0.01, 0.9);
+    s->addSound("il barbere de sevilla", "/Users/gene/bin/wavenet/barber_25525.wav", h4, false, false, 0.05, 0.6, 0.25, 0.04);
+
+
+    s = slideshow.addSlide("Closed-captioning wavenets");
+    //s->addMovie("CC wavenets", "/Users/gene/bin/misc/Closed-captioning WaveNets.mp4", true, 0, 0, 1, 1);
+    s->addImage("cc wavenets", "/Users/gene/bin/misc/closedcapwavenets.jpg", 0, 0, 1, 1);
+
     
     
-    CubistMirrorDemo *cmd = new CubistMirrorDemo(s, "classifier", 0, 0, 1, 1);
-    s = slideshow.addSlide("Kandinskify");
-    s->addAction(cmd);
-    cmd->setStyleModel(ofToDataPath("kandinsky_e2_full512.model"));
+    
+    // ADVERSARIAL NETS
     
     
-    /////////////////////////
+    s = slideshow.addSlide("Visual Semantic Alignment (Li, Karpathy)");
+    s->addImage("visual semantic alignment", "/Users/gene/bin/misc/stock/rnn/captioning-visual-semantic-align.png", 0, 0, 0.5, 1);
+    s->addImage("visual semantic alignment", "/Users/gene/bin/misc/stock/rnn/captioning-architecture.png", 0.5, 0, 0.5, 0.5);
+    s->addImage("visual semantic alignment", "/Users/gene/bin/misc/stock/rnn/captioning-visual-semantic-align-architecture.png", 0.5, 0.5, 0.5, 0.5);
+    
+    s = slideshow.addSlide("Mona Lisa densecap");
+    s->addImage("densecap", "/Users/gene/bin/densecap/monalisa-densecap.png", 0, 0.1, 1, 0.8);
+
+    s = slideshow.addSlide("Dense captioning Atlas, The Next Generation");
+    s->addMovie("densecap", "/Users/gene/bin/densecap/atlas.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Dense captioning Pouff's grocery trip");
+    s->addMovie("densecap", "/Users/gene/bin/densecap/deepdream_grocery.mp4", true, 0, 0, 1, 1);
+    s->addText(h4, ofColor(0), "original: https://www.youtube.com/watch?v=DgPaCWJL7XI", 0.01, 0.0, 0.99);
+    
+    s = slideshow.addSlide("Dense captioning Deepdream");
+    s->addMovie("densecap", "/Users/gene/bin/densecap/deepdream.mp4", true, 0, 0, 1, 1);
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     s = slideshow.addSlide("ml4a.github.io");
     //s = slideshow.addSlide("Machine Learning for Artists @ ITP-NYU, Spring 2016");
@@ -289,14 +349,15 @@ void ofApp::Kikk() {
     s = slideshow.addSlide("ml4a.github.io");
     s->addImage("pyramid", "/Users/gene/bin/misc/stock/pyramid.png", 0.2, 0.2, 0.6, 0.6);
     
-    s = slideshow.addSlide("alt-AI");
-    s->addMovie("alt-AI", "/Users/gene/bin/alt-ai/lisa-oculus-convnet.mp4", true, 0, 0, 0.5, 0.5);
-    s->addMovie("alt-AI", "/Users/gene/bin/alt-ai/D90A8726.mp4", true, 0.5, 0, 0.5, 0.5);
-    s->addMovie("alt-AI", "/Users/gene/bin/alt-ai/D90A8627.mp4", true, 0, 0.5, 0.5, 0.5);
-    s->addMovie("alt-AI", "/Users/gene/bin/alt-ai/cubistmirror_v1.mp4", true, 0.5, 0.5, 0.5, 0.5);
-    
     // games
     // mention lee won game 4
+    
+    
+    // issues
+    
+    
+    // deepmind + atari
+    
     
     s = slideshow.addSlide("I will do my best to play a beautiful and interesting game");
     s->addMovie("t-SNE convergence", "/Users/gene/Downloads/imgs/tsne_manual.mp4", true, 0, 0, 1, 1);
@@ -308,4 +369,107 @@ void ofApp::Kikk() {
     s->addText(h2, ofColor(0), "@ml4a_", 0.6, 0.3, 0.5);
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*
+     s = slideshow.addSlide("Reinforcement learning + Atari games");
+     s->addImage("autoencoder", "/Users/gene/bin/misc/stock/reinforcement_learning.png", 0, 0.05, 1, 0.95);
+     s->addText(h4, ofColor(0), "http://www.iclr.cc/lib/exe/fetch.php?media=iclr2015:silver-iclr2015.pdf", 0.1, 0.0, 0.9);
+     
+     s = slideshow.addSlide("Convnets playing Atari");
+     s->addMovie("MCTS", "/Users/gene/bin/misc/stock/Deep Q network learning to play Pong-60pwnLB0DqY.mp4", true, 0, 0, 1, 1);
+     s->addText(h4, ofColor(0), "https://www.youtube.com/watch?v=60pwnLB0DqY", 0.1, 0.0, 0.9);
+     
+     s = slideshow.addSlide("Convnets to the rescue");
+     s->addImage("joystick + convnet", "/Users/gene/bin/misc/stock/joystick_convnet.png", 0, 0, 1, 1);
+     s->addText(h4, ofColor(0), "http://home.uchicago.edu/~arij/journalclub/papers/2015_Mnih_et_al.pdf", 0.1, 0.0, 0.9);
+     */
+    
+    
+    
+    /*
+    // creative machines
+    s = slideshow.addSlide("Creativity");
+    s->addText(h2, ofColor(0), "so can machines be creative?", 0.1, 0.2, 0.7);
+    
+    s = slideshow.addSlide("Can machines think?");
+    s->addImage("cmt 1", "/Users/gene/bin/misc/turing_cmt_1.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Can machines think?");
+    s->addImage("cmt 1", "/Users/gene/bin/misc/turing_cmt_2.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Can machines think?");
+    s->addText(h2, ofColor(0), "\"The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.\" - Edsger Dijkstra", 0.1, 0.1, 0.7);
+    
+    
+   
+    // Adversarial nets
+    s = slideshow.addSlide("Closed-captioning wavenets");
+    //s->addMovie("CC wavenets", "/Users/gene/bin/misc/Closed-captioning WaveNets.mp4", true, 0, 0, 1, 1);
+    s->addImage("cc wavenets", "/Users/gene/bin/misc/closedcapwavenets.jpg", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Adversarial nets");
+    s->addImage("perceptrons top", "/Users/gene/bin/misc/stock/nytimes_perceptron_top.png", 0.0, 0.0, 1, 0.24);
+    s->addImage("perceptrons", "/Users/gene/bin/misc/stock/nytimes_perceptron.png", 0.0, 0.24, 1, 0.76);
+    
+    s = slideshow.addSlide("Adversarial nets");
+    s->addImage("inbox", "/Users/gene/Writing/_Talks/S4AD-Pioneerworks/05_sequences/dribnet_monwed2.png", 0.1, 0.1, 0.8, 0.8);
+    
+    
+    /////////////////////////
+    
+    s = slideshow.addSlide("Action >> philosophy");
+    s->addImage("goboard", "/Users/gene/bin/misc/goboard.jpg", 0, 0.2, 1, 0.8);
+    s->addText(h3, ofColor(0), "inner self vs outer world", 0.1, 0.1, 0.8);
+    
+    ///////////////
+    
+    s = slideshow.addSlide("The Neural Aesthetic (brainbow by Katie Matho)");
+    s->addImage("neural net", "/Users/gene/bin/misc/stock/brainbow.jpg", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Create mappings between sensors and synthesis parameters");
+    s->addImage("kinect", "/Users/gene/bin/misc/stock/kinect-skeleton.png", 0, 0, 0.3333, 0.3333);
+    s->addImage("leap", "/Users/gene/bin/misc/stock/leap-hands.jpg", 0, 0.33333, 0.3333, 0.33333);
+    //    s->addImage("face", "/Users/gene/bin/misc/stock/face-osc.png", 0, 0.66666, 0.3333, 0.33333);
+    s->addMovie("faceosc + ableton", "/Users/gene/Desktop/faceosc_ableton.mp4", true, 0, 0.66666, 0.3333, 0.33333);
+    s->addImage("arrow", "/Users/gene/bin/misc/stock/arrow.png", 0.4, 0.4, 0.2, 0.3);
+    s->addImage("leap", "/Users/gene/bin/misc/stock/ableton-params.png", 0.66666, 0.0, 0.3333, 0.5);
+    s->addImage("leap", "/Users/gene/bin/images/vjing/vj_160.jpg", 0.66666, 0.5, 0.3333, 0.5);
+    
+    s = slideshow.addSlide("Deepdream: Leonardo Da Vinci");
+    s->addImage("Da Vinci", "/Users/gene/bin/deepdream/painters/_davinci.jpg", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("Da Vinci", "/Users/gene/bin/deepdream/painters/davinci_drawing(0)0002_i5_o8_os1.1_j32.png", 0, 0, 1, 1);
+    
+     
+     
+    s = slideshow.addSlide("A Book from the Sky");
+    s->addMovie("interplations", "/Users/gene/bin/dcgan/public/interpolations_3.mp4", true, 0.2, 0.15, 0.6, 0.6);
+    
+    s = slideshow.addSlide("Radical interpolations");
+    s->addText(h3, ofColor(0), "interpolations across characters sharing the same radical often appear to preserve it", 0.1, 0.0, 0.8);
+    s->addMovie("radical interpolations", "/Users/gene/bin/dcgan/summary/radinterpolation.mp4", true, 0, 0.2, 1, 0.8);
+    
+    // THE FUTURE
+    // what happens when things go real-time
+    
+    
+    CubistMirrorDemo *cmd = new CubistMirrorDemo(s, "classifier", 0, 0, 1, 1);
+    s = slideshow.addSlide("Kandinskify");
+    s->addAction(cmd);
+    cmd->setStyleModel(ofToDataPath("kandinsky_e2_full512.model"));
+    
+    
+    /////////////////////////
+    
+
+    
+     */
 }

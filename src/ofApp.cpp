@@ -7,22 +7,23 @@ void ofApp::setup(){
     if (USE_SECOND_SCREEN) {
         ofSetWindowPosition(ofGetScreenWidth(), 0);
     }
-    //ofSetFullscreen(true);
+    ofSetFullscreen(true);
     
     // load fonts
-    h1.load("/Users/gene/Code/of_v0.9.0_osx_release/apps/myApps/convnet-canvas/bin/data/fonts/AndaleMono.ttf", 72);
-    h2.load("/Users/gene/Code/of_v0.9.0_osx_release/addons/ofxLibwebsockets/example_server_binary_video/bin/data/myriad.ttf", 32);
-    h3.load("/Users/gene/Code/of_v0.9.0_osx_release/apps/myApps/convnet-canvas/bin/data/fonts/AndaleMono.ttf", 22);
-    h4.load("/Users/gene/Code/of_v0.9.0_osx_release/apps/myApps/convnet-canvas/bin/data/fonts/AndaleMono.ttf", 15);
-    h5.load("/Users/gene/Code/of_v0.9.0_osx_release/apps/myApps/convnet-canvas/bin/data/fonts/AndaleMono.ttf", 12);
-    h6.load("/Users/gene/Code/of_v0.9.3_osx_release/examples/utils/systemSpeakExample/bin/data/verdana.ttf", 36);
+    h1.load("AndaleMono.ttf", 72);
+    h2.load("myriad.ttf", 32);
+    h3.load("AndaleMono.ttf", 22);
+    h4.load("AndaleMono.ttf", 15);
+    h5.load("AndaleMono.ttf", 12);
+    h6.load("verdana.ttf", 36);
     
     slideshow.setBackgroundFunction(this, &ofApp::drawBgWhite);
     
     //slideshow.loadFromExported();
-    
 
     Kikk();
+    
+    
     
     
     slideshow.setContentRectangle(20, 56, ofGetWidth()-40, ofGetHeight()-56);
@@ -36,9 +37,6 @@ void ofApp::setup(){
     if (OSC_REMOTE_ENABLED) {
         osc.setup(8000);
     }
-    
-    
-    
     
 }
 
@@ -108,6 +106,16 @@ void ofApp::drawGui(ofEventArgs & args){
 }
 
 //--------------------------------------------------------------
+void ofApp::keyPressedGui(ofKeyEventArgs & args){
+    slideshow.keyPressed(args.key);
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseScrolled(ofMouseEventArgs & args){
+    slideshow.mouseScrolled(args.scrollX, args.scrollY);
+}
+
+//--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     slideshow.keyPressed(key);
 }
@@ -125,7 +133,6 @@ void ofApp::mouseMoved(int x, int y ){
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
     slideshow.mouseDragged(x, y);
- //   cout << "DRAG BUTTON " << button << endl;
 }
 
 //--------------------------------------------------------------

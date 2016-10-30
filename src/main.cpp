@@ -26,6 +26,8 @@ int main( ){
         shared_ptr<ofApp> mainApp(new ofApp);
         mainApp->setupGui();
         ofAddListener(guiWindow->events().draw,mainApp.get(),&ofApp::drawGui);
+        ofAddListener(guiWindow->events().keyPressed,mainApp.get(),&ofApp::keyPressedGui);
+        ofAddListener(mainWindow->events().mouseScrolled,mainApp.get(),&ofApp::mouseScrolled);
         
         ofRunApp(mainWindow, mainApp);
         ofRunMainLoop();
