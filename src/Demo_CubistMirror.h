@@ -140,7 +140,15 @@ public:
             loaded = true;
             active = true;
         }
-        //grab.initGrabber(640, 480);
+        int deviceIdx = 0;
+        vector<ofVideoDevice> devices = grab.listDevices();
+        for (int i=0; i<devices.size(); i++) {
+            if (devices[i].deviceName == "USB Camera") {
+                cout << "found "<<devices[i].deviceName << " at " << i << endl;
+                deviceIdx = i;
+            }
+        }
+        grab.setDeviceID(deviceIdx);
         grab.initGrabber(320, 240);
         last = 0;
     }

@@ -7,7 +7,25 @@ void ofApp::setup(){
     if (USE_SECOND_SCREEN) {
         ofSetWindowPosition(ofGetScreenWidth(), 0);
     }
+    //ofSetWindowShape(1600, 900);
+    //ofHideCursor();
+    CGDisplayHideCursor(NULL);
+    
     ofSetFullscreen(true);
+    
+    // make sure USB Camera detected
+    bool foundUsbCam = false;
+    ofVideoGrabber grab;
+    vector<ofVideoDevice> devices = grab.listDevices();
+    for (int i=0; i<devices.size(); i++) {
+        if (devices[i].deviceName == "USB Camera") {
+            foundUsbCam = true;
+        }
+    }
+    if (!foundUsbCam) {
+        ofLog(OF_LOG_NOTICE, "No usb cam found");
+        //ofExit();
+    }
     
     // load fonts
     h1.load("AndaleMono.ttf", 72);
@@ -17,27 +35,29 @@ void ofApp::setup(){
     h5.load("AndaleMono.ttf", 12);
     h6.load("verdana.ttf", 36);
     
+    // background functions
     slideshow.setBackgroundFunction(this, &ofApp::drawBgWhite);
-    
-    //slideshow.loadFromExported();
 
+    // before loading slides
+    //slideshow.loadFromExported();
+    
+    
+    // CONTENT
     Kikk();
+    //WorkshopKikk();
     
     
-    
-    
+    // after loading slides
     slideshow.setContentRectangle(20, 56, ofGetWidth()-40, ofGetHeight()-56);
     slideshow.printStats();
     slideshow.wrapNotes();
-    
+    slideshow.preloadAssets();
     //slideshow.exportAssets();
     //slideshow.exportScreenshots();
-    
-    //setup osc remote control
+
     if (OSC_REMOTE_ENABLED) {
         osc.setup(8000);
     }
-    
 }
 
 //--------------------------------------------------------------
@@ -122,7 +142,7 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+    
 }
 
 //--------------------------------------------------------------
@@ -147,7 +167,7 @@ void ofApp::mouseReleased(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mouseEntered(int x, int y){
-
+    
 }
 
 //--------------------------------------------------------------
@@ -157,14 +177,12 @@ void ofApp::mouseExited(int x, int y){
 
 //--------------------------------------------------------------
 void ofApp::gotMessage(ofMessage msg){
-
+    
     
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-    cout <<"DRAG! " << endl;
-
+void ofApp::dragEvent(ofDragInfo dragInfo){
 }
 
 

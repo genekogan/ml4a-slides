@@ -12,7 +12,7 @@
 
 
 #define OSC_REMOTE_ENABLED 0
-#define USE_SECOND_SCREEN 0
+#define USE_SECOND_SCREEN 1
 
 
 /*
@@ -103,6 +103,7 @@ public:
     void WorkshopSpektrum();
     void WorkshopRetune();
     void WorkshopInfluencers();
+    void WorkshopKikk();
     
     ////// Assets
     ofxPwrrPoint slideshow;

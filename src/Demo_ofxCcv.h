@@ -113,6 +113,15 @@ public:
         if (!loaded) {
             loadAssets();
         }
+        int deviceIdx = 0;
+        vector<ofVideoDevice> devices = grab.listDevices();
+        for (int i=0; i<devices.size(); i++) {
+            if (devices[i].deviceName == "USB Camera") {
+                cout << "found "<<devices[i].deviceName << " at " << i << endl;
+                deviceIdx = i;
+            }
+        }
+        grab.setDeviceID(deviceIdx);
         grab.initGrabber(640, 480);
         ccv.start();
     }
@@ -277,10 +286,10 @@ public:
         return false;
     }
     
-    bool mouseDragged(int x_, int y_) {
-        scroll = ofClamp(scroll - (ofGetMouseY() - ofGetPreviousMouseY()), 0, 32 * 110);
+    bool mouseScrolled(float x_, float y_) {
+        scroll = ofClamp(scroll - y_, 0, 32 * 110);
     }
-    
+
     bool mousePressed(int x_, int y_) {
         float mx = ofGetMouseX() - box.getX();
         float my = ofGetMouseY() - box.getY();
@@ -347,7 +356,16 @@ public:
         if (!loaded) {
             loadAssets();
         }
-        grab.initGrabber(640, 480);
+        int deviceIdx = 0;
+        vector<ofVideoDevice> devices = grab.listDevices();
+        for (int i=0; i<devices.size(); i++) {
+            if (devices[i].deviceName == "USB Camera") {
+                cout << "found "<<devices[i].deviceName << " at " << i << endl;
+                deviceIdx = i;
+            }
+        }
+        grab.setDeviceID(deviceIdx);
+        grab.initGrabber(320, 240);
     }
     
     void stop() {
@@ -512,8 +530,8 @@ public:
         return false;
     }
     
-    bool mouseDragged(int x_, int y_) {
-        scroll = ofClamp(scroll - (ofGetMouseY() - ofGetPreviousMouseY()), 0, 32 * 110);
+    bool mouseScrolled(float x_, float y_) {
+        scroll = ofClamp(scroll - y_, 0, 32 * 110);
     }
     
     bool mousePressed(int x_, int y_) {
@@ -568,11 +586,20 @@ public:
         if (!loaded) {
             loadAssets();
         }
-        cam.initGrabber(640, 480);
+        int deviceIdx = 0;
+        vector<ofVideoDevice> devices = grab.listDevices();
+        for (int i=0; i<devices.size(); i++) {
+            if (devices[i].deviceName == "USB Camera") {
+                cout << "found "<<devices[i].deviceName << " at " << i << endl;
+                deviceIdx = i;
+            }
+        }
+        grab.setDeviceID(deviceIdx);
+        grab.initGrabber(640, 480);
     }
     
     void stop() {
-        cam.close();
+        grab.close();
     }
     
     void loadAssets() {
@@ -590,12 +617,12 @@ public:
     }
     
     void update() {
-        cam.update();
-        if(cam.isFrameNew()) {
+        grab.update();
+        if(grab.isFrameNew()) {
             if(ofGetKeyPressed()) {
                 
                 // get libccv classification
-                results = ccv.classify(cam);
+                results = ccv.classify(grab);
                 if (results.size() == 0)    return;
                 string searchword = results[0].imageNetName;
                 vector<string> words = ofSplitString(searchword, ",");
@@ -628,7 +655,7 @@ public:
         scrollValue = -ofMap(ofGetMouseY(), 0, ofGetHeight(), 0, 3200);
         
         // draw camera
-        cam.draw(0, 0);
+        grab.draw(0, 0);
         
         // draw libccv results
         ofPushStyle();
@@ -702,7 +729,7 @@ public:
     }
 
     
-    ofVideoGrabber cam;
+    ofVideoGrabber grab;
     
     ofxCcv ccv;
     vector<ofxCcv::Classification> results;
