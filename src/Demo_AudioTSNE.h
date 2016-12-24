@@ -10,7 +10,7 @@ class AudioClip {
 public:
     void setup(string path, float x, float y) {
         sound.load(path);
-        point.set(x, y);
+        point.set(ofGetWidth() * x, ofGetHeight() * y);
         t = 0;
     }
     void update() {
@@ -21,19 +21,21 @@ public:
     void draw() {
         if (sound.isPlaying()) {
             ofSetColor(0, 255, 0, 220);
-        }
-        else {
+        } else {
             ofSetColor(0, 165);
         }
-        ofDrawCircle(ofGetWidth() * point.x, ofGetHeight() * point.y, 5);
+        ofDrawCircle(point.x, point.y, 5);
     }
     void trigger() {
         sound.play();
         t = ofGetElapsedTimef();
     }
     void mouseMoved(int x, int y) {
-        float distanceToMouse = ofDistSquared(x, y, ofGetWidth() * point.x, ofGetHeight() * point.y);
-        if (distanceToMouse < 250 && !sound.isPlaying() && (ofGetElapsedTimef() - t > 2.0)) {
+        if (sound.isPlaying() || (ofGetElapsedTimef() - t < 2.0)) {
+            return;
+        }
+        float distanceToMouse = ofDistSquared(x, y, point.x, point.y);
+        if (distanceToMouse < 250) {
             trigger();
         }
     }
@@ -60,9 +62,24 @@ public:
     
     void setupTsne() {
         
+         string file = "/Users/gene/Desktop/bohemian.json";
+         ofxJSONElement result;
+         bool parsingSuccessful = result.open(file);
+         for (int i=0; i<result.size(); i++) {
+             string path = result[i]["path"].asString();
+             //float x = result[i]["x"].asFloat();
+             //float y = result[i]["y"].asFloat();
+             float x = result[i]["point"][0].asFloat();
+             float y = result[i]["point"][1].asFloat();
+         
+             AudioClip newSound;
+             newSound.setup(path, x, y);
+             sounds.push_back(newSound);
+         }
+        
+        /*
         string file = "audiotsnetest.json";
         ofxJSONElement result;
-        
         bool parsingSuccessful = result.open(file);
         for (int i=0; i<result.size(); i++) {
             string path = result[i]["path"].asString();
@@ -72,6 +89,7 @@ public:
             newSound.setup(path, x, y);
             sounds.push_back(newSound);
         }
+         */
     }
     
     void update() {
@@ -93,7 +111,6 @@ public:
             sounds[i].mouseMoved(x_, y_);
         }
     }
-
     
     vector<AudioClip> sounds;    
 };

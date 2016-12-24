@@ -3,9 +3,23 @@
 
 void ofApp::ReinforcementLearning()
 {
-    s = slideshow.addSlide("The Glass Bead Game (1943) - Herman Hesse");
-    s->addText(h3, ofColor(0), "A Game, for example, might start from a given astronomical configuration, or from the actual theme of a Bach fugue, or from a sentence out of Leibniz or the Upanishads, and from this theme, depending on the intentions and talents of the player, it could either further explore and elaborate the initial motif or else enrich its expressiveness by allusions to kindred concepts... It represented an elite, symbolic form of seeking for perfection, a sublime alchemy, an approach to that Mind which beyond all images and multiplicities is one within itself -- in other words, to God.", 0.1, 0.2, 0.75);
-    
+//    s = slideshow.addSlide("The Glass Bead Game (1943) - Herman Hesse");
+//    s->addText(h3, ofColor(0), "A Game, for example, might start from a given astronomical configuration, or from the actual theme of a Bach fugue, or from a sentence out of Leibniz or the Upanishads, and from this theme, depending on the intentions and talents of the player, it could either further explore and elaborate the initial motif or else enrich its expressiveness by allusions to kindred concepts... It represented an elite, symbolic form of seeking for perfection, a sublime alchemy, an approach to that Mind which beyond all images and multiplicities is one within itself -- in other words, to God.", 0.1, 0.2, 0.75);
+
+    s = slideshow.addSlide("The Glass Bead Game");
+    s->addImage("glass bead game", "/Users/gene/bin/misc/glassbead.jpg", 0.0, 0.05, 0.36, 0.9);
+    s->addText(h3, ofColor(0,0,20), "A Game, for example, might start from a given astronomical configuration, or from the actual theme of a Bach fugue, or from a sentence out of Leibniz or the Upanishads, and from this theme, depending on the intentions and talents of the player, it could either further explore and elaborate the initial motif or else enrich its expressiveness by allusions to kindred concepts... It represented an elite, symbolic form of seeking for perfection, a sublime alchemy, an approach to that Mind which beyond all images and multiplicities is one within itself -- in other words, to God.", 0.38, 0.2, 0.5);
+    //    s->addNote("hesse is describing GBG, a game played by an devoted caste of intellectuals, sequestered from the rest of society at a monastery-like academy, centuries into the future in the highlands of central Europe in a province called Castalia (Switzerland). the game is described as this perfect synthesis of art, science, literature, and history. players take turns moving glass stones around the board by making deep connections among the many intellectual pursuits of mankind -- for example, finding an analogy between the notes of a mozart sonata to the constellations of the night sky, or contrasting the laws of quantum mechanics with Hegelian economics, and so on.");
+    //    s->addNote("a curious thing about the book is that nowhere in its nearly 600 pages are the actual rules of the game precisely described. only made reference to in various allusions. it's as if hesse is hinting at something which can't be expressed, or fully described by rules... our creativity, the vast interconnectedness of our knowledge, even the very essence of human intelligence itself... something which can't be put into words.");
+    s->addNote("game played by a devoted caste of intellectuals, sequestered from society in a monastery-like academy, centuries into the future, in a province of Europe called Castalia (Switzerland).");
+    s->addNote("a perfect synthesis of art, humanities, science, literature, and history");
+    s->addNote("players take turns moving glass stones around a board, making analogies between various intellectual disciplines of mankind");
+    s->addNote("notes of a mozart sonata to the constellations of the night sky");
+    s->addNote("contrasting quantum mechanics with hegelian economics");
+    s->addNote("600 pages, rules never described, except by passing reference or allusions");
+    s->addNote("can't be expressed, or fully described by rules, put into words");
+    s->addNote("our creativity, the interconnectedness of our knowledge, essence of human intelligence itself");
+
     s = slideshow.addSlide("Lee Se-dol");
     s->addText(h3, ofColor(0), "I will do my best to play a beautiful and interesting game.", 0.05, 0.4, 0.95);
     
@@ -126,13 +140,32 @@ void ofApp::ReinforcementLearning()
     s = slideshow.addSlide("Go rules");
     s->addImage("autoencoder", "/Users/gene/bin/misc/stock/Go.jpg", 0, 0, 1, 1);
     
-    s = slideshow.addSlide("Why is Go hard??");
-    s->addText(h2, ofColor(0), "tic-tac-toe boards: 765", 0.2, 0.1, 0.8);
-    s->addText(h2, ofColor(0), "planck times since big bang: 10^62", 0.2, 0.17, 0.8);
-    s->addText(h2, ofColor(0), "atoms in universe: 10^80", 0.2, 0.24, 0.8);
-    s->addText(h2, ofColor(0), "chess boards: 10^120", 0.2, 0.31, 0.8);
-    s->addText(h2, ofColor(0), "go boards: 10^170", 0.2, 0.38, 0.8);
-    s->addImage("gostates", "/Users/gene/bin/misc/stock/alphagogamestates.jpg", 0.4, 0.47, 0.6, 0.5);
+//    s = slideshow.addSlide("Why is Go hard??");
+//    s->addText(h2, ofColor(0), "tic-tac-toe boards: 765", 0.2, 0.1, 0.8);
+//    s->addText(h2, ofColor(0), "planck times since big bang: 10^62", 0.2, 0.17, 0.8);
+//    s->addText(h2, ofColor(0), "atoms in universe: 10^80", 0.2, 0.24, 0.8);
+//    s->addText(h2, ofColor(0), "chess boards: 10^120", 0.2, 0.31, 0.8);
+//    s->addText(h2, ofColor(0), "go boards: 10^170", 0.2, 0.38, 0.8);
+//    s->addImage("gostates", "/Users/gene/bin/misc/stock/alphagogamestates.jpg", 0.4, 0.47, 0.6, 0.5);
+
+    s = slideshow.addSlide("\"I felt the board\"");
+    s->addImage("go", "/Users/gene/bin/misc/stock/Go.jpg", 0, 0, 1, 1);
+    s->addRect(ofColor(255,160), 0.005, 0.04, 0.45, 0.26);
+    s->addText(h3, ofColor(0), "tic-tac-toe boards: 765", 0.01, 0.05, 0.6);
+    s->addText(h3, ofColor(0), "planck times since big bang: 10^62", 0.01, 0.1, 0.6);
+    s->addText(h3, ofColor(0), "atoms in universe: 10^80", 0.01, 0.15, 0.6);
+    s->addText(h3, ofColor(0), "chess boards: 10^120", 0.01, 0.2, 0.6);
+    s->addText(h3, ofColor(0), "go boards: 10^170", 0.01, 0.25, 0.6);
+    s->addNote("common to hear this terminology. describe reasons for moves ambiguously, \"i felt the board\", like it came from some deep intuition built up from years of experience");
+    s->addNote("fascinated with me because no one described chess this way: \"i felt the rook\"");
+    s->addNote("chess is analytical. in libraries, volumes are devoted just to listing common opening sequences");
+    s->addNote("players talk of mentally playing out many possible game sequences");
+    s->addNote("doesn't scale for go, because of the math.");
+    s->addNote("you know chess positions vs atoms in universe, but go moves are 50 OOM more vast. incredible");
+    s->addNote("impossible for a human to evaluate even tiny fraction");
+    s->addNote("go players rely on something more mysterious, abstract, intuitive, experiential");
+    s->addNote("indeed, a beautiful and interesting game");
+
     
     s = slideshow.addSlide("Policy network + Value network");
     s->addImage("gostates", "/Users/gene/bin/misc/stock/alphago-policy-network.jpg", 0, 0.05, 1, 0.8);
@@ -151,4 +184,42 @@ void ofApp::ReinforcementLearning()
     s = slideshow.addSlide("It gets harder");
     s->addImage("doom", "/Users/gene/bin/misc/stock/doom.jpg", 0.1, 0.1, 0.8, 0.8);
     s->addText(h3, ofColor(0), "http://thenewstack.io/google-ai-beats-human-champion-complex-game-ever-invented/", 0.1, 0.0, 0.9);
+    
+    /// RECENT
+    
+    s = slideshow.addSlide("Reinforcement learning with unsupervised auxiliary tasks");
+    s->addImage("DeepMind maze", "/Users/gene/bin/misc/deepmind_maze.gif", 0.15, 0.1, 0.7, 0.7);
+    s->addText(h3, ofColor(0), "https://deepmind.com/blog/reinforcement-learning-unsupervised-auxiliary-tasks/", 0.1, 0.05, 0.9);
+    
+    s = slideshow.addSlide("DeepMind + StarCraft");
+    s->addMovie("starcraft", "/Users/gene/bin/misc/starcraft-deepmind.mp4", true, 0, 0, 1, 1);
+
+    
+    
+
+    
+    /*
+    s = slideshow.addSlide("Lee Se-dol vs. AlphaGo");
+    s->addImage("go", "/Users/gene/bin/misc/stock/alphago-vs-leesedol.jpg", 0, 0.3, 0.8, 0.7);
+    s->addImage("go", "/Users/gene/bin/misc/stock/leesedol.jpg", 0.5, 0.0, 0.5, 0.5);
+    s->addText(h2, ofColor(0), "\"I will do my best to play a beautiful and interesting game\"", 0.05, 0.06, 0.44);
+    s->addNote("reminded during the AlphaGo/Lee Sedol match");
+    s->addNote("DeepMind created AI which beat top Go player");
+    s->addNote("landmark moment in AI for reasons i will return to");
+    s->addNote("2-player strategy board game, played with stone pieces rather than glass ones");
+    s->addNote("described by its players in abstract, almost poetic terms, its nature can't be put into words");
+    s->addNote("first encountered this with Lee's quote, which resonated with me");
+    
+    
+    s = slideshow.addSlide("Chess vs. Go");
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/kasparov.jpg", 0, 0.3, 0.48, 0.4);
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/chess-fritz-analysis.jpg", 0.52, 0.0, 0.48, 1.0);
+    s->addText(h3, ofColor(0), "1996-97: DeepBlue vs Gary Kasparov", 0.01, 0.2, 0.5);
+    s->addNote("this is why Go is harder for computers than chess");
+    s->addNote("DeepBlue beat Kasparov 20 years ago");
+    s->addNote("expert function created by team of grandmasters, knowledge of rules specifically encoded, special positions. very complex, heuristics");
+    s->addNote("that and brute force computation");
+    s->addNote("too many Go states, so a different algorithm was developed");
+    s->addNote("differences between DeepBlue and AlphaGo are similar to between human chess and go players");
+ */
 }

@@ -14,6 +14,9 @@ void ofApp::Autoencoders(){
     s->addImage("autoencoder", "/Users/gene/bin/misc/stock/mnist_VAE.png", 0, 0.1, 1, 0.8);
     s->addText(h4, ofColor(0), "https://jmetzen.github.io/2015-11-27/vae.html", 0.01, 0.0, 0.9);
     
+    s = slideshow.addSlide("Gene VRAE by @dribnet");
+    s->addImage("gene_vrae", "/Users/gene/bin/misc/stock/gene_vrae.jpg", 0.1, 0.1, 0.8, 0.8);
+
     s = slideshow.addSlide("Stick figures (Tom White, @dribnet)");
     s->addImage("autoencoder", "/Users/gene/bin/autoencoders/_dribnet_stickfigures.png", 0, 0, 1, 1);
     

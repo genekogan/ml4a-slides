@@ -11,18 +11,10 @@
 #include "Demo_ReverseImageSearch.h"
 
 
-#define OSC_REMOTE_ENABLED 0
-#define USE_SECOND_SCREEN 1
+#define OSC_REMOTE_ENABLED 1
+#define USE_SECOND_SCREEN 0
 
 
-/*
- to-do
- - example: rain + spam
- - more about training
- */
-
-
-//    http://www.evolvingai.org/content/ai-neuroscience-understanding
 
 class ofApp : public ofBaseApp{
 public:
@@ -65,6 +57,7 @@ public:
     void RNNs();
     void ReinforcementLearning();
     void CriticalIssues();
+    void SoundResearch();
 
     /* Meta */
     void ML4A();
@@ -87,6 +80,10 @@ public:
     void TechCode();
     void Influencers();
     void Kikk();
+    void Betahaus();
+    void OpenDotTalk();
+    void HowDeepIsYourDream();
+    void ArtCenterNabi();
     
     /* SchoolOfMaaa */
     void NeuralAesthetic1();
@@ -99,11 +96,26 @@ public:
     void NeuralAesthetic8();
     void NeuralAestheticMisc();
     
-    /*Workshops */
+    /* OpenDot */
+    void OpenDot_Intro();
+    void OpenDot_NeuralNetworks();
+    void OpenDot_Wekinator();
+    void OpenDot_ConvolutionalNeuralNetworks();
+    void OpenDot_ConvnetApplicationsBasic();
+    void OpenDot_ConvnetApplicationsAdvanced();
+    void OpenDot_GenerativeModels();
+    void OpenDot_RecurrentNeuralNetworks();
+    void OpenDot_LanguageProcessing();
+    void OpenDot_ReinforcementLearning();
+    void OpenDot_CriticalIssues();
+    
+    /* Short Workshops */
     void WorkshopSpektrum();
     void WorkshopRetune();
     void WorkshopInfluencers();
     void WorkshopKikk();
+    void WorkshopArtCenterNabi();
+    void WorkshopJogja();
     
     ////// Assets
     ofxPwrrPoint slideshow;

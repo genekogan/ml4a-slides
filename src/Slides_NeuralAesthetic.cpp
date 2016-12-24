@@ -94,7 +94,7 @@ void ofApp::NeuralAesthetic1() {
     
     s = slideshow.addSlide("What can we do with neural nets?");
     s->addImage("wekinator", "/Users/gene/bin/misc/stock/wekinator.png", 0, 0, 0.5, 0.5);
-    s->addMovie("faceosc + ableton", "/Users/gene/Desktop/faceosc_ableton.mp4", true, 0.4, 0.4, 0.6, 0.6);
+    s->addMovie("faceosc + ableton", "/Users/gene/bin/misc/faceosc_ableton.mp4", true, 0.4, 0.4, 0.6, 0.6);
     s->addText(h3, ofColor(0), "Machine learning for musicians + artists", 0.5, 0.1, 0.5);
     s->addText(h3, ofColor(0), "by Rebecca Fiebrink, @Princeton->@Goldsmiths", 0.5, 0.2, 0.5);
     s->addText(h3, ofColor(0), "Osc interface for your favorite apps", 0.5, 0.3, 0.5);
@@ -291,7 +291,7 @@ void ofApp::NeuralAesthetic2() {
     
     s = slideshow.addSlide("Wekinator (wekinator.org)");
     s->addImage("wekinator", "/Users/gene/bin/misc/stock/wekinator.png", 0, 0, 0.5, 0.5);
-    s->addMovie("faceosc + ableton", "/Users/gene/Desktop/faceosc_ableton.mp4", true, 0.4, 0.4, 0.6, 0.6);
+    s->addMovie("faceosc + ableton", "/Users/gene/bin/misc/faceosc_ableton.mp4", true, 0.4, 0.4, 0.6, 0.6);
     s->addText(h3, ofColor(0), "Machine learning for musicians + artists", 0.5, 0.1, 0.5);
     s->addText(h3, ofColor(0), "by Rebecca Fiebrink, @Princeton->@Goldsmiths", 0.5, 0.2, 0.5);
     s->addText(h3, ofColor(0), "Osc interface for your favorite apps", 0.5, 0.3, 0.5);
@@ -1039,7 +1039,7 @@ void ofApp::NeuralAesthetic5() {
     
     s = slideshow.addSlide("Wekinator (wekinator.org)");
     s->addImage("wekinator", "/Users/gene/bin/misc/stock/wekinator.png", 0, 0, 0.5, 0.5);
-    s->addMovie("faceosc + ableton", "/Users/gene/Desktop/faceosc_ableton.mp4", true, 0.4, 0.4, 0.6, 0.6);
+    s->addMovie("faceosc + ableton", "/Users/gene/bin/misc/faceosc_ableton.mp4", true, 0.4, 0.4, 0.6, 0.6);
     s->addText(h3, ofColor(0), "Machine learning for musicians + artists", 0.5, 0.1, 0.5);
     s->addText(h3, ofColor(0), "by Rebecca Fiebrink, @Princeton->@Goldsmiths", 0.5, 0.2, 0.5);
     s->addText(h3, ofColor(0), "Osc interface for your favorite apps", 0.5, 0.3, 0.5);
@@ -1069,7 +1069,7 @@ void ofApp::NeuralAesthetic5() {
     s->addImage("leap", "/Users/gene/bin/misc/stock/leap-hands.jpg", 1./3, 0, 0.3333, 0.45);
     s->addImage("face", "/Users/gene/bin/misc/stock/face-osc.png", 2./3, 0, 0.3333, 0.45);
     s->addImage("face", "/Users/gene/bin/misc/stock/mfcc.png", 0, 0.5, 0.3333, 0.45);
-    s->addMovie("convnetosc", "/Users/gene/Desktop/wekinator-coffee-croissant.mp4", true, 1./3, 0.5, 0.3333, 0.45);
+    s->addMovie("convnetosc", "/Users/gene/bin/misc/wekinator-coffee-croissant.mp4", true, 1./3, 0.5, 0.3333, 0.45);
     s->addText(h3, ofColor(0), "{openframeworks, processing, max, arduino}->osc\n - stock market data?\n - twitter hashtags?\n - the weather?\n - eye tracker?", 2.1/3, 0.5, 0.3);
 
     s = slideshow.addSlide("Ouptuts");
@@ -1078,7 +1078,7 @@ void ofApp::NeuralAesthetic5() {
     s->addImage("leap", "/Users/gene/bin/misc/stock/aalto.png", 0.66666, 0.2, 0.3333, 0.55);
 
     s = slideshow.addSlide("Transfer learning");
-    s->addMovie("convnetosc", "/Users/gene/Desktop/wekinator-coffee-croissant.mp4", true, 0, 0, 1, 1);
+    s->addMovie("convnetosc", "/Users/gene/bin/misc/wekinator-coffee-croissant.mp4", true, 0, 0, 1, 1);
 }
 
 void ofApp::NeuralAesthetic6() {
@@ -1147,7 +1147,7 @@ void ofApp::NeuralAesthetic6() {
     s->addText(h3, ofColor(0), "Image patches which respond most to filters", 0.2, 0.0, 1.0);
 
     s = slideshow.addSlide("Activations are valuable");
-    s->addMovie("convnetosc", "/Users/gene/Desktop/wekinator-coffee-croissant.mp4", true, 0, 0, 1, 1);
+    s->addMovie("convnetosc", "/Users/gene/bin/misc/wekinator-coffee-croissant.mp4", true, 0, 0, 1, 1);
     
     s = slideshow.addSlide("t-SNE (Laurens van der Maaten + Geoff Hinton]");
     s->addImage("t-sne", "/Users/gene/bin/misc/stock/tsne.png", 0.0, 0.1, 1.0, 0.9);

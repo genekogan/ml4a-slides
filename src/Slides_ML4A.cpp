@@ -51,7 +51,7 @@ void ofApp::AboutAltAI(){
     
     s = slideshow.addSlide("openframe");
     s->addText(h3, ofColor(0), "openframe.io", 0.1, 0.005, 0.7);
-    s->addImage("openframe", "/Users/gene/Desktop/openframe_altai.jpg", 0, 0.1, 1, 0.8);
+    s->addImage("openframe", "/Users/gene/bin/misc/stock/openframe_altai.JPG", 0, 0.1, 1, 0.8);
     
     s = slideshow.addSlide("openframe");
     s->addText(h3, ofColor(0), "openframe.io", 0.1, 0.005, 0.7);

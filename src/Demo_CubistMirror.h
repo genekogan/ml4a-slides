@@ -131,7 +131,7 @@ public:
     CubistMirrorDemo(ofxPPSlide *parent, string name, float x, float y, float w, float h) : ofxPPElement(parent, name, x, y, w, h) {
         ready = false;
         active = false;
-        styleModel = ofToDataPath("cubist.model");
+        styleModel = "/Users/gene/bin/style-transfer/models/cubist.model";
     }
     
     void start() {
@@ -248,42 +248,41 @@ public:
     
     void keyPressed(int key) {
         if (!active) return;
-        cout << key << endl;
         if      (key=='1') {
-            setStyleModel(ofToDataPath("cubist.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/cubist.model");
         }
         else if (key=='2') {
-            setStyleModel(ofToDataPath("cubist2.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/cubist2.model");
         }
         else if (key=='3') {
-            setStyleModel(ofToDataPath("edtaonisl.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/edtaonisl.model");
         }
         else if (key=='4') {
-            setStyleModel(ofToDataPath("hokusai.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/hokusai.model");
         }
         else if (key=='5') {
-            setStyleModel(ofToDataPath("hokusai2.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/hokusai2.model");
         }
         else if (key=='6') {
-            setStyleModel(ofToDataPath("hundertwasser.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/hundertwasser.model");
         }
         else if (key=='7') {
-            setStyleModel(ofToDataPath("kandinsky_e2_crop512.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/kandinsky_e2_crop512.model");
         }
         else if (key=='8') {
-            setStyleModel(ofToDataPath("kandinsky_e2_full512.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/kandinsky_e2_full512.model");
         }
         else if (key=='9') {
-            setStyleModel(ofToDataPath("composition.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/composition.model");
         }
         else if (key=='0') {
-            setStyleModel(ofToDataPath("smokefog.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/smokefog.model");
         }
         else if (key=='-') {
-            setStyleModel(ofToDataPath("rami_bianco.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/rami_bianco.model");
         }
         else if (key=='=') {
-            setStyleModel(ofToDataPath("palm.model"));
+            setStyleModel("/Users/gene/bin/style-transfer/models/palm.model");
         }
     }
     

@@ -43,7 +43,7 @@ void ofApp::Background(){
     s->addScrollableImage("color of words", "/Users/gene/bin/misc/stock/color-of-words.png", 0, 0, 1, 1);
     
     s = slideshow.addSlide("processing + openframeworks");
-    s->addMovie("KPT", "/Users/gene/Desktop/colin-ribbons-2.mp4", true, 0.0, 0, 0.5, 0.5);
+    s->addMovie("KPT", "/Users/gene/bin/opera-toolkit/colin-ribbons-2.mp4", true, 0.0, 0, 0.5, 0.5);
     s->addMovie("machine yearning", "/Users/gene/bin/machine-yearning/machine-yearning-gopro.mp4", true, 0.5, 0.5, 0.5, 0.5);
     s->addMovie("flocking", "/Users/gene/bin/images/Flocking-fast.mp4", true, 0.0, 0.5, 0.5, 0.5);
     s->addImage("ecohack", "/Users/gene/Writing/_Talks/BabyCastles/ecohack/_mg_7093_14926714478_o.jpg", 0.5, 0.0, 0.5, 0.5);
@@ -87,4 +87,17 @@ void ofApp::GoogleMLArtExperiments() {
     s->addText(h2, ofColor(0), "ml4a.github.io", 0.67, 0.2, 0.5);
     s->addText(h2, ofColor(0), "@ml4a_", 0.67, 0.3, 0.5);
 
+}
+
+
+void ofApp::SoundResearch() {
+    s = slideshow.addSlide("Visually indicated sounds");
+    s->addMovie("flocking", "/Users/gene/bin/misc/visually_indicated_sounds.mp4", true, 0.1, 0.1, 0.8, 0.8);
+    s->addText(h3, ofColor(50), "Owens et al (http://vis.csail.mit.edu)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("Sound clasification (SoundNet)");
+    s->addMovie("flocking", "/Users/gene/bin/misc/soundnet.mp4", true, 0.1, 0.1, 0.8, 0.8);
+    s->addText(h3, ofColor(50), "Aytar, Vondrick, Torralba (NIPS 2016)", 0.1, 0.0, 0.8);
+    s->addText(h4, ofColor(50), "http://projects.csail.mit.edu/soundnet/", 0.1, 0.92, 0.8);
+    
 }

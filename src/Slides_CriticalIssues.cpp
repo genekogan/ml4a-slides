@@ -37,6 +37,10 @@ void ofApp::CriticalIssues() {
     s->addText(h3, ofColor(0), "\"How would a woman know to apply for a job she never saw advertised? How might a black community learn that it were being overpoliced by software?\" - Kate Crawford", 0.15, 0.51, 0.75);
     s->addText(h4, ofColor(0), "http://www.cmu.edu/news/stories/archives/2015/july/online-ads-research.html", 0.15, 0.95, 0.75);
     
+    s = slideshow.addSlide("Trailblazer");
+    s->addImage("binney", "/Users/gene/bin/misc/stock/binney.jpg", 0.2, 0.1, 0.6, 0.6);
+    s->addText(h2, ofColor(0), "\"It's better than anything that the KGB, the Stasi, or the Gestapo and SS ever had.\"", 0.05, 0.75, 0.75);
+
     s = slideshow.addSlide("Terror Tuesdays");
     s->addImage("napalm", "/Users/gene/bin/misc/stock/obama.jpg", 0.0, 0.0, 0.5, 0.5);
     s->addImage("obama terror fun", "/Users/gene/bin/misc/obama-terror.png", 0.5, 0.0, 0.5, 0.5);
@@ -56,6 +60,19 @@ void ofApp::CriticalIssues() {
     s->addText(h3, ofColor(0), "Vicious cycle: more arrests (to meet quotas) make algorithms favor poor areas more", 0.12, 0.82, 0.82);
     s->addText(h4, ofColor(0), "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing", 0.05, 0.9, 0.82);
     
+    s = slideshow.addSlide("Criminality prediction");
+    s->addImage("phrenology 2", "/Users/gene/bin/misc/ai_phrenology.png", 0.0, 0.1, 0.5, 0.4);
+    s->addImage("phrenology 1", "/Users/gene/bin/misc/ai_phrenology_2.png", 0.0, 0.5, 0.5, 0.4);
+    s->addImage("l'homme criminel", "/Users/gene/bin/misc/lhommecriminel.jpg", 0.5, 0.1, 0.5, 0.9);
+    s->addText(h4, ofColor(0), "Automated Inference on Criminality using Face Images, 2016\nhttps://arxiv.org/abs/1611.04135", 0.05, 0.0, 0.45);
+    s->addText(h4, ofColor(0), "L'uomo delinquente, Cesare Lombroso. 1878", 0.55, 0.0, 0.4);
+    s->addText(h5, ofColor(0), "We find some discriminating structural features for predicting criminality, such as lip curvature, eye inner corner distance, and the so-called nose-mouth angle.", 0.02, 0.9, 0.45);
+    s->addNote("study out of Shanghai Jiao Tong University");
+    s->addNote("\"Unlike a human examiner/judge, a computer vision algorithm or classifier has absolutely no subjective baggages, having no emotions, no biases whatsoever due to past experience, race, religion, political doctrine, gender, age, etc., no mental fatigue, no preconditioning of a bad sleep or meal\"");
+    s->addNote("no discussion of \"historical controversy\"");
+    s->addNote("discriminating structural features");
+    s->addNote("Cesare Lombroso, lombard physician and criminologist who rejected classical school, notion that crime is characteristic of human nature. he believed criminality was inherited, and that someone \"born criminal\" could be identified by physical (congenital) defects.");
+
     s = slideshow.addSlide("AP Hacking + Flash crash");
     s->addImage("flash crash", "/Users/gene/Pictures/Screenshots/flashcrash_tweet.png", 0.0, 0.0, 1.0, 0.5);
     s->addText(h3, ofColor(0), "S&P 500 temporarily lost $136B after the hack", 0.15, 0.6, 0.8);

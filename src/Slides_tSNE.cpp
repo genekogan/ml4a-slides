@@ -1,6 +1,7 @@
 #include "ofApp.h"
 
-void ofApp::TSNE(){
+
+void ofApp::TSNE() {
     s = slideshow.addSlide("t-SNE (Laurens van der Maaten + Geoff Hinton]");
     s->addImage("t-sne", "/Users/gene/bin/misc/stock/tsne.png", 0.0, 0.1, 1.0, 0.9);
     s->addText(h3, ofColor(0), "[http://www.cs.toronto.edu/~hinton/absps/tsne.pdf]", 0.2, 0.0, 0.8);
@@ -20,7 +21,7 @@ void ofApp::TSNE(){
     s->addAction(attd);
 
     s = slideshow.addSlide("t-SNE colors converging in 2d");
-    s->addMovie("t-SNE convergence", "/Users/gene/Downloads/imgs/tsne_manual.mp4", true, 0, 0, 1, 1);
+    s->addMovie("t-SNE convergence", "/Users/gene/bin/tsne/tsne_manual.mp4", true, 0, 0, 1, 1);
     
     s = slideshow.addSlide("reassign t-SNE to grid");
     s->addMovie("grid mario", "/Users/gene/bin/misc/stock/assignment_rasterfairy.mp4", true, 0, 0.05, 0.5, 0.95);

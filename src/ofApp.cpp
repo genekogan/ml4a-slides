@@ -8,7 +8,7 @@ void ofApp::setup(){
         ofSetWindowPosition(ofGetScreenWidth(), 0);
     }
     //ofSetWindowShape(1600, 900);
-    //ofHideCursor();
+    ofHideCursor();
     CGDisplayHideCursor(NULL);
     
     ofSetFullscreen(true);
@@ -31,7 +31,8 @@ void ofApp::setup(){
     h1.load("AndaleMono.ttf", 72);
     h2.load("myriad.ttf", 32);
     h3.load("AndaleMono.ttf", 22);
-    h4.load("AndaleMono.ttf", 15);
+    //h4.load("AndaleMono.ttf", 15);
+    h4.load("AndaleMono.ttf", 18);
     h5.load("AndaleMono.ttf", 12);
     h6.load("verdana.ttf", 36);
     
@@ -43,8 +44,11 @@ void ofApp::setup(){
     
     
     // CONTENT
-    Kikk();
-    //WorkshopKikk();
+    //OpenDotTalk();
+    // mappings between censors and variables
+    //ArtCenterNabi();
+    WorkshopJogja();
+    
     
     
     // after loading slides
@@ -63,7 +67,8 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::drawBgWhite(ofxPPSlide * & slide) {
     ofBackground(255);
-    ofSetHexColor(0x1abc9c);
+    //ofSetHexColor(0x1abc9c);
+    ofSetHexColor(0x9c1abc);
     ofFill();
     ofDrawRectangle(0, 0, ofGetWidth(), 56);
     ofSetColor(255);
@@ -73,7 +78,8 @@ void ofApp::drawBgWhite(ofxPPSlide * & slide) {
 //--------------------------------------------------------------
 void ofApp::drawBgBlack(ofxPPSlide * & slide) {
     ofBackground(32);
-    ofSetHexColor(0x1abc9c);
+  //  ofSetHexColor(0x1abc9c);
+    ofSetHexColor(0x9c1abc);
     ofFill();
     ofDrawRectangle(0, 0, ofGetWidth(), 56);
     ofSetColor(255);
@@ -94,6 +100,7 @@ void ofApp::checkRemoteControl(){
         ofxOscMessage msg;
         osc.getNextMessage(msg);
         string address = msg.getAddress();
+        cout << address << endl;
         float value = msg.getArgAsFloat(0);
         if (address == "/1/push1" && value == 0.0) {
             slideshow.prevSegment();
@@ -184,11 +191,3 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){
 }
-
-
-
-
-
-
-
-
