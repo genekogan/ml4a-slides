@@ -44,7 +44,7 @@ void ofApp::setup(){
 //    darknet.init( cfgfile, weightfile, namesfile );
     
     // Ccv
-//    ccv.setup("/Users/gene/bin/misc/ccv/image-net-2012.sqlite3");
+    ccv.setup("/Users/gene/bin/misc/ccv/image-net-2012.sqlite3");
 
     // background functions
     slideshow.setBackgroundFunction(this, &ofApp::drawBgWhite);
@@ -53,10 +53,7 @@ void ofApp::setup(){
     //slideshow.loadFromExported();
     
     // CONTENT
-//    CreativeAILondon();
-    
     s = slideshow.addSlide("Darknet x ScreenGrab demo");
-    
     
     // after loading slides
     slideshow.setContentRectangle(20, 56, ofGetWidth()-40, ofGetHeight()-56);

@@ -333,7 +333,7 @@ void ofApp::CreativeAILondon(){
 //    s = slideshow.addSlide("");
 //    s->addImage("pj about", "/Users/gene/bin/misc/yolo/pjreddie_about.png", 0, 0, 1, 1);
 
-    s = slideshow.addSlide("Darknet demo");
+    s = slideshow.addSlide("Darknet-YOLO x ScreenGrab");
     DarknetScreenGrabDemo *dnsgd = new DarknetScreenGrabDemo(s, "Darknet Demo", 0, 0, 1, 1);
     dnsgd->setDarknetReference(&darknet);
     s->addAction(dnsgd);
@@ -603,7 +603,6 @@ void ofApp::CreativeAILondon(){
     s->addMovie("mnist", "/Users/gene/bin/misc/stock/mnist_weights_demo.mp4", true, -0.025, 0, 0.65, 0.9);
     s->addMovie("convolution", "/Users/gene/bin/misc/stock/convolution_demo.mp4", true, 0.35, 0.6, 0.72, 0.4);
 
-    
     s = slideshow.addSlide("CNN demo");
     CcvForwardPassDemo *ccvd = new CcvForwardPassDemo(s, "ccv", 0, 0, 1, 1);
     s->addAction(ccvd);
@@ -878,18 +877,18 @@ void ofApp::WorkshopMachinesRoom() {
     s = slideshow.addSlide("ConvnetOSC");
     s->addMovie("convnetosc", "/Users/gene/bin/misc/wekinator-coffee-croissant.mp4", true, 0, 0, 1, 1);
     
-    s = slideshow.addSlide("Reverse Image Search Fast");
-//    ReverseImageSearchFastDemo *risfd = new ReverseImageSearchFastDemo(s, "Reverse Image Search Fast", 0, 0, 1, 1);
-//    risfd->setCcvReference(&ccv);
-//    risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_small.dat");
-//    risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_vecs50k.dat");
-//    risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_vecs145k.dat");
-//    risfd->load("/Users/gene/Teaching/ML4A/ml4a-ofx/apps/ReverseImageSearchFast/bin/data/data_vecs50k.dat");
-//    risfd->runKDTree();
-//    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
-//    s->addAction(risfd);
+    if (REVIMGFAST) {
+        s = slideshow.addSlide("Reverse Image Search Fast");
+        ReverseImageSearchFastDemo *risfd = new ReverseImageSearchFastDemo(s, "Reverse Image Search Fast", 0, 0, 1, 1);
+        risfd->setCcvReference(&ccv);
+        risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_small.dat");
+//        risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_vecs50k.dat");
+//        risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_vecs145k.dat");
+        risfd->runKDTree();
+        s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+        s->addAction(risfd);
+    }
 
-    
     s = slideshow.addSlide("Image t-SNE");
     s->addScrollableImage("animal t-sne", "/Users/gene/bin/tsne/tsne-animals.png", 0.0, 0.0, 1.0, 1.0);
     

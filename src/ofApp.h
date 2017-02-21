@@ -1,9 +1,10 @@
 #pragma once
 
-#define IS_PROJECTING true
+#define IS_PROJECTING false
 #define HIDE_CURSOR false
 #define USE_SECOND_SCREEN false
 #define REVIMGFAST true
+
 
 #include "ofMain.h"
 #include "ofxDarknet.h"

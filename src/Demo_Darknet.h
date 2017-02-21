@@ -51,13 +51,13 @@ public:
     //            pixels.resize(ofGetWidth(), ofGetHeight());
                 pw = pixels.getWidth();
                 ph = pixels.getHeight();
-//                detections = darknet->yolo(pixels, thresh);
+                detections = darknet->yolo(pixels, thresh);
             }
         }
         else {
             grab.update();
             if (grab.isFrameNew()){
-//                detections = darknet->yolo( grab.getPixels(), thresh );
+                detections = darknet->yolo( grab.getPixels(), thresh );
                 pw = grab.getPixels().getWidth();
                 ph = grab.getPixels().getHeight();
             }
