@@ -73,13 +73,14 @@ void ofApp::RecurseCenter() {
     
     s = slideshow.addSlide("Kinect Projector Toolkit");
     s->addMovie("KPT", "/Users/gene/bin/opera-toolkit/colin-ribbons-2_nosound.mp4", true, 0.0, 0, 0.5, 0.6);
-    s->addMovie("KPT", "/Users/gene/Writing/_Talks/StoryOfLight/KPT/Silhouettes @ Saigon Ranger 12:5:2014.mp4", true, 0.4, 0.4, 0.64, 0.62);
+    s->addMovie("KPT", "/Users/gene/bin/kinect-projector-toolkit/Silhouettes @ Saigon Ranger 12:5:2014.mp4", true, 0.4, 0.4, 0.64, 0.62);
     
     s = slideshow.addSlide("Machine Yearning");
     s->addMovie("machine yearning", "/Users/gene/bin/machine-yearning/machine-yearning-gopro.mp4", true, 0.0, 0, 1, 1);
     
     s = slideshow.addSlide("EcoHacker-Build");
-    s->addImage("ecohack", "/Users/gene/Writing/_Talks/BabyCastles/ecohack/_mg_7093_14926714478_o.jpg", 0, 0, 1, 1);
+    s->addImage("ecohack", "/Users/gene/bin/ecohacker-build/_mg_7093_14926714478_o.jpg", 0, 0, 1, 1);
+    
     
     ////////////////////////////////////////
     // DEEPDREAM
@@ -286,7 +287,7 @@ void ofApp::RecurseCenter() {
     s->addMovie("fb", "/Users/gene/bin/misc/DoodleClassifier_tutorial.mp4", true, 0.0, 0.00, 1.0, 1.0);
     
     s = slideshow.addSlide("Project with Andreas Refsgaard");
-    s->addImage("fb", "/Users/gene/Pictures/Screenshots/Screen Shot 2016-12-01 at 4.19.18 PM.png", 0.0, 0.00, 1.0, 1.0);
+    s->addImage("fb", "/Users/gene/bin/ml4a/nabimusic2.png", 0.0, 0.00, 1.0, 1.0);
     
     s = slideshow.addSlide("DoodleTunes");
     s->addMovie("fb", "/Users/gene/bin/ml4a/Doodle Tunes-HD.mp4", true, 0.0, 0.00, 1.0, 1.0);

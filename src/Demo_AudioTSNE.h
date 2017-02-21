@@ -8,9 +8,11 @@ class ofxPPSlide;
 
 class AudioClip {
 public:
-    void setup(string path, float x, float y) {
+    void setup(string path, float x, float y, ofRectangle home) {
         sound.load(path);
-        point.set(ofGetWidth() * x, ofGetHeight() * y);
+        point.set(ofMap(x, 0, 1, home.getX(), home.getX() + home.getWidth()),
+                  ofMap(y, 0, 1, home.getY(), home.getY() + home.getHeight()));
+//        point.set(ofGetWidth() * x, ofGetHeight() * y);
         t = 0;
     }
     void update() {
@@ -73,7 +75,7 @@ public:
              float y = result[i]["point"][1].asFloat();
          
              AudioClip newSound;
-             newSound.setup(path, x, y);
+             newSound.setup(path, x, y, box);
              sounds.push_back(newSound);
          }
         

@@ -1,7 +1,12 @@
 ofxCcv
+ofxCv
+ofxDarknet
+ofxGui
 ofxInstagram
 ofxJSON
+ofxKDTree
 ofxLearn
-ofxOsc
+ofxOpenCv
 ofxPwrrPoint
+ofxScreenGrab
 ofxThreadedImageLoader
