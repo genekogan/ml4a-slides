@@ -1576,6 +1576,7 @@ void ofApp::HowDeepIsYourDream() {
     s->addImage("invest", "/Users/gene/bin/misc/ILSVRC-nvidia.png", 0.0, 0.55, 0.4, 0.4);
     s->addText(h3, ofColor(80), "\"Machine learning is a core, transformative way by which weÕre rethinking everything weÕre doing,\" - Sundar Pichai, Google CEO", 0.45, 0.7, 0.4);
     
+
     ////////////////////////////////////////
     // CRITICAL ISSUES
     
@@ -1979,7 +1980,7 @@ void ofApp::ArtCenterNabi() {
     
     s = slideshow.addSlide("Project with Andreas Refsgaard");
     s->addImage("fb", "/Users/gene/Pictures/Screenshots/Screen Shot 2016-12-01 at 4.19.18 PM.png", 0.0, 0.00, 1.0, 1.0);
-    
+
     s = slideshow.addSlide("I will do my best to play a beautiful and interesting game");
     s->addMovie("t-SNE convergence", "/Users/gene/Downloads/imgs/tsne_manual.mp4", true, 0, 0, 1, 1);
     s->addRect(ofColor(255,160), 0.005, 0.19, 0.33, 0.25);

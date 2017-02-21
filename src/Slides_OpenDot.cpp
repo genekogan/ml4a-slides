@@ -732,7 +732,7 @@ void ofApp::OpenDot_ConvnetApplicationsAdvanced() {
     s->addText(h4, ofColor(0), "http://dcgi.fel.cvut.cz/home/sykorad/stylit", 0.1, 0.0, 0.8);
     
     s = slideshow.addSlide("Colorization");
-    s->addImage("Colorization", "/Users/gene/Learn/siggraph2016_colorization/example_results.png", 0, 0.1, 1, 0.9);
+    s->addImage("Colorization", "/Users/gene/bin/misc/colorization/example_results.png", 0, 0.1, 1, 0.9);
     s->addText(h4, ofColor(0), "http://hi.cs.waseda.ac.jp/~iizuka/projects/colorization/en/", 0.1, 0.0, 0.8);
     
     s = slideshow.addSlide("Coloring baby photos");

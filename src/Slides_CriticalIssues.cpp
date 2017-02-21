@@ -86,4 +86,14 @@ void ofApp::CriticalIssues() {
     s->addText(h3, ofColor(0), "\"Practical AI successes, computational programs that actually achieved intelligent behavior, were soon assimilated into whatever application domain they were found to be useful in, and became silent partners alongside other problem-solving approaches, which left AI researchers to deal only with the \"failures,\" the tough nuts that couldn't yet be cracked.\" - Pamela McCorduck", 0.05, 0.1, 0.85);
     s->addText(h3, ofColor(0), "\"This paradox resulted from the fact that whenever an AI research project made a useful new discovery, that product usually quickly spun off to form a new scientific or commercial specialty with its own distinctive name. These changes in name led outsiders to ask, Why do we see so little progress in the central field of artificial intelligence?\" - Marvin Minsky", 0.05, 0.5, 0.85);
 
+    
+    
+    ///////////// new
+    s = slideshow.addSlide("Super-resolution => Deblurring");
+    s->addImage("deblur", "/Users/gene/bin/misc/super-resolution-ground-truth.jpg", 0.0, 0.2, 1.0, 0.75);
+    s->addText(h3, ofColor(0), "https://arxiv.org/abs/1702.00783", 0.1, 0.01, 0.8);
+
+    
+    
+    
 }

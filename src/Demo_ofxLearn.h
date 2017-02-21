@@ -40,7 +40,7 @@ public:
             }
             trainingExamples.push_back(sample);
             trainingLabels.push_back(label);
-            classifier.addTrainingInstance(sample, label);
+            classifier.addSample(sample, label);
         }
         classifier.train();
     }
@@ -124,8 +124,8 @@ public:
             y_ = ofClamp(y_, 0, 1);
             vector<double> sample;
             sample.push_back(x_);
-            mlp.addTrainingInstance(sample, y_);
-            svr.addTrainingInstance(sample, y_);
+            mlp.addSample(sample, y_);
+            svr.addSample(sample, y_);
             trainingExamples.push_back(sample);
             trainingLabels.push_back(y_);
         }
@@ -206,7 +206,7 @@ public:
         for (int i = 0; i < numPoints; i++) {
             instances[i].push_back( ofRandom(1) );
             instances[i].push_back( ofRandom(1) );
-            clusterer.addTrainingInstance( instances[i] );
+            clusterer.addSample( instances[i] );
         }
         
         // we tell ofxLearn to assign our NUMPOINTS points into NUMCLUSTERS clusters.

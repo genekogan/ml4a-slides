@@ -11,7 +11,7 @@
 #include "Demo_ReverseImageSearch.h"
 
 
-#define OSC_REMOTE_ENABLED 1
+#define OSC_REMOTE_ENABLED 0
 #define USE_SECOND_SCREEN 0
 
 
@@ -84,6 +84,10 @@ public:
     void OpenDotTalk();
     void HowDeepIsYourDream();
     void ArtCenterNabi();
+    void RecurseCenter();
+    void ITPxStory();
+    void CreativeAILondon();
+    void MattTalk();
     
     /* SchoolOfMaaa */
     void NeuralAesthetic1();
@@ -116,6 +120,8 @@ public:
     void WorkshopKikk();
     void WorkshopArtCenterNabi();
     void WorkshopJogja();
+    void WorkshopRecurseCenter();
+    void WorkshopRecurseCenterDeepLearning();
     
     ////// Assets
     ofxPwrrPoint slideshow;

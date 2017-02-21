@@ -42,14 +42,62 @@ void ofApp::setup(){
     // before loading slides
     //slideshow.loadFromExported();
     
+    s = slideshow.addSlide("Super-resolution => Deblurring");
+    s->addImage("deblur", "/Users/gene/bin/misc/super-resolution-ground-truth.jpg", 0.0, 0.2, 1.0, 0.75);
+    s->addText(h3, ofColor(0), "https://arxiv.org/abs/1702.00783", 0.1, 0.01, 0.8);
+
+    CreativeAILondon();
+    
+    
+ Kikk();
+ Betahaus();
+ OpenDotTalk();
+ HowDeepIsYourDream();
+ ArtCenterNabi();
+ RecurseCenter();
+ ITPxStory();
+ CreativeAILondon();
+ MattTalk();
+
+    
     
     // CONTENT
-    //OpenDotTalk();
-    // mappings between censors and variables
-    //ArtCenterNabi();
-    WorkshopJogja();
     
     
+    
+    
+    /*
+    s = slideshow.addSlide("Plug & Play Generative Networks");
+    s->addImage("PPGN", "/Users/gene/bin/misc/ppgn_image_captioning.jpg", 0, 0.05, 1, 0.97);
+    s->addText(h4, ofColor(0), "http://www.evolvingai.org/ppgn", 0.1, 0.0, 0.8);
+
+    s = slideshow.addSlide("Objectifier (Bjørn Karmann, CIID)");
+    s->addImage("objectifier", "/Users/gene/bin/misc/prototype_objectifier.jpg", 0, 0, 0.6, 0.55);
+    s->addMovie("objectifier", "/Users/gene/bin/misc/prototype_objectifier.mp4", true, 0.32, 0.4, 0.7, 0.6);
+    s->addText(h4, ofColor(0), "bjoernkarmann.dk/objectifier", 0.65, 0.0, 0.4);
+    
+    s = slideshow.addSlide("Fukushima's Neocognitron (1982) and Hubel/Wiesel");
+    s->addImage("hubel wiesel", "/Users/gene/bin/misc/neocognitron.png", 0, 0.1, 0.5, 0.5);
+    s->addImage("hubel wiesel", "/Users/gene/bin/misc/hubel1.jpg", 0.5, 0.05, 0.5, 1);
+    s->addImage("hubel wiesel", "/Users/gene/bin/misc/hubel2.jpg", 0, 0.6, 0.5, 0.4);
+    s->addText(h4, ofColor(0), "Hubel, Wiesel 1962: Receptive fields, binocular interaction and functional architecture in the cat's visual cortex", 0.51, 0.0, 0.4);
+
+    s = slideshow.addSlide("Tele-captioning skype");
+    s->addImage("skype1", "/Users/gene/bin/misc/densecap-skype_2.png", 0.32, 0.46, 0.7, 0.65);
+    s->addImage("skype1", "/Users/gene/bin/misc/densecap-skype_1.png", 0, 0.0, 0.7, 0.65);
+
+
+    // nsfw
+    // - obscene machine
+//
+//
+     */
+    
+    
+    //WorkshopRecurseCenterDeepLearning();
+    
+    //RIS + t-SNe
+    // audio t-SNE
     
     // after loading slides
     slideshow.setContentRectangle(20, 56, ofGetWidth()-40, ofGetHeight()-56);
