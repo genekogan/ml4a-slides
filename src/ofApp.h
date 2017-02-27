@@ -90,6 +90,7 @@ public:
     void RecurseCenter();
     void ITPxStory();
     void CreativeAILondon();
+    void MLParis();
     void MattTalk();
     
     /* SchoolOfMaaa */
@@ -131,6 +132,7 @@ public:
     ofxPwrrPoint slideshow;
     ofxPPSlide *s;
     ofTrueTypeFont h1, h2, h3, h4, h5, h6;
+    bool isPaused;
     
     // Shared
     ofxDarknet darknet;
@@ -139,23 +141,69 @@ public:
     //ofxOscReceiver osc;
     //int idx=0;
     
+    
+    void ArtProjects() {
+        //alt-AI + ml4a projects + other
+        // sketch2cat
+    }
+    
     void UnsortedSlides() {
         
-        s = slideshow.addSlide("Reverse Image Search Fast");
-        ReverseImageSearchFastDemo *risfd = new ReverseImageSearchFastDemo(s, "Reverse Image Search Fast", 0, 0, 1, 1);
-        risfd->setCcvReference(&ccv);
-    //    risfd->load("/Users/gene/Teaching/ML4A/ml4a-ofx/apps/ReverseImageSearchLive/bin/data/data_vecs50k.dat");
-        risfd->load("/Users/gene/Teaching/ML4A/ml4a-ofx/apps/ReverseImageSearchFast/bin/data/data_vecs50k.dat");
-        risfd->runKDTree();
-        s->setBackgroundFunction(this, &ofApp::drawBgBlack);
-        s->addAction(risfd);
 
+        // biomedical applications
+        // Mitosis Detection in Breast Cancer Histology Images with Deep Neural Networks
+        // people.idsia.ch/~ciresan/data/miccai2013.pdf
+        // deep learning + bio list https://followthedata.wordpress.com/2015/12/21/list-of-deep-learning-implementations-in-biology/
+        // and https://arxiv.org/pdf/1603.06430.pdf
+     
+        // applications
+        //  - self-driving cars
+        // - semantic segmentation https://pdfs.semanticscholar.org/ac28/805da20e06ffc51307683d2dc90841a206d8.pdf
+        // - face identification https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf
+        // - image captioning
+        // - wavenets
+        // - galaxy challenge https://arxiv.org/abs/1503.07077
+        // - aerial image labeling https://www.cs.toronto.edu/~vmnih/docs/Mnih_Volodymyr_PhD_Thesis.pdf
+        // - alphago/atari/doom/starcraft and DQL
         
-        s = slideshow.addSlide("Darknet x ScreenGrab demo");
-        DarknetScreenGrabDemo *dnsgd = new DarknetScreenGrabDemo(s, "Darknet Demo", 0, 0, 1, 1);
-        dnsgd->setDarknetReference(&darknet);
-        s->addAction(dnsgd);
-    
+        // image applications
+        // - superresolution / debluring / enhancement
+        // - depth estimation
+        // - others
+        
+        // /Users/gene/Downloads/karpathy-slides/IMG_4633.PNG
+        // active research in architecture
+        // densely connected convnets, huang et al
+        // resnets
+        // deeply fused nets
+        
+        
+        // tasks in CV
+        // - classification
+        // - localization
+        // - classification + localization = object detection
+        // - segmentation / semantic segmentation
+        // - dense captioning
+        
+        // meta
+        // - resnets of resnets multilevel residual networks zhang et al
+        // - learning gradient descent by gradient descent
+        // - attention/memory - learning copy/paste
+        
+        
+        // batch norm
+        
+        
+        
+        s = slideshow.addSlide("Computer vision pre-deep learning");
+        
+        
+        
+        s = slideshow.addSlide("Residual networks");
+        s->addImage("deblur", "/Users/gene/bin/misc/residual_building_block.png", 0.05, 0.3, 0.4, 0.4);
+        s->addImage("deblur", "/Users/gene/bin/misc/resnet.png", 0.7, 0.0, 0.305, 1.0);
+        s->addText(h3, ofColor(0), "He et al (Microsoft Research, 2015)\narxiv.org/pdf/1512.03385.pdf", 0.01, 0.0, 0.6);
+        
         
         s = slideshow.addSlide("Super-resolution => Deblurring");
         s->addImage("deblur", "/Users/gene/bin/misc/super-resolution-ground-truth.jpg", 0.0, 0.2, 1.0, 0.75);
@@ -165,7 +213,7 @@ public:
         s->addImage("PPGN", "/Users/gene/bin/misc/ppgn_image_captioning.jpg", 0, 0.05, 1, 0.97);
         s->addText(h4, ofColor(0), "http://www.evolvingai.org/ppgn", 0.1, 0.0, 0.8);
         
-        s = slideshow.addSlide("Objectifier (Bj√∏rn Karmann, CIID)");
+        s = slideshow.addSlide("Objectifier (Bjoern Karmann, CIID)");
         s->addImage("objectifier", "/Users/gene/bin/misc/prototype_objectifier.jpg", 0, 0, 0.6, 0.55);
         s->addMovie("objectifier", "/Users/gene/bin/misc/prototype_objectifier.mp4", true, 0.32, 0.4, 0.7, 0.6);
         s->addText(h4, ofColor(0), "bjoernkarmann.dk/objectifier", 0.65, 0.0, 0.4);

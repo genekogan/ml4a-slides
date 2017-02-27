@@ -20,6 +20,7 @@ void ofApp::setup(){
     h5.load("AndaleMono.ttf", 12);
     h6.load("verdana.ttf", 36);
 
+    // color of words
     
     //ofSetWindowShape(1600, 900);
     ofSetFullscreen(true);
@@ -53,13 +54,30 @@ void ofApp::setup(){
     //slideshow.loadFromExported();
     
     // CONTENT
-    s = slideshow.addSlide("Darknet x ScreenGrab demo");
+//    UnsortedSlides();
+//    MattTalk();
+    MLParis();
+    ITPxStory();
+    
+    s = slideshow.addSlide("Darknet-YOLO x ScreenGrab");
+
+    s = slideshow.addSlide("Reverse Image Search Fast");
+    ReverseImageSearchFastDemo *risfd = new ReverseImageSearchFastDemo(s, "Reverse Image Search Fast", 0, 0, 1, 1);
+    risfd->setCcvReference(&ccv);
+    risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_small.dat");
+    //        risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_vecs50k.dat");
+    //        risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_vecs145k.dat");
+    risfd->runKDTree();
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addAction(risfd);
+
     
     // after loading slides
     slideshow.setContentRectangle(20, 56, ofGetWidth()-40, ofGetHeight()-56);
     slideshow.printStats();
     slideshow.wrapNotes();
     slideshow.preloadAssets();
+    isPaused = false;
     //slideshow.exportAssets();
     //slideshow.exportScreenshots();
 
@@ -95,6 +113,7 @@ void ofApp::update(){
 //    if (OSC_REMOTE_ENABLED) {
 //        checkRemoteControl();
 //    }
+    if (isPaused)   return;
     slideshow.update();
 }
 
@@ -117,7 +136,11 @@ void ofApp::checkRemoteControl(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    if (isPaused)   return;
     slideshow.draw();
+    if (ofGetKeyPressed(OF_KEY_SHIFT)){
+        cout << ofToString(ofGetFrameRate()) << endl;
+    }
 }
 
 //--------------------------------------------------------------
@@ -148,6 +171,15 @@ void ofApp::mouseScrolled(ofMouseEventArgs & args){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+    if (key=='?') {
+        if (isPaused) {
+            ofSetFrameRate(60);
+            isPaused = false;
+        } else {
+            ofSetFrameRate(1);
+            isPaused = true;
+        }
+    }
     slideshow.keyPressed(key);
 }
 
