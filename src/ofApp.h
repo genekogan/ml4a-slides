@@ -18,6 +18,7 @@
 #include "Demo_CubistMirror.h"
 #include "Demo_ReverseImageSearch.h"
 #include "Demo_ReverseImageSearchFast.h"
+#include "Demo_ReverseObjectSearchFast.h"
 
 class ofApp : public ofBaseApp{
 public:
@@ -61,6 +62,7 @@ public:
     void ReinforcementLearning();
     void CriticalIssues();
     void SoundResearch();
+    void Pix2Pix();
 
     /* Meta */
     void ML4A();
@@ -127,6 +129,7 @@ public:
     void WorkshopRecurseCenter();
     void WorkshopRecurseCenterDeepLearning();
     void WorkshopMachinesRoom();
+    void WorkshopParsons();
     
     ////// Assets
     ofxPwrrPoint slideshow;
