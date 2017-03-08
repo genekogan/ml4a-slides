@@ -1,6 +1,6 @@
 #pragma once
 
-#define IS_PROJECTING false
+#define IS_PROJECTING true
 #define HIDE_CURSOR false
 #define USE_SECOND_SCREEN false
 #define REVIMGFAST true
@@ -39,6 +39,7 @@ public:
     void gotMessage(ofMessage msg);
     
     void checkRemoteControl();
+    void checkIfCorrectCam();
     
     void drawBgWhite(ofxPPSlide * & slide);
     void drawBgBlack(ofxPPSlide * & slide);
@@ -130,6 +131,7 @@ public:
     void WorkshopRecurseCenterDeepLearning();
     void WorkshopMachinesRoom();
     void WorkshopParsons();
+    void WorkshopSpektrum2();
     
     ////// Assets
     ofxPwrrPoint slideshow;
@@ -143,7 +145,6 @@ public:
     
     //ofxOscReceiver osc;
     //int idx=0;
-    
     
     void ArtProjects() {
         //alt-AI + ml4a projects + other
@@ -198,14 +199,6 @@ public:
         
         
         
-        s = slideshow.addSlide("Computer vision pre-deep learning");
-        
-        
-        
-        s = slideshow.addSlide("Residual networks");
-        s->addImage("deblur", "/Users/gene/bin/misc/residual_building_block.png", 0.05, 0.3, 0.4, 0.4);
-        s->addImage("deblur", "/Users/gene/bin/misc/resnet.png", 0.7, 0.0, 0.305, 1.0);
-        s->addText(h3, ofColor(0), "He et al (Microsoft Research, 2015)\narxiv.org/pdf/1512.03385.pdf", 0.01, 0.0, 0.6);
         
         
         s = slideshow.addSlide("Super-resolution => Deblurring");
@@ -215,25 +208,7 @@ public:
         s = slideshow.addSlide("Plug & Play Generative Networks");
         s->addImage("PPGN", "/Users/gene/bin/misc/ppgn_image_captioning.jpg", 0, 0.05, 1, 0.97);
         s->addText(h4, ofColor(0), "http://www.evolvingai.org/ppgn", 0.1, 0.0, 0.8);
-        
-        s = slideshow.addSlide("Objectifier (Bjoern Karmann, CIID)");
-        s->addImage("objectifier", "/Users/gene/bin/misc/prototype_objectifier.jpg", 0, 0, 0.6, 0.55);
-        s->addMovie("objectifier", "/Users/gene/bin/misc/prototype_objectifier.mp4", true, 0.32, 0.4, 0.7, 0.6);
-        s->addText(h4, ofColor(0), "bjoernkarmann.dk/objectifier", 0.65, 0.0, 0.4);
-        
-        s = slideshow.addSlide("Fukushima's Neocognitron (1982) and Hubel/Wiesel");
-        s->addImage("hubel wiesel", "/Users/gene/bin/misc/neocognitron.png", 0, 0.1, 0.5, 0.5);
-        s->addImage("hubel wiesel", "/Users/gene/bin/misc/hubel1.jpg", 0.5, 0.05, 0.5, 1);
-        s->addImage("hubel wiesel", "/Users/gene/bin/misc/hubel2.jpg", 0, 0.6, 0.5, 0.4);
-        s->addText(h4, ofColor(0), "Hubel, Wiesel 1962: Receptive fields, binocular interaction and functional architecture in the cat's visual cortex", 0.51, 0.0, 0.4);
-        
-        s = slideshow.addSlide("Tele-captioning skype");
-        s->addImage("skype1", "/Users/gene/bin/misc/densecap-skype_2.png", 0.32, 0.46, 0.7, 0.65);
-        s->addImage("skype1", "/Users/gene/bin/misc/densecap-skype_1.png", 0, 0.0, 0.7, 0.65);
-        
-        s = slideshow.addSlide("");
-        s->addImage("alexnet filters", "/Users/gene/bin/misc/stock/alexnet-firstlayer-filters.jpg", 0, 0, 0.5, 1);
-        s->addImage("alexnet filters", "/Users/gene/bin/misc/stock/alexnet-conv5-filters.jpg", 0.5, 0, 0.5, 1);
+
         
 
         // nsfw

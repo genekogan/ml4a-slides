@@ -1911,6 +1911,10 @@ void ofApp::MattTalk() {
     s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/alexnet-firstlayer-filters.jpg", 0.0, 0.1, 1, 0.8);
     s->addText(h3, ofColor(0), "first layer filters", 0.2, 0.0, 1.0);
     
+    s = slideshow.addSlide("");
+    s->addImage("alexnet filters", "/Users/gene/bin/misc/stock/alexnet-firstlayer-filters.jpg", 0, 0, 0.5, 1);
+    s->addImage("alexnet filters", "/Users/gene/bin/misc/stock/alexnet-conv5-filters.jpg", 0.5, 0, 0.5, 1);
+
     s = slideshow.addSlide("Visualizing convnets (Zeiler + Fergus 2013) [ arxiv.org/abs/1311.2901 ]");
     s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l2.png", 0.0, 0.0, 0.5, 1);
     s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l3.png", 0.5, 0.0, 0.5, 1);
@@ -1975,6 +1979,11 @@ void ofApp::MattTalk() {
     s->addImage("densecap", "/Users/gene/bin/misc/stock/rnn/densecap.png", 0, 0.06, 1, 0.94);
     s->addText(h4, ofColor(0), "http://cs.stanford.edu/people/karpathy/densecap/", 0.01, 0.01, 0.99);
 
+    s = slideshow.addSlide("Residual networks");
+    s->addImage("deblur", "/Users/gene/bin/misc/residual_building_block.png", 0.05, 0.3, 0.4, 0.4);
+    s->addImage("deblur", "/Users/gene/bin/misc/resnet.png", 0.7, 0.0, 0.305, 1.0);
+    s->addText(h3, ofColor(0), "He et al (Microsoft Research, 2015)\narxiv.org/pdf/1512.03385.pdf", 0.01, 0.0, 0.6);
+    
     s = slideshow.addSlide("Deep learning community");
     s->addImage("invest", "/Users/gene/bin/misc/stock/arxiv.png", 0.0, 0.0, 0.45, 0.3);
     s->addImage("invest", "/Users/gene/bin/misc/stock/torch.png", 0.0, 0.33, 0.45, 0.3);

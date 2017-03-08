@@ -3,7 +3,8 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    
+    isPaused = false;
+
     if (USE_SECOND_SCREEN) {
         ofSetWindowPosition(ofGetScreenWidth(), 0);
     }
@@ -11,6 +12,9 @@ void ofApp::setup(){
         ofHideCursor();
         CGDisplayHideCursor(NULL);
     }
+    //if (OSC_REMOTE_ENABLED) {
+    //  osc.setup(8000);
+    //}
     
     // load fonts
     h1.load("AndaleMono.ttf", 72);
@@ -20,28 +24,17 @@ void ofApp::setup(){
     h5.load("AndaleMono.ttf", 12);
     h6.load("verdana.ttf", 36);
     
-    
     //ofSetWindowShape(1600, 900);
     ofSetFullscreen(true);
     
     // make sure USB Camera detected
-    bool foundUsbCam = false;
-    ofVideoGrabber grab;
-    vector<ofVideoDevice> devices = grab.listDevices();
-    for (int i=0; i<devices.size(); i++) {
-        if (devices[i].deviceName == "USB Camera") {
-            foundUsbCam = true;
-        }
-    }
-    if (!foundUsbCam) {
-        ofLog(OF_LOG_NOTICE, "No usb cam found");
-    }
-    
+    checkIfCorrectCam();
+
     // Darknet
     string cfgfile = ofToDataPath( "cfg/yolo9000.cfg" );
     string weightfile = "/Users/gene/Downloads/yolo9000.weights";
     string namesfile = ofToDataPath( "cfg/9k.names" );
-//    darknet.init( cfgfile, weightfile, namesfile );
+    darknet.init( cfgfile, weightfile, namesfile );
     
     // Ccv
     ccv.setup("/Users/gene/bin/misc/ccv/image-net-2012.sqlite3");
@@ -53,36 +46,16 @@ void ofApp::setup(){
     //slideshow.loadFromExported();
     
     // CONTENT
-    UnsortedSlides();
-    MattTalk();
-    Pix2Pix();
-    
-    
-    //    s = slideshow.addSlide("Reverse Object Search Fast");
-    //    ReverseImageSearchFastDemo *risfd = new ReverseImageSearchFastDemo(s, "Reverse Image Search Fast", 0, 0, 1, 1);
-    //    risfd->setCcvReference(&ccv);
-    //    risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_small.dat");
-    //    //        risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_vecs50k.dat");
-    //    //        risfd->load("/Users/gene/bin/ml4a/ReverseImageSearch/data_vecs145k.dat");
-    //    risfd->runKDTree();
-    //    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
-    //    s->addAction(risfd);
-    
+    WorkshopSpektrum2();
     
     // after loading slides
     slideshow.setContentRectangle(20, 56, ofGetWidth()-40, ofGetHeight()-56);
     slideshow.printStats();
     slideshow.wrapNotes();
     slideshow.preloadAssets();
-    isPaused = false;
     //slideshow.exportAssets();
-    //    slideshow.exportScreenshots();
-    
-    //if (OSC_REMOTE_ENABLED) {
-    //  osc.setup(8000);
-    //}
+    //slideshow.exportScreenshots();
 }
-
 
 //--------------------------------------------------------------
 void ofApp::drawBgWhite(ofxPPSlide * & slide) {
@@ -130,6 +103,21 @@ void ofApp::checkRemoteControl(){
 //            slideshow.nextSegment();
 //        }
 //    }
+}
+
+//--------------------------------------------------------------
+void ofApp::checkIfCorrectCam() {
+    bool foundUsbCam = false;
+    ofVideoGrabber grab;
+    vector<ofVideoDevice> devices = grab.listDevices();
+    for (int i=0; i<devices.size(); i++) {
+        if (devices[i].deviceName == "USB Camera") {
+            foundUsbCam = true;
+        }
+    }
+    if (!foundUsbCam) {
+        ofLog(OF_LOG_NOTICE, "No usb cam found");
+    }
 }
 
 //--------------------------------------------------------------
@@ -219,9 +207,11 @@ void ofApp::mouseExited(int x, int y){
 //--------------------------------------------------------------
 void ofApp::gotMessage(ofMessage msg){
     
-    
 }
 
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){
 }
+
+
+
