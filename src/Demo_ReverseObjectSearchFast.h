@@ -18,6 +18,7 @@ public:
         vector<float> encoding;
         vector<double> projectedEncoding;
         string filename;
+        float probability;
         ofRectangle crop;
     };
 
@@ -248,29 +249,37 @@ public:
     }
     
     void extractFeaturesForDirectory(string directory) {
-        ofLog() << "Gathering images recursively from "+directory;
+        baseDir = directory;
+        ofLog() << "Gathering images recursively from "+baseDir;
         candidateFiles.clear();
-        ofDirectory dir = ofDirectory(directory);
+        ofDirectory dir = ofDirectory(baseDir);
         getImagePathsRecursive(dir);
-        int numImages = 10000; //candidateFiles.size();
+        int numImages = candidateFiles.size();
         for(int i=0; i<numImages; i++) {
-            if (i % 5 == 0) ofLog() << "extracting features for image "<<i<<"/"<<numImages;
+            if (i % 200 == 0) ofLog() << "extracting features for image "<<i<<"/"<<numImages;
+            string imagePath = candidateFiles[i].getAbsolutePath();
+            ofStringReplace(imagePath, dir.getAbsolutePath(), "");
+            if (imageMap.count(imagePath)) {
+                continue;
+            }
             bool success = activeImage.load(candidateFiles[i]);
             if (success) {
                 detections = darknet->yolo(activeImage, yoloThreshold, yoloMaxOverlap);
                 for (int j=0; j<detections.size(); j++) {
                     Image image;
-                    image.filename = candidateFiles[i].getAbsolutePath();
+                    image.filename = imagePath;
                     image.encoding = detections[j].features;
                     image.crop = detections[j].rect;
+                    image.probability = detections[j].probability;
                     images.push_back(image);
+                    imageMap[image.filename] = true;
                 }
             }
             else {
                 ofLog(OF_LOG_ERROR, "Failed to load image: "+candidateFiles[i].getAbsolutePath());
             }
         }
-        ofLog() << "finished extracting features for "<<images.size()<<" images.";
+        ofLog() << "finished extracting features for "<<images.size()<<" objects from "<<imageMap.size()<<" images.";
     }
     
     void runPCAonImageSet(){
@@ -316,54 +325,81 @@ public:
         ofLog() << "finished constructiong kd-tree for "<<images.size()<<" images in "<<(ofGetElapsedTimef() - startTime)<<" sec";
     }
     
-    void save(string path) {
+    void save(string path, bool featuresOnly=false) {
         ofLog()<<"Saving to "<<path;
         const char *filepath = path.c_str();
         ofstream fout(filepath, ios::binary);
         vector<vector<double> > projectedEncodings;
+        vector<vector<float> > encodings;
         vector<vector<float> > crops;
+        vector<float> probabilities;
         vector<string> filenames;
         for (auto image : images) {
+            if (featuresOnly) {
+                encodings.push_back(image.encoding);
+            }
             projectedEncodings.push_back(image.projectedEncoding);
             crops.push_back(vector<float>{image.crop.x, image.crop.y, image.crop.width, image.crop.height});
+            probabilities.push_back(image.probability);
             filenames.push_back(image.filename);
+        }
+        if (featuresOnly) {
+            dlib::serialize(encodings, fout);
         }
         dlib::serialize(projectedEncodings, fout);
         dlib::serialize(crops, fout);
+        dlib::serialize(probabilities, fout);
         dlib::serialize(filenames, fout);
-        //    dlib::serialize(rp.getE(), fout);
-        dlib::serialize(rp.getV(), fout);
-        dlib::serialize(rp.getColumnMeans(), fout);
-        ofLog()<<"Saved "<<images.size()<<" image vectors to "<<path<<endl;
+        if (!featuresOnly) {
+            //dlib::serialize(rp.getE(), fout);
+            dlib::serialize(rp.getV(), fout);
+            dlib::serialize(rp.getColumnMeans(), fout);
+        }
+        ofLog()<<"Saved "<<images.size()<<" image vectors from "<<imageMap.size()<<" images to "<<path<<endl;
     }
     
-    void load(string path) {
+    void load(string path, string baseDir, bool featuresOnly=false) {
+        this->baseDir = baseDir;
         ofLog()<<"Loading from "<<path;
         const char *filepath = path.c_str();
         ifstream fin(filepath, ios::binary);
         vector<vector<double> > projectedEncodings;
-        vector<vector<float>> crops;
+        vector<vector<float> > encodings;
+        vector<vector<float> > crops;
+        vector<float> probabilities;
         vector<string> filenames;
         vector<double> column_means;
         dlib::matrix<double, 0, 0> E, V;
+        if (featuresOnly) {
+            dlib::deserialize(encodings, fin);
+        }
         dlib::deserialize(projectedEncodings, fin);
         dlib::deserialize(crops, fin);
+        dlib::deserialize(probabilities, fin);
         dlib::deserialize(filenames, fin);
-        //    dlib::deserialize(E, fin);
-        dlib::deserialize(V, fin);
-        dlib::deserialize(column_means, fin);
-        //    rp.setE(E);
-        rp.setV(V);
-        rp.setColumnMeans(column_means);
+        if (!featuresOnly) {
+            //dlib::deserialize(E, fin);
+            dlib::deserialize(V, fin);
+            dlib::deserialize(column_means, fin);
+            //rp.setE(E);
+            rp.setV(V);
+            rp.setColumnMeans(column_means);
+        }
+        imageMap.clear();
         images.clear();
         for (int i=0; i<filenames.size(); i++) {
             Image image;
             image.filename = filenames[i];
+            if (featuresOnly) {
+                image.encoding = encodings[i];
+            }
             image.projectedEncoding = projectedEncodings[i];
-            image.crop.set(crops[i][0], crops[i][1], crops[i][2], crops[i][3]);
+            image.crop = ofRectangle(crops[i][0], crops[i][1], crops[i][2], crops[i][3]);
+            image.probability = probabilities[i];
             images.push_back(image);
+            imageMap[image.filename] = true;
         }
-        ofLog()<<"Loaded "<<images.size()<<" image vectors "<<path<<endl;
+        ofLog()<<"Loaded "<<images.size()<<" image vectors from "<<imageMap.size()<<" images in "<<path<<endl;
     }
     
     void saveKDTree(string path) {
@@ -390,22 +426,22 @@ public:
     void loadDialog() {
         //load(ofToDataPath("data.dat"));
         ofFileDialogResult result = ofSystemLoadDialog("Load saved feature vectors");
+        ofFileDialogResult result2 = ofSystemLoadDialog("Where is the dataset located?", true);
         if (result.bSuccess) {
             string path = result.getPath();
-            load(path);
+            string baseDir_ = result2.getPath();
+            load(path, baseDir_);
             runKDTree();
         }
     }
     
     void extractDirectory() {
-        //    ofFileDialogResult result = ofSystemLoadDialog("Which directory to scan?", true);
-        //    if (result.bSuccess) {
-        //        string folder = result.getPath();
-        string folder = "/Users/gene/Teaching/ML4A/ml4a-ofx/apps/ReverseImageSearchFast/bin/data/mscoco";
-        extractFeaturesForDirectory(folder);
-        //        runPCAonImageSet();
-        //        runKDTree();
-        //    }
+        ofFileDialogResult result = ofSystemLoadDialog("Which directory to scan?", true);
+        if (result.bSuccess) {
+            extractFeaturesForDirectory(result.filePath);
+            runPCAonImageSet();
+            runKDTree();
+        }
     }
     
     bool mouseMoved(int x, int y ){
@@ -447,7 +483,9 @@ public:
     }
 
     vector<Image> images;
+    map<string, bool> imageMap;
     vector<ofFile> candidateFiles;
+    string baseDir;
     
     ofxDarknet *darknet;
     ofxLearnRandomProjection rp;

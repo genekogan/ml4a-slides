@@ -1818,7 +1818,7 @@ void ofApp::MLParis(){
     s = slideshow.addSlide("Reverse Object Search Fast");
     ReverseObjectSearchFastDemo *rosd = new ReverseObjectSearchFastDemo(s, "Reverse Object Search Fast", 0, 0, 1, 1);
     rosd->setDarknetReference(&darknet);
-    rosd->load("/Users/gene/Code/of_v0.9.6_osx_release/apps/myApps/RISDarknetScratch/bin/data/risd_rp256_40k.dat");
+    rosd->load("/Users/gene/Code/of_v0.9.6_osx_release/apps/myApps/RISDarknetScratch/bin/data/risd_rp256_40k.dat", "/Users/gene/Teaching/ML4A/ml4a-ofx/apps/ReverseImageSearchFast/bin/data/mscoco");
     rosd->runKDTree();
     s->setBackgroundFunction(this, &ofApp::drawBgBlack);
     s->addAction(rosd);

@@ -95,6 +95,7 @@ public:
     void CreativeAILondon();
     void MLParis();
     void MattTalk();
+    void ScopeSessions();
     
     /* SchoolOfMaaa */
     void NeuralAesthetic1();
