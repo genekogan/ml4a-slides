@@ -131,7 +131,7 @@ public:
             x = box.getX() + margin;
         }
         
-        ofDrawBitmapStringHighlight("Query image", 210, 13);
+        ofDrawBitmapStringHighlight("Query image", 210, box.getY()+13);
         ofDrawBitmapStringHighlight("Nearest neighbor images:", margin + 5, ofGetHeight() - numRows * (thumbHeight + margin) + 13);
     }
 
@@ -207,7 +207,7 @@ public:
         tScreen = false;
         tVideo = false;
         int idx = floor(ofRandom(images.size()));
-        activeImage.load(images[idx].filename);
+        activeImage.load(baseDir+"/"+images[idx].filename);
         detections = darknet->yolo(activeImage, yoloThreshold, yoloMaxOverlap);
         queryResults();
     }
@@ -221,7 +221,7 @@ public:
             kdTree.getKNN(projectedEncoding, numResults, indexes, distances);
             resultImages[i].resize(numResults);
             for (int j=0; j<numResults; j++) {
-                resultImages[i][j].load(images[indexes[j]].filename);
+                resultImages[i][j].load(baseDir+"/"+images[indexes[j]].filename);
                 float x = images[indexes[j]].crop.getX();
                 float y = images[indexes[j]].crop.getY();
                 float w = images[indexes[j]].crop.getWidth();
@@ -358,8 +358,8 @@ public:
         ofLog()<<"Saved "<<images.size()<<" image vectors from "<<imageMap.size()<<" images to "<<path<<endl;
     }
     
-    void load(string path, string baseDir, bool featuresOnly=false) {
-        this->baseDir = baseDir;
+    void load(string path, string baseDir_, bool featuresOnly=false) {
+        baseDir = baseDir_;
         ofLog()<<"Loading from "<<path;
         const char *filepath = path.c_str();
         ifstream fin(filepath, ios::binary);

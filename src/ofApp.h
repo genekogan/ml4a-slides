@@ -73,6 +73,7 @@ public:
     void Misc();
     void Background();
     void Archive();
+    void ArtProjects();
     
     /* Special */
     void AltAI();
@@ -134,6 +135,12 @@ public:
     void WorkshopParsons();
     void WorkshopSpektrum2();
     
+    /* Strelka */
+    void WorkshopStrelkaIntro();
+    void WorkshopStrelkaOverviewML();
+    void WorkshopStrelkaNeuralNets();
+    void WorkshopStrelkaNeuralGenerativeModels();
+    
     ////// Assets
     ofxPwrrPoint slideshow;
     ofxPPSlide *s;
@@ -147,11 +154,6 @@ public:
     //ofxOscReceiver osc;
     //int idx=0;
     
-    void ArtProjects() {
-        //alt-AI + ml4a projects + other
-        // sketch2cat
-    }
-    
     void UnsortedSlides() {
         
 
@@ -162,7 +164,7 @@ public:
         // and https://arxiv.org/pdf/1603.06430.pdf
      
         // applications
-        //  - self-driving cars
+        // - self-driving cars
         // - semantic segmentation https://pdfs.semanticscholar.org/ac28/805da20e06ffc51307683d2dc90841a206d8.pdf
         // - face identification https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf
         // - image captioning
@@ -182,33 +184,13 @@ public:
         // resnets
         // deeply fused nets
         
-        
-        // tasks in CV
-        // - classification
-        // - localization
-        // - classification + localization = object detection
-        // - segmentation / semantic segmentation
-        // - dense captioning
-        
         // meta
         // - resnets of resnets multilevel residual networks zhang et al
         // - learning gradient descent by gradient descent
         // - attention/memory - learning copy/paste
         
-        
         // batch norm
         
-        
-        
-        
-        
-        s = slideshow.addSlide("Super-resolution => Deblurring");
-        s->addImage("deblur", "/Users/gene/bin/misc/super-resolution-ground-truth.jpg", 0.0, 0.2, 1.0, 0.75);
-        s->addText(h3, ofColor(0), "https://arxiv.org/abs/1702.00783", 0.1, 0.01, 0.8);
-        
-        s = slideshow.addSlide("Plug & Play Generative Networks");
-        s->addImage("PPGN", "/Users/gene/bin/misc/ppgn_image_captioning.jpg", 0, 0.05, 1, 0.97);
-        s->addText(h4, ofColor(0), "http://www.evolvingai.org/ppgn", 0.1, 0.0, 0.8);
 
         
 

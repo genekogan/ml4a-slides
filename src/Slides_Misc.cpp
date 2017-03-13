@@ -18,6 +18,14 @@ void ofApp::Misc() {
     // Russ Salakhutdinov, Machine Learning Department, Carnegie Mellon University, Canadian Institute for Advanced Research
     // /Users/gene/bin/misc/stock/learn-features.png
     
+    s = slideshow.addSlide("Super-resolution => Deblurring");
+    s->addImage("deblur", "/Users/gene/bin/misc/super-resolution-ground-truth.jpg", 0.0, 0.2, 1.0, 0.75);
+    s->addText(h3, ofColor(0), "https://arxiv.org/abs/1702.00783", 0.1, 0.01, 0.8);
+    
+    s = slideshow.addSlide("Plug & Play Generative Networks");
+    s->addImage("PPGN", "/Users/gene/bin/misc/ppgn_image_captioning.jpg", 0, 0.05, 1, 0.97);
+    s->addText(h4, ofColor(0), "http://www.evolvingai.org/ppgn", 0.1, 0.0, 0.8);
+
 }
 
 void ofApp::Background(){
@@ -308,3 +316,7 @@ void ofApp::Pix2Pix() {
 
 
 
+void ofApp::ArtProjects() {
+    // alt-AI + ml4a projects + other
+    // sketch2cat
+}
