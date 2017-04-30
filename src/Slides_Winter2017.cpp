@@ -331,6 +331,12 @@ void ofApp::CreativeAILondon(){
     s = slideshow.addSlide("???");
     s->addImage("pj resume", "/Users/gene/bin/misc/yolo/pjreddie_resume.png", 0, 0, 1, 1);
 
+    
+    
+    
+    // darknet is not... surprising
+    // because that's actually how i found it in first place
+    
 //    s = slideshow.addSlide("");
 //    s->addImage("pj about", "/Users/gene/bin/misc/yolo/pjreddie_about.png", 0, 0, 1, 1);
 
@@ -501,7 +507,7 @@ void ofApp::CreativeAILondon(){
 //    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_content/deeptrain2.mp4", true, 0.0, 0.0, 0.6, 0.35);
 //    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/testOtherl4_1.mp4", true, 0.0, 0.35, 0.5, 0.65);
 //    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/makeMid_blur_2a_imovie.mp4", true, 0.4, 0.0, 0.6, 0.6);
-//    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/theFrame7.mov", true, 0.5, 0.5, 0.5, 0.5);
+//    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/theFrame7.mp4", true, 0.5, 0.5, 0.5, 0.5);
 
     
     
@@ -921,7 +927,6 @@ void ofApp::WorkshopMachinesRoom() {
     s->addText(h3, ofColor(0), "Regression", 0.7, 0.05, 0.3);
     s->addText(h3, ofColor(0), "Clustering", 0.22, 0.75, 0.28);
     
-    slideshow.setPage(s);
 
     s = slideshow.addSlide("Convolutional neural networks \"in 5 minutes\" (brainbow by Katie Matho)");
     s->addImage("neural net", "/Users/gene/bin/misc/stock/brainbow.jpg", 0, 0, 1, 1);
@@ -1164,7 +1169,7 @@ void ofApp::WorkshopMachinesRoom() {
     s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_content/deeptrain2.mp4", true, 0.0, 0.0, 0.6, 0.35);
     s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/testOtherl4_1.mp4", true, 0.0, 0.35, 0.5, 0.65);
     s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/makeMid_blur_2a_imovie.mp4", true, 0.4, 0.0, 0.6, 0.6);
-    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/theFrame7.mov", true, 0.5, 0.5, 0.5, 0.5);
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/theFrame7.mp4", true, 0.5, 0.5, 0.5, 0.5);
     
     slideshow.addSlide("Make it stop")->addImage("cappucinno", "/Users/gene/bin/deepdream/cappucinno/composite_cappucinno2a.png", 0.05, 0.05, 0.9, 0.9);
     
@@ -1317,7 +1322,6 @@ void ofApp::WorkshopMachinesRoom() {
     s->addImage("fb", "/Users/gene/bin/pix2pix/teaser_v3a.png", 0.0, 0.04, 1.0, 0.96);
     s->addText(h3, ofColor(100), "phillipi.github.io/pix2pix/", 0.02, 0.00, 0.8);
 
-    slideshow.setPage(s);
     
     s = slideshow.addSlide("Deep Generator Networks (Places365)");
     s->addImage("classvis", "/Users/gene/bin/synthesizing/new_classes.png", 0.025, 0.025, 0.95, 0.95);
@@ -1559,7 +1563,7 @@ void ofApp::MLParis(){
     //    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_content/deeptrain2.mp4", true, 0.0, 0.0, 0.6, 0.35);
     //    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/testOtherl4_1.mp4", true, 0.0, 0.35, 0.5, 0.65);
     //    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/makeMid_blur_2a_imovie.mp4", true, 0.4, 0.0, 0.6, 0.6);
-    //    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/theFrame7.mov", true, 0.5, 0.5, 0.5, 0.5);
+    //    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/theFrame7.mp4", true, 0.5, 0.5, 0.5, 0.5);
     
     s = slideshow.addSlide("Style transfer");
     s->addImage("Mona Lisa -> Cubist/Expressionist/Impressionist", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_cubist_expressionist_impressionist.jpg", 0, 0.15, 1, 0.85);
@@ -1818,7 +1822,7 @@ void ofApp::MLParis(){
     s = slideshow.addSlide("Reverse Object Search Fast");
     ReverseObjectSearchFastDemo *rosd = new ReverseObjectSearchFastDemo(s, "Reverse Object Search Fast", 0, 0, 1, 1);
     rosd->setDarknetReference(&darknet);
-    rosd->load("/Users/gene/Code/of_v0.9.6_osx_release/apps/myApps/RISDarknetScratch/bin/data/risd_rp256_40k.dat", "/Users/gene/Teaching/ML4A/ml4a-ofx/apps/ReverseImageSearchFast/bin/data/mscoco");
+    rosd->load("/Users/gene/Teaching/ML4A/ml4a-ofx/data/feature_vectors/mscoco_objects_145k_rp32.dat", "/Users/gene/Teaching/ML4A/ml4a-ofx/data/mscoco");
     rosd->runKDTree();
     s->setBackgroundFunction(this, &ofApp::drawBgBlack);
     s->addAction(rosd);
@@ -2103,7 +2107,7 @@ void ofApp::ScopeSessions(){
     s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_content/deeptrain2.mp4", true, 0.0, 0.0, 0.6, 0.35);
     s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/testOtherl4_1.mp4", true, 0.0, 0.35, 0.5, 0.65);
     s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/makeMid_blur_2a_imovie.mp4", true, 0.4, 0.0, 0.6, 0.6);
-    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/theFrame7.mov", true, 0.5, 0.5, 0.5, 0.5);
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/theFrame7.mp4", true, 0.5, 0.5, 0.5, 0.5);
     
     s = slideshow.addSlide("Style transfer");
     s->addImage("Mona Lisa -> Cubist/Expressionist/Impressionist", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_cubist_expressionist_impressionist.jpg", 0, 0.15, 1, 0.85);
@@ -2328,7 +2332,6 @@ void ofApp::ScopeSessions(){
     s = slideshow.addSlide("DoodleTunes");
     s->addMovie("fb", "/Users/gene/bin/ml4a/Doodle Tunes-small.mp4", true, 0.0, 0.00, 1.0, 1.0);
     
-    //    slideshow.setPage(s);
     
     /////////////////////////////////////////////////////////////////
     // ML4A
@@ -2399,7 +2402,8 @@ void ofApp::ScopeSessions(){
     s = slideshow.addSlide("Reverse Object Search Fast");
     ReverseObjectSearchFastDemo *rosd = new ReverseObjectSearchFastDemo(s, "Reverse Object Search Fast", 0, 0, 1, 1);
     rosd->setDarknetReference(&darknet);
-    rosd->load("/Users/gene/Teaching/ML4A/ml4a-ofx/models/mscoco_145k_rp32.dat", "/Users/gene/Teaching/ML4A/ml4a-ofx/apps/ReverseImageSearchFast/bin/data/mscoco");
+    rosd->load("/Users/gene/Teaching/ML4A/ml4a-ofx/data/feature_vectors/mscoco_objects_145k_rp32.dat", "/Users/gene/Teaching/ML4A/ml4a-ofx/data/mscoco");
+//    rosd->load("/Users/gene/Teaching/ML4A/ml4a-ofx/models/mscoco_145k_rp32.dat", "/Users/gene/Teaching/ML4A/ml4a-ofx/apps/ReverseImageSearchFast/bin/data/mscoco");
     rosd->runKDTree();
     s->setBackgroundFunction(this, &ofApp::drawBgBlack);
     s->addAction(rosd);

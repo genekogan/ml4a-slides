@@ -271,6 +271,19 @@ public:
         ofPopMatrix();
     }
     
+    void setLayer(int l) {
+        layer = l;
+        if (layer == ccv.getLayerNames().size()-1) {
+            ccv.setClassify(true, 20);
+        }
+        else {
+            ccv.setClassify(false);
+        }
+        if (inputMode == 1) {
+            ccv.update(pic, ccv.numLayers());
+        }
+    }
+    
     bool mouseMoved(int x_, int y_) {
         float mx = ofGetMouseX() - box.getX();
         float my = ofGetMouseY() - box.getY();
@@ -308,16 +321,7 @@ public:
         else {
             for (int i=0; i<ccv.getLayerNames().size(); i++) {
                 if (ofRectangle(10, 375+23*i, 200, 20).inside(mx, my)) {
-                    layer = i;
-                    if (layer == ccv.getLayerNames().size()-1) {
-                        ccv.setClassify(true, 20);
-                    }
-                    else {
-                        ccv.setClassify(false);
-                    }
-                    if (inputMode == 1) {
-                        ccv.update(pic, ccv.numLayers());
-                    }
+                    setLayer(i);
                     return true;
                 }
             }
@@ -515,6 +519,10 @@ public:
         ofPopMatrix();
     }
     
+    void setLayer(int l) {
+        layer = l;
+    }
+    
     bool mouseMoved(int x_, int y_) {
         float mx = ofGetMouseX() - box.getX();
         float my = ofGetMouseY() - box.getY();
@@ -552,7 +560,7 @@ public:
         else {
             for (int i=0; i<ccv.getLayerNames().size(); i++) {
                 if (ofRectangle(10, 375+23*i, 200, 20).inside(mx, my)) {
-                    layer = i;
+                    setLayer(i);
                     return true;
                 }
             }
@@ -910,4 +918,72 @@ public:
     bool windowOccluded = true;
     float mx, my;
 
+};
+
+
+
+class RandPixDemo : public ofxPPElement {
+public:
+    RandPixDemo(ofxPPSlide *parent, string name, float x, float y, float w, float h) : ofxPPElement(parent, name, x, y, w, h) {
+        loaded = false;
+        arrow.load("/Users/gene/bin/misc/stock/arrow.png");
+        mona.load("/Users/gene/bin/misc/stock/monalisa_pixelated.png");
+        
+    }
+    
+    void start() {
+        if (!loaded) {
+            loadAssets();
+        }
+    }
+    
+    void stop() {
+        
+    }
+    
+    void loadAssets() {
+        
+    }
+    
+    
+    void draw() {
+        float rad = 6;
+        int nx = 1;
+        int ny = 1;
+        int px = 32;
+        int py = 32;
+        int margin = 20;
+        
+        ofPushStyle();
+        ofPushMatrix();
+        
+        ofTranslate(box.getX(), box.getY());
+        
+        for (int x=0; x<nx; x++) {
+            for (int y=0; y<ny; y++) {
+        
+                ofPushMatrix();
+                ofTranslate(x * (px * rad + margin), y * (py * rad + margin));
+                for (int i=0; i<px; i++) {
+                    for (int j=0; j<py; j++) {
+                        ofSetColor(ofColor(ofRandom(255),ofRandom(255),ofRandom(255)));
+                        ofFill();
+                        ofDrawRectangle(i*rad, j*rad, rad, rad);
+                    }
+                }
+                ofPopMatrix();
+            }
+        }
+        
+        ofSetColor(255);
+        arrow.draw(50 + nx * (px * rad + margin), -10 + ny * (py * rad + margin) / 2.0, 100, 20);
+        mona.draw(180 + nx * (px * rad + margin), 0, px * rad, py * rad);
+        
+        ofPopMatrix();
+        ofPopStyle();
+        
+        
+    }
+    
+    ofImage mona, arrow;
 };

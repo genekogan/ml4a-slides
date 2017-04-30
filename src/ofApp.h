@@ -20,6 +20,9 @@
 #include "Demo_ReverseImageSearchFast.h"
 #include "Demo_ReverseObjectSearchFast.h"
 
+// fix segment
+
+
 class ofApp : public ofBaseApp{
 public:
     void setup();
@@ -75,7 +78,7 @@ public:
     void Archive();
     void ArtProjects();
     
-    /* Special */
+    /* Talks */
     void AltAI();
     void ITPCamp();
     void Eyeo();
@@ -97,8 +100,16 @@ public:
     void MLParis();
     void MattTalk();
     void ScopeSessions();
+    void CCAmsterdam();
+    void Resonate();
+    void ECALausanne();
+    void Sensorium();
+    void HEADGeneva();
+    void Goldsmiths();
+    void PyData();
+    void Eyeo2();
     
-    /* SchoolOfMaaa */
+    /* SchoolOfMaaa Neural Aesthetic */
     void NeuralAesthetic1();
     void NeuralAesthetic2();
     void NeuralAesthetic3();
@@ -134,12 +145,23 @@ public:
     void WorkshopMachinesRoom();
     void WorkshopParsons();
     void WorkshopSpektrum2();
+    void WorkshopMediaMonks();
+    void WorkshopResonate1();
+    void WorkshopResonate2();
+    void WorkshopResonate3();
+    void WorkshopSensorium();
+    
+    /* ECAL workshop */
+    void WorkshopECAL1();
+    void WorkshopECAL2();
+    void WorkshopECAL3();
     
     /* Strelka */
     void WorkshopStrelkaIntro();
     void WorkshopStrelkaOverviewML();
     void WorkshopStrelkaNeuralNets();
     void WorkshopStrelkaNeuralGenerativeModels();
+    
     
     ////// Assets
     ofxPwrrPoint slideshow;
@@ -197,6 +219,9 @@ public:
         // nsfw
         // - obscene machine
 
+        
+        
+        
         
     }
 };

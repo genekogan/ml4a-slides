@@ -12,7 +12,7 @@ class ofxPPSlide;
 // openframeworks overwrites the path so you can't find CUDA.
 // if you have the chainer script working, just change this so it matches what
 // you get if you run "echo $PATH" in a terminal
-#define PATH "/usr/local/bin:/usr/local/sbin:/Developer/NVIDIA/CUDA-7.5/bin:/usr/local/cuda/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+#define PATH "/usr/local/bin:/usr/local/sbin:/Developer/NVIDIA/CUDA-8.0/bin:/usr/local/cuda/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 // same thing for "echo $LD_LIBRARY_PATH"
 #define LD_LIBRARY_PATH "/usr/local/cuda/lib"

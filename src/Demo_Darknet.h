@@ -38,6 +38,7 @@ public:
     }
     
     void stop() {
+        cout << "close" << endl;
         grab.close();
     }
     
