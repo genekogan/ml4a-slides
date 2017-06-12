@@ -378,7 +378,7 @@ void ofApp::CreativeAILondon(){
     s->addText(h4, ofColor(0), "https://arxiv.org/abs/1508.06576", 0.6, 0.51, 1.0);
     s->addText(h4, ofColor(0), "http://www.evolvingai.org/synthesizing", 0.6, 0.0, 1.0);
 //    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
-//    s->addImage("Starry night", "/Users/gene/bin/_bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+//    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
 //    s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
     
     s = slideshow.addSlide("Style transfer");
@@ -478,7 +478,7 @@ void ofApp::CreativeAILondon(){
 //    s->addMovie("radical interpolations", "/Users/gene/bin/dcgan/summary/radinterpolation.mp4", true, 0, 0.2, 1, 0.8);
 //    
 //    s = slideshow.addSlide("Arithmetic tricks");
-//    s->addMovie("arithmetic", "/Users/gene/bin/_bin/dcgan/arithmetic2.mp4", true, 0.1, 0.2, 0.8, 0.6);
+//    s->addMovie("arithmetic", "/Users/gene/bin/dcgan/public/arithmetic2.mp4", true, 0.1, 0.2, 0.8, 0.6);
 //    
     s = slideshow.addSlide("Deep Generator Networks");
     s->addImage("classvis", "/Users/gene/bin/synthesizing/DGN_architecture.jpg", 0.0, 0.1, 1, 0.41);
@@ -1204,7 +1204,7 @@ void ofApp::WorkshopMachinesRoom() {
     
     s = slideshow.addSlide("Stylenet convergence");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
-    s->addImage("Starry night", "/Users/gene/bin/_bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
     s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
     
     s = slideshow.addSlide("Mona Lisa x Devajyoti Ray");
@@ -1214,7 +1214,7 @@ void ofApp::WorkshopMachinesRoom() {
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/hokusai.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_hokusai.jpg", 0.6, 0.0, 0.4, 1.0);
     s = slideshow.addSlide("Mona Lisa x Tarsila");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.6, 0.0, 0.4, 1.0);
     s = slideshow.addSlide("Mona Lisa x Roy Liechtenstein");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/liechtenstein.jpg", 0.0, 0.0, 0.55, 1.0);
@@ -1265,10 +1265,10 @@ void ofApp::WorkshopMachinesRoom() {
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tvnoise.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_tvnoise.jpg", 0.6, 0.0, 0.4, 1.0);
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps1.jpg", 0.4, 0.4, 0.6, 0.6);
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps2.jpg", 0.4, 0.4, 0.6, 0.6);
     
     s = slideshow.addSlide("Mr. Div x Gustav Klimt");
@@ -1556,7 +1556,7 @@ void ofApp::MLParis(){
     s->addText(h4, ofColor(0), "https://arxiv.org/abs/1508.06576", 0.6, 0.51, 1.0);
     s->addText(h4, ofColor(0), "http://www.evolvingai.org/synthesizing", 0.6, 0.0, 1.0);
     //    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
-    //    s->addImage("Starry night", "/Users/gene/bin/_bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    //    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
     //    s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
     
     //    s = slideshow.addSlide("Deepdream oscillations");
@@ -1612,7 +1612,7 @@ void ofApp::MLParis(){
     s->addMovie("radical interpolations", "/Users/gene/bin/dcgan/summary/radinterpolation.mp4", true, 0, 0.2, 1, 0.8);
     
     s = slideshow.addSlide("Arithmetic tricks");
-    s->addMovie("arithmetic", "/Users/gene/bin/_bin/dcgan/arithmetic2.mp4", true, 0.1, 0.2, 0.8, 0.6);
+    s->addMovie("arithmetic", "/Users/gene/bin/dcgan/public/arithmetic2.mp4", true, 0.1, 0.2, 0.8, 0.6);
     
     s = slideshow.addSlide("Deep Generator Networks");
     s->addImage("classvis", "/Users/gene/bin/synthesizing/DGN_architecture.jpg", 0.0, 0.1, 1, 0.41);
@@ -1903,7 +1903,7 @@ void ofApp::MattTalk() {
     s->addText(h3, ofColor(0), "Lenet (LeCun et al, 1998) [http://yann.lecun.com/exdb/lenet/]", 0.05, 0.4, 0.9);
     s->addText(h3, ofColor(0), "AlexNet 2012 [via https://jeremykarnowski.wordpress.com/2015/07/15/alexnet-visualization/]", 0.05, 0.92, 0.9);
 
-    s = slideshow.addSlide("Convolution layers");
+    s = slideshow.addSlide("Convolution layers	");
     s->addMovie("convolution", "/Users/gene/bin/misc/stock/convolution_demo.mp4", true, 0, 0, 1, 1);
     s->addText(h4, ofColor(0), "ml4a.github.io/dev/demos/demo_convolution.html", 0.1, 0.05, 1);
     
@@ -2100,7 +2100,7 @@ void ofApp::ScopeSessions(){
     s->addText(h4, ofColor(0), "https://arxiv.org/abs/1508.06576", 0.6, 0.51, 1.0);
     s->addText(h4, ofColor(0), "http://www.evolvingai.org/synthesizing", 0.6, 0.0, 1.0);
     //    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
-    //    s->addImage("Starry night", "/Users/gene/bin/_bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    //    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
     //    s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
     
     s = slideshow.addSlide("Deepdream");
@@ -2124,7 +2124,7 @@ void ofApp::ScopeSessions(){
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_hokusai.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Tarsila");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Roy Liechtenstein");
@@ -2192,11 +2192,11 @@ void ofApp::ScopeSessions(){
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_tvnoise.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps1.jpg", 0.4, 0.4, 0.6, 0.6);
     
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps2.jpg", 0.4, 0.4, 0.6, 0.6);
     
     s = slideshow.addSlide("Mr. Div x Gustav Klimt");
@@ -2258,7 +2258,7 @@ void ofApp::ScopeSessions(){
     
     //
     //s = slideshow.addSlide("Arithmetic tricks");
-    //s->addMovie("arithmetic", "/Users/gene/bin/_bin/dcgan/arithmetic2.mp4", true, 0.1, 0.2, 0.8, 0.6);
+    //s->addMovie("arithmetic", "/Users/gene/bin/dcgan/public/arithmetic2.mp4", true, 0.1, 0.2, 0.8, 0.6);
     //
     
     s = slideshow.addSlide("Deep Generator Networks");

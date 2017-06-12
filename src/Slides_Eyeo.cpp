@@ -267,7 +267,7 @@ void ofApp::Eyeo() {
     
     s = slideshow.addSlide("Stylenet convergence");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
-    s->addImage("Starry night", "/Users/gene/bin/_bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
     s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
     
     s = slideshow.addSlide("Mona Lisa x Devajyoti Ray");
@@ -287,7 +287,7 @@ void ofApp::Eyeo() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_rajaravivarma.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Tarsila");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Roy Liechtenstein");
@@ -323,11 +323,11 @@ void ofApp::Eyeo() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_aurora.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Arabic Calligraphy (1)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/caligraphy.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/caligraphy.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_calligraphy1.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Arabic Calligraphy (2)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/caligraphy2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/caligraphy2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_calligraphy2.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Crab Nebula");
@@ -395,7 +395,7 @@ void ofApp::Eyeo() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_tvnoise.jpg", 0.6, 0.0, 0.4, 1.0);
     
     //    s = slideshow.addSlide("Just style (Tarsila)");
-    //    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0, 0, 0.6, 0.6);
+    //    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0, 0, 0.6, 0.6);
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/tarsila.jpg", 0.4, 0.4, 0.6, 0.6);
     
     s = slideshow.addSlide("Why is a Raven like a Writing Desk?");
@@ -434,7 +434,7 @@ void ofApp::Eyeo() {
     s->addMovie("video style", "/Users/gene/bin/style-transfer/10_optical_flow/video-style-transfer-x4-reordered.mp4", true, 0, 0, 1, 1);
     
     //    s = slideshow.addSlide("Just style (Persian style)");
-    //    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/persian.jpg", 0, 0, 0.6, 0.6);
+    //    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/persian.jpg", 0, 0, 0.6, 0.6);
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/persian.jpg", 0.4, 0.4, 0.6, 0.6);
     //
     //    s = slideshow.addSlide("Just style (Arabic script)");
@@ -442,35 +442,35 @@ void ofApp::Eyeo() {
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/arabic.jpg", 0.4, 0.4, 0.6, 0.6);
     //
     //    s = slideshow.addSlide("Just style (Basquiat)");
-    //    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/basquiat2.jpg", 0, 0, 0.6, 0.6);
+    //    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/basquiat2.jpg", 0, 0, 0.6, 0.6);
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/basquiat.jpg", 0.4, 0.4, 0.6, 0.6);
     
     //    s = slideshow.addSlide("Just style (google maps)");
-    //    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    //    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps1.jpg", 0.4, 0.4, 0.6, 0.6);
     //
     //    s = slideshow.addSlide("Just style (google maps)");
-    //    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    //    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps2.jpg", 0.4, 0.4, 0.6, 0.6);
     //
     //    s = slideshow.addSlide("Just style (google maps)");
-    //    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    //    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps3.jpg", 0.4, 0.4, 0.6, 0.6);
     
     //    s = slideshow.addSlide("Just style (Crab nebula)");
-    //    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/crab.jpg", 0, 0, 0.6, 0.6);
+    //    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/crab.jpg", 0, 0, 0.6, 0.6);
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/crab.jpg", 0.4, 0.4, 0.6, 0.6);
     //
     //    s = slideshow.addSlide("Just style (Hieroglyphs)");
-    //    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/egypt.jpg", 0, 0, 0.6, 0.6);
+    //    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/egypt.jpg", 0, 0, 0.6, 0.6);
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/egypt.jpg", 0.4, 0.4, 0.6, 0.6);
     //
     //    s = slideshow.addSlide("Just style (Hokusai)");
-    //    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/hokusai.jpg", 0, 0, 0.6, 0.6);
+    //    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/hokusai.jpg", 0, 0, 0.6, 0.6);
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/hokusai.jpg", 0.4, 0.4, 0.6, 0.6);
     //
     //    s = slideshow.addSlide("Just style (Kandinsky)");
-    //    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/kandinsky2.jpg", 0, 0, 0.6, 0.6);
+    //    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/kandinsky2.jpg", 0, 0, 0.6, 0.6);
     //    s->addImage("deep-texture", "/Users/gene/bin/deep-texture/kandinsky.jpg", 0.4, 0.4, 0.6, 0.6);
     
     

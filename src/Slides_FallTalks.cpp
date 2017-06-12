@@ -397,7 +397,7 @@ void ofApp::IXDS() {
     
     s = slideshow.addSlide("Stylenet convergence");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
-    s->addImage("Starry night", "/Users/gene/bin/_bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
     s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
     
     
@@ -410,7 +410,7 @@ void ofApp::IXDS() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_hokusai.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Tarsila");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Roy Liechtenstein");
@@ -438,11 +438,11 @@ void ofApp::IXDS() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_aurora.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Arabic Calligraphy (1)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/caligraphy.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/caligraphy.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_calligraphy1.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Arabic Calligraphy (2)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/caligraphy2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/caligraphy2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_calligraphy2.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Crab Nebula");
@@ -486,11 +486,11 @@ void ofApp::IXDS() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_tvnoise.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps1.jpg", 0.4, 0.4, 0.6, 0.6);
     
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps2.jpg", 0.4, 0.4, 0.6, 0.6);
     
     s = slideshow.addSlide("Mr. Div x Gustav Klimt");
@@ -820,7 +820,7 @@ void ofApp::WithTheBest() {
     
     s = slideshow.addSlide("Stylenet convergence");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
-    s->addImage("Starry night", "/Users/gene/bin/_bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
     s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
     
     s = slideshow.addSlide("Mona Lisa x Devajyoti Ray");
@@ -832,7 +832,7 @@ void ofApp::WithTheBest() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_hokusai.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Tarsila");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Roy Liechtenstein");
@@ -860,11 +860,11 @@ void ofApp::WithTheBest() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_aurora.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Arabic Calligraphy (1)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/caligraphy.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/caligraphy.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_calligraphy1.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Arabic Calligraphy (2)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/caligraphy2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/caligraphy2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_calligraphy2.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Crab Nebula");
@@ -908,11 +908,11 @@ void ofApp::WithTheBest() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_tvnoise.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps1.jpg", 0.4, 0.4, 0.6, 0.6);
     
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps2.jpg", 0.4, 0.4, 0.6, 0.6);
     
     s = slideshow.addSlide("Mr. Div x Gustav Klimt");
@@ -1885,12 +1885,12 @@ void ofApp::ArtCenterNabi() {
     
     s = slideshow.addSlide("Style transfer");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
-    s->addImage("Starry night", "/Users/gene/bin/_bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
     s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
     
     s = slideshow.addSlide("Mona Lisa stylenets");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/hokusai.jpg", 0.0, 0.0, 0.33, 0.35);
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0.335, 0.0, 0.33, 0.35);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.335, 0.0, 0.33, 0.35);
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0.67, 0.0, 0.33, 0.35);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_hokusai.jpg", 0.0, 0.36, 0.33, 0.64);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.335, 0.36, 0.33, 0.64);

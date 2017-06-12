@@ -524,7 +524,7 @@ void ofApp::WorkshopMediaMonks(){
     
     s = slideshow.addSlide("Stylenet convergence");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
-    s->addImage("Starry night", "/Users/gene/bin/_bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
     s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
     
     s = slideshow.addSlide("Mona Lisa x Devajyoti Ray");
@@ -534,7 +534,7 @@ void ofApp::WorkshopMediaMonks(){
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/hokusai.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_hokusai.jpg", 0.6, 0.0, 0.4, 1.0);
     s = slideshow.addSlide("Mona Lisa x Tarsila");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.6, 0.0, 0.4, 1.0);
     s = slideshow.addSlide("Mona Lisa x Roy Liechtenstein");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/liechtenstein.jpg", 0.0, 0.0, 0.55, 1.0);
@@ -585,10 +585,10 @@ void ofApp::WorkshopMediaMonks(){
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tvnoise.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_tvnoise.jpg", 0.6, 0.0, 0.4, 1.0);
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps1.jpg", 0.4, 0.4, 0.6, 0.6);
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps2.jpg", 0.4, 0.4, 0.6, 0.6);
     
     s = slideshow.addSlide("Mr. Div x Gustav Klimt");
@@ -1156,7 +1156,7 @@ void ofApp::WorkshopResonate2()
     
     s = slideshow.addSlide("Stylenet convergence");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
-    s->addImage("Starry night", "/Users/gene/bin/_bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
     s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
     
     s = slideshow.addSlide("Mona Lisa x Devajyoti Ray");
@@ -1166,7 +1166,7 @@ void ofApp::WorkshopResonate2()
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/hokusai.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_hokusai.jpg", 0.6, 0.0, 0.4, 1.0);
     s = slideshow.addSlide("Mona Lisa x Tarsila");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.6, 0.0, 0.4, 1.0);
     s = slideshow.addSlide("Mona Lisa x Roy Liechtenstein");
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/liechtenstein.jpg", 0.0, 0.0, 0.55, 1.0);
@@ -1217,10 +1217,10 @@ void ofApp::WorkshopResonate2()
     s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tvnoise.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_tvnoise.jpg", 0.6, 0.0, 0.4, 1.0);
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps1.jpg", 0.4, 0.4, 0.6, 0.6);
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 0.6, 0.6);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps2.jpg", 0.4, 0.4, 0.6, 0.6);
     
     s = slideshow.addSlide("Mr. Div x Gustav Klimt");
@@ -1525,4 +1525,387 @@ void ofApp::WorkshopResonate3()
     s = slideshow.addSlide("Plug & Play Generative Networks");
     s->addImage("PPGN", "/Users/gene/bin/misc/ppgn_image_captioning.jpg", 0, 0.05, 1, 0.97);
     s->addText(h4, ofColor(0), "http://www.evolvingai.org/ppgn", 0.1, 0.0, 0.8);
+}
+
+
+void ofApp::WorkshopSoundCloud() {
+    
+    s = slideshow.addSlide("ml4a @ SoundCloud, 19.5.2017");
+    s->addText(h2, ofColor(0), "@genekogan", 0.1, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "genekogan.com", 0.1, 0.3, 0.5);
+    s->addText(h2, ofColor(0), "ml4a.github.io", 0.6, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "@ml4a_", 0.6, 0.3, 0.5);
+    s->start();
+    
+    
+    
+    s = slideshow.addSlide("About me");
+    s->addImage("event detection", "/Users/gene/bin/misc/sourcetone/event_detection.png", 0.0, 0.0, 0.4, 0.38);
+    s->addImage("genre VA", "/Users/gene/bin/misc/sourcetone/genre-AvgVA.jpg", 0.0, 0.4, 0.42, 0.6);
+    s->addImage("LSA tags", "/Users/gene/bin/misc/sourcetone/LSA-tagsSmall-rank10-clust5.jpg", 0.41, 0, 0.59, 1.0);
+    
+    s = slideshow.addSlide("Color of Words");
+    s->addScrollableImage("color of words", "/Users/gene/bin/misc/stock/color-of-words.png", 0, 0, 1, 1);
+    
+    //    s = slideshow.addSlide("Generative art");
+    //    s->addImage("interference", "/Users/gene/bin/images/interference/interference11.png", 0.0, 0, 0.33, 0.5);
+    //    s->addImage("interference", "/Users/gene/bin/images/interference/interference14.png", 0.3333, 0, 0.33, 0.5);
+    //    s->addImage("interference", "/Users/g ene/bin/images/interference/interference12.png", 0.6666, 0, 0.33, 0.5);
+    //    s->addImage("star", "/Users/gene/bin/images/stars/star-00014.png", 0.25, 0.5, 0.25, 0.5);
+    //    s->addImage("star", "/Users/gene/bin/images/stars/star-00016.png", 0.5, 0.5, 0.25, 0.5);
+    //    s->addImage("star", "/Users/gene/bin/images/stars/star-00011.png", 0, 0.5, 0.25, 0.5);
+    //    s->addImage("star", "/Users/gene/bin/images/stars/star-00022.png", 0.75, 0.5, 0.25, 0.5);
+    //
+    //    s = slideshow.addSlide("Nature and simulation");
+    //    s->addMovie("simulation", "/Users/gene/bin/images/Flocking-fast.mp4", true, -0.04, 0.0, 0.65, 0.6);
+    //    s->addMovie("simulation", "/Users/gene/bin/images/VertexFields2_01.29.2012.mov", true, 0.42, 0.415, 0.63, 0.6);
+    //
+    //    s = slideshow.addSlide("Kinect Projector Toolkit");
+    //    s->addMovie("KPT", "/Users/gene/bin/opera-toolkit/colin-ribbons-2_nosound.mp4", true, 0.0, 0, 0.5, 0.6);
+    //    s->addMovie("KPT", "/Users/gene/bin/kinect-projector-toolkit/Silhouettes @ Saigon Ranger 12:5:2014.mp4", true, 0.4, 0.4, 0.64, 0.62);
+    
+    s = slideshow.addSlide("Musical instruments (w/ Jeff Snyder)");
+    s->addImage("tweet", "/Users/gene/Web/genekogan.github.io/_site/images/birl/birl1.jpg", 0.0, 0.0, 1, 0.35);
+    s->addImage("tweet", "/Users/gene/bin/misc/Snyderphonics_Manta.jpg", 0.0, 0.365, 1, 0.64);
+    
+    s = slideshow.addSlide("Neural nets hallucinating");
+    s->addMovie("dcgan", "/Users/gene/bin/autoencoders/_AlecRad_Faces.mp4", true, 0, 0.026, 0.5, 0.47);
+    s->addImage("deepdream", "/Users/gene/bin/misc/stock/building-dreams.png", 0, 0.515, 0.5, 0.48);
+    s->addImage("stylenet", "/Users/gene/bin/misc/stock/stylenet-original.png", 0.5, 0.53, 0.5, 0.47);
+    s->addImage("synthesizing original", "/Users/gene/bin/misc/stock/synthesizing-original.jpg", 0.5, 0.025, 0.5, 0.48);
+    s->addText(h4, ofColor(0), "https://www.youtube.com/watch?v=QYcKCGdZvq4", 0.01, 0.0, 1.0);
+    s->addText(h5, ofColor(0), "research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html", 0.002, 0.475, 1.0);
+    s->addText(h4, ofColor(0), "https://arxiv.org/abs/1508.06576", 0.6, 0.51, 1.0);
+    s->addText(h4, ofColor(0), "http://www.evolvingai.org/synthesizing", 0.6, 0.0, 1.0);
+    
+    s = slideshow.addSlide("pix2pix -> generative model as a filter");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/jasper-streetview.mp4", true, 0, 0, 0.5, 0.5);
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump_gene1.mp4", true, 0.5, 0.0, 0.5, 0.5);
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/memo-painting.mp4", true, 0.0, 0.5, 0.5, 0.5);
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/brannon-kurzweil.mp4", true, 0.5, 0.5, 0.5, 0.5);
+    
+    s = slideshow.addSlide("Morning");
+    s->addText(h3, ofColor(0), "Part 1: PCA for poets", 0.1, 0.1, 0.8);
+    s->addText(h3, ofColor(0), " - what are neural nets", 0.1, 0.2, 0.8);
+    s->addText(h3, ofColor(0), " - how generative models work", 0.1, 0.3, 0.8);
+    s->addText(h3, ofColor(0), "Part 2: pix2pix (& CycleGAN)", 0.1, 0.4, 0.8);
+    s->addText(h3, ofColor(0), " - implementation options", 0.1, 0.5, 0.8);
+    s->addText(h3, ofColor(0), " - tutorial (pre-baked oven)", 0.1, 0.6, 0.8);
+    
+    s = slideshow.addSlide("Other things");
+    s->addText(h3, ofColor(0), " - Reverse Image Search", 0.1, 0.1, 0.8);
+    s->addText(h3, ofColor(0), " - Reverse Audio Seach", 0.1, 0.2, 0.8);
+    s->addText(h3, ofColor(0), " - ml4a + real-time demos", 0.1, 0.3, 0.8);
+    s->addText(h3, ofColor(0), " - ml4a-guides", 0.1, 0.4, 0.8);
+    s->addText(h3, ofColor(0), " - neural painter", 0.1, 0.5, 0.8);
+    s->addText(h3, ofColor(0), " - midi-rnn (Brannon Dorsey)", 0.1, 0.6, 0.8);
+    
+    s = slideshow.addSlide("Deep learning demand vs. burden");
+    s->addImage("cost", "/Users/gene/bin/misc/deeplearning_demand_vs_difficulty.png", 0.0, 0, 1, 1);
+    
+    s = slideshow.addSlide("ML generative models");
+    s->addImage("pca", "/Users/gene/bin/misc/stock/GaussianScatterPCA.svg.png", 0.0, 0, 0.5, 1.0);
+    s->addImage("arrow", "/Users/gene/bin/misc/stock/arrow.png", 0.47, 0.0, 0.06, 1.0);
+    s->addImage("deepdream", "/Users/gene/bin/misc/stock/building-dreams.png", 0.48, 0.3, 0.63, 0.5);
+    s->addMovie("dcgan", "/Users/gene/bin/autoencoders/_AlecRad_Faces.mp4", true, 0.4, 0.0, 0.25, 0.33);
+    s->addMovie("Deepzoom", "/Users/gene/bin/strelka/out2.mp4", true, 0.4, 0.67, 0.31, 0.34);
+    s->addImage("synthesizing original", "/Users/gene/bin/misc/stock/synthesizing-original.jpg", 0.71, 0.66, 0.3, 0.35);
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_content/deeptrain2.mp4", true, 0.66, 0.0, 0.35, 0.35);
+    
+    s = slideshow.addSlide("Attributes are not independent");
+    s->addImage("pca", "/Users/gene/bin/misc/stock/GaussianScatterPCA.svg.png", 0.0, 0, 0.5, 1.0);
+    s->addImage("pca", "/Users/gene/bin/misc/stock/GaussianScatterPCA.svg-flipped.png", 0.5, 0, 0.5, 1.0);
+    s->addImage("arrow", "/Users/gene/bin/misc/stock/arrow.png", 0.47, 0.0, 0.06, 1.0);
+    
+    s = slideshow.addSlide("Principal component analysis");
+    s->addImage("pca", "/Users/gene/bin/misc/stock/fig_pca_principal_component_analysis.png", 0.0, 0.0, 1, 1);
+    s->addText(h4, ofColor(0), "http://www.nlpca.org/pca_principal_component_analysis.html", 0.1, 0, 0.8);
+    //    s = slideshow.addSlide("Curse of dimensionality");
+    //    s->addImage("sampling", "/Users/gene/bin/misc/sampling.png", 0.01, 0, 0.98, 1);
+    
+    s = slideshow.addSlide("n-dimensional space is a lonely place");
+    s->addImage("pca", "/Users/gene/bin/misc/sampling.png", 0.0, 0.025, 1, 0.7);
+    s->addText(h3, ofColor(0), "\"To deal with hyper-planes in a 14-dimensional space, visualize a 3-D space and say “fourteen” to yourself very loudly. Everyone does it.\"\n - Geoffrey Hinton", 0.01, 0.76, 0.85);
+    
+    s = slideshow.addSlide("Curse of dimensionality");
+    RandPixDemo *randDemo = new RandPixDemo(s, "randdemo", 0.25, 0.1, 0.5, 0.5);
+    s->addAction(randDemo);
+    s->addText(h4, ofColor(0), "One pixel has 256 * 256 * 256 possible values", 0.1, 0.5, 0.8);
+    s->addText(h4, ofColor(0), "1024 pixels = 1024 ^ (256 * 256 * 256) possible combinations", 0.1, 0.6, 0.8);
+    
+    
+    // curse of dimensionality graphics
+    //
+    
+    s = slideshow.addSlide("Eigenfaces");
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/eigenface_reconstruction_opencv.png", 0.15, 0.1, 0.7, 0.8);
+    s->addText(h4, ofColor(0), "http://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec_tutorial.html", 0.05, 0.93, 0.7);
+    
+    s = slideshow.addSlide("Autoencoders");
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/autoencoder.png", 0, 0, 1, 0.3);
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/autoencoder_net.png", 0, 0.3, 1, 0.65);
+    s->addText(h4, ofColor(0), "world's most expensive identity function", 0.01, 0.93, 0.8);
+    // samples left -> right
+    
+    
+    ///////////////////
+    // Insert neural net stuff
+    
+    s = slideshow.addSlide("Forward pass");
+    s->addImage("neuron", "/Users/gene/bin/misc/stock/forwardPassDemo/fp_1.png", 0.1, 0.1, 0.8, 0.8);
+    s->addBreakpoint();
+    s->addImage("neuron", "/Users/gene/bin/misc/stock/forwardPassDemo/fp_2.png", 0.1, 0.1, 0.8, 0.8);
+    s->addBreakpoint();
+    s->addImage("neuron", "/Users/gene/bin/misc/stock/forwardPassDemo/fp_3.png", 0.1, 0.1, 0.8, 0.8);
+    s->addBreakpoint();
+    s->addImage("neuron", "/Users/gene/bin/misc/stock/forwardPassDemo/fp_4.png", 0.1, 0.1, 0.8, 0.8);
+    s->addBreakpoint();
+    s->addImage("neuron", "/Users/gene/bin/misc/stock/forwardPassDemo/fp_5.png", 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("MNIST");
+    s->addImage("mnist", "/Users/gene/bin/misc/stock/mnist_random_sample.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Classifying handwritten numbers");
+    s->addImage("mnist", "/Users/gene/bin/misc/mnist-net.png", 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("Training our neural network");
+    s->addImage("mnist1", "/Users/gene/bin/misc/stock/mnist-forward-pass-1.png", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("mnist3", "/Users/gene/bin/misc/stock/mnist-forward-pass-3.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Training our neural network");
+    s->addMovie("mnist", "/Users/gene/bin/misc/stock/mnist_weights_demo.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("MNIST first layer weights");
+    s->addImage("MNIST weights", "/Users/gene/bin/misc/stock/mnist_weights.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("A more complicated dataset");
+    s->addImage("CIFAR", "/Users/gene/bin/misc/stock/cifar.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("What tricks ordinary neural nets?");
+    s->addImage("CIFAR cats", "/Users/gene/bin/misc/stock/cifar-cats.png", 0.0, 0.02, 1, 0.48);
+    s->addImage("CIFAR-10 linear classifier", "/Users/gene/bin/misc/stock/cifar_weights_linclassifier_cs231n.png", 0.0, 0.52, 1.0, 0.25);
+    s->addText(h4, ofColor(0), "CIFAR-10 linear classifier [ cs231n.stanford.edu/slides/winter1516_lecture2.pdf ]", 0.10, 0.8, 1);
+    
+    s = slideshow.addSlide("Convolutional neural networks");
+    s->addImage("lenet", "/Users/gene/bin/misc/stock/lenet.png", 0, 0, 1, 0.4);
+    s->addMovie("lenet demo", "/Users/gene/bin/misc/stock/lenet_demo.mp4", true, 0, 0.4, 1, 0.6);
+    s->addText(h3, ofColor(0), "Lenet (LeCun et al, 1998) [http://yann.lecun.com/exdb/lenet/]", 0, 0.4, 1);
+    
+    //    s = slideshow.addSlide("Convnet geometry (volume interpretation)");
+    //    s->addImage("volumes", "/Users/gene/bin/misc/stock/cnn_volumes.jpg", 0.0, 0.0, 1.0, 1.0);
+    //    s->addText(h4, ofColor(0), "http://cs231n.stanford.edu/slides/winter1516_lecture2.pdf", 0.1, 0.05, 1);
+    
+    s = slideshow.addSlide("Convolution layers");
+    s->addMovie("convolution", "/Users/gene/bin/misc/stock/convolution_demo.mp4", true, 0, 0, 1, 1);
+    s->addText(h4, ofColor(0), "ml4a.github.io/dev/demos/demo_convolution.html", 0.1, 0.05, 1);
+    
+    s = slideshow.addSlide("Pooling layers");
+    s->addImage("pooling", "/Users/gene/bin/misc/stock/cnn_pool.jpg", 0.0, 0.2, 0.5, 0.7);
+    s->addImage("Max-pooling", "/Users/gene/bin/misc/stock/cnn_maxpool.jpg", 0.5, 0.2, 0.5, 0.7);
+    s->addText(h4, ofColor(0), "http://cs231n.github.io/convolutional-networks/", 0.1, 0.01, 0.99);
+    
+    s = slideshow.addSlide("CNN demo");
+    CcvForwardPassDemo *ccvd = new CcvForwardPassDemo(s, "ccv", 0, 0, 1, 1);
+    s->addAction(ccvd);
+    
+    
+    //////////////////
+    // back to gen models
+    
+    
+    s = slideshow.addSlide("so.... Autoencoders");
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/autoencoder.png", 0, 0, 1, 0.3);
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/autoencoder_net.png", 0, 0.3, 1, 0.65);
+    s->addText(h4, ofColor(0), "world's most expensive identity function", 0.01, 0.93, 0.8);
+    // samples left -> right
+    
+    s = slideshow.addSlide("Reconstructions MNIST");
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/autoencoders_mnist_reconstruction.png", 0, 0, 1, 1);
+    
+    
+    // GANS + DCGANs + A book from the sky + Zero Likes + VGAN
+    
+    s = slideshow.addSlide("Generative adversarial nets (Goodfellow et al)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/misc/stock/GANs.png", 0.0, 0.0, 1.0, 1.0);
+    
+    s = slideshow.addSlide("Deep convolutional generative adversarial network");
+    s->addImage("Mona Lisa", "/Users/gene/bin/misc/stock/faces_128_filter_samples.png", 0.0, 0.15, 1.0, 0.86);
+    s->addText(h4, ofColor(0), "Radford, Metz, Chintala", 0.1, 0.0, 0.8);
+    s->addText(h4, ofColor(0), "arxiv.org/abs/1511.06434", 0.1, 0.08, 0.8);
+    
+    s = slideshow.addSlide("Arithmetic on generated faces");
+    s->addImage("smiling arithmetic", "/Users/gene/bin/misc/stock/faces_arithmetic_collage1.png", 0, 0, 1, 1);
+    s->addText(h4, ofColor(0), "Radford, Metz, Chintala (arxiv.org/abs/1511.06434)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("Interpolating faces");
+    s->addMovie("mymov2", "/Users/gene/bin/autoencoders/_AlecRad_Faces.mp4", true, 0, 0, 1, 1);
+    s->addText(h4, ofColor(0), "Radford, Metz, Chintala (arxiv.org/abs/1511.06434)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("\"Interpolating\" numbers");
+    s->addMovie("MNIST interpolations", "/Users/gene/bin/dcgan/summary/digits.mov", true, 0.2, 0.1, 0.6, 0.6);
+    
+    s = slideshow.addSlide("HIT-OR3C");
+    s->addScrollableImage("Actuals", "/Users/gene/bin/dcgan/summary/actual.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Fake (R) + Real (L)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/dcgan/summary/fakereal.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("A Book from the Sky (Dec 2015)");
+    s->addMovie("zloops", "/Users/gene/bin/dcgan/summary/zloops.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Character interpolations");
+    s->addMovie("interplations", "/Users/gene/bin/dcgan/summary/interpolations.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Radical interpolations");
+    s->addText(h3, ofColor(0), "interpolations across characters sharing the same radical often appear to preserve it", 0.1, 0.0, 0.8);
+    s->addMovie("radical interpolations", "/Users/gene/bin/dcgan/summary/radinterpolation.mp4", true, 0, 0.2, 1, 0.8);
+    
+    s = slideshow.addSlide("Arithmetic tricks");
+    s->addMovie("arithmetic", "/Users/gene/bin/dcgan/public/arithmetic2.mp4", true, 0.1, 0.2, 0.8, 0.6);
+    
+    s = slideshow.addSlide("DCGAN flowers");
+    s->addImage("flowers", "/Users/gene/bin/dcgan/public/07_flowers.png", 0, 0.1, 1, 0.9);
+    s->addText(h3, ofColor(0), "https://twitter.com/vintermann/status/675599478494208000", 0, 0, 1);
+    
+    s = slideshow.addSlide("DCGAN Manga");
+    s->addImage("manga 1", "/Users/gene/bin/dcgan/public/07_manga_sample1.png", 0, 0.1, 1, 0.9);
+    s->addText(h3, ofColor(0), "https://github.com/mattya/chainer-DCGAN", 0, 0, 1);
+    
+    s = slideshow.addSlide("DCGAN Manga interpolations");
+    s->addImage("manga 2", "/Users/gene/bin/dcgan/public/07_manga_sample2.png", 0, 0.1, 1, 0.9);
+    s->addText(h3, ofColor(0), "https://github.com/mattya/chainer-DCGAN", 0, 0, 1);
+    
+    
+    s = slideshow.addSlide("@zero_likes (Sam Hains)");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addImage("zero_likes", "/Users/gene/bin/dcgan/zero_likes/zero_likes-selfie.png", 0.0, 0.05, 1, 0.9);
+    
+    s = slideshow.addSlide("@zero_likes (Sam Hains)");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addImage("zero_likes", "/Users/gene/bin/dcgan/zero_likes/zero_likes-doglooks.png", 0.0, 0.05, 1, 0.9);
+    
+    s = slideshow.addSlide("@zero_likes (Sam Hains)");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addImage("zero_likes", "/Users/gene/bin/dcgan/zero_likes/zero_likes-sandwich.png", 0.0, 0.05, 1, 0.9);
+    
+    // vgan
+    s = slideshow.addSlide("Video prediction GANs");
+    s->addMovie("Video GANS", "/Users/gene/bin/dcgan/video_gans.mp4", true, 0.0, 0.03, 1, 1);
+    s->addText(h4, ofColor(0), "Carl Vondrick (http://web.mit.edu/vondrick/tinyvideo/)", 0.0, 0.0, 0.8);
+    
+    s = slideshow.addSlide("loading video gans!");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addMovie("Loading VGAN", "/Users/gene/bin/dcgan/loading_vgan.mp4", true, 0.0, 0.0, 1, 1);
+    
+    
+    // DGN
+    
+    s = slideshow.addSlide("Deep Generator Networks");
+    s->addImage("classvis", "/Users/gene/bin/synthesizing/DGN_architecture.jpg", 0.0, 0.1, 1, 0.41);
+    s->addImage("classvis", "/Users/gene/bin/misc/stock/class-synthesis-deepgen.png", 0.0, 0.52, 1, 0.48);
+    s->addText(h4, ofColor(0), "Nguyen, Dosovitskiy, Yosinski, Brox, Clune [arxiv.org/abs/1605.09304v1]", 0.15, 0.01, 1.0);
+    s->start();
+    
+    
+    s = slideshow.addSlide("DGN CaffeNet");
+    s->addScrollableImage("classvis", "/Users/gene/bin/synthesizing/synthesizing-caffenet-tSNE.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("DGN convergence");
+    s->addText(h4, ofColor(0), "https://github.com/Evolving-AI-Lab/synthesizing", 0.15, 0.00, 1.0);
+    ofxPPMovie *mov3 = s->addMovie("macaw", "/Users/gene/bin/synthesizing/macaw.mov", true, 0.05, 0.05, 0.9, 0.9);
+    mov3->setLoop(false);
+    
+    s = slideshow.addSlide("DGN convergence");
+    ofxPPMovie *mov = s->addMovie("cheeseburger", "/Users/gene/bin/synthesizing/teapotnew.mov", true, 0.02, 0.1, 0.46, 0.8);
+    mov->setLoop(false);
+    ofxPPMovie *mov2 = s->addMovie("teapot", "/Users/gene/bin/synthesizing/cheeseburgernew.mov", true, 0.52, 0.1, 0.46, 0.8);
+    mov2->setLoop(false);
+    
+    s = slideshow.addSlide("DGN (people)");
+    s->addImage("classvis", "/Users/gene/bin/synthesizing/people.png", 0.025, 0.025, 0.95, 0.95);
+    
+    s = slideshow.addSlide("DGN (boathouses)");
+    s->addImage("classvis", "/Users/gene/bin/synthesizing/boathouses.png", 0.025, 0.025, 0.95, 0.95);
+    
+    s = slideshow.addSlide("Plug & Play Generative Networks");
+    s->addImage("PPGN", "/Users/gene/bin/misc/ppgn_image_captioning.jpg", 0, 0.05, 1, 0.97);
+    s->addText(h4, ofColor(0), "http://www.evolvingai.org/ppgn", 0.1, 0.0, 0.8);
+    
+    
+    ////////////////////////
+    // pix2pix
+    
+    s = slideshow.addSlide("Image-to-Image Translation with Conditional Adversarial Nets");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/teaser_v3a.png", 0.0, 0.04, 1.0, 0.96);
+    s->addText(h3, ofColor(100), "phillipi.github.io/pix2pix/", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Invisible Cities");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_style_transfer_x4.jpg", 0.0, 0.04, 1, 0.96);
+    s->addText(h3, ofColor(100), "opendot.github.io/ml4a-invisible-cities/", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Reconstructing Mapbox tiles");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/venice_reconstructed_all.jpg", 0.0, 0, 1, 1);
+    
+    s = slideshow.addSlide("City style transfer");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/la_x_venice.png", 0.0, 0.0, 1.0, 0.5);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_x_venice.jpg", 0.0, 0.5, 1.0, 0.5);
+    
+    s = slideshow.addSlide("City style transfer");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_x_venice_la.jpg", 0.0, 0.0, 1.0, 1.0);
+    
+    s = slideshow.addSlide("Handrawn satellite imagery");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/handdrawn1.jpg", 0.0, 0.0, 1.0, 0.5);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/handdrawn2.jpg", 0.0, 0.5, 1.0, 0.5);
+    
+    s = slideshow.addSlide("Online drawing tool");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/invisible_cities/invisible_cities-draw.mp4", false, 0.05, 0.05, 0.9, 0.9);
+    s->addText(h3, ofColor(100), "github.com/genekogan/InvisibleCities/", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Pix2Pix experiment (Ildar Iakubov)");
+    s->addMovie("fb", "/Users/gene/bin/strelka/ildar-pix2pix.mp4", false, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("Pix2Pix streetview (Jasper van Loenen)");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/jasper-streetview.mp4", false, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("Pix2Pix person-to-person (Brannon Dorsey)");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/brannon-kurzweil.mp4", false, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/trump/trump_face_train.png", 0.0, 0.0, 0.45, 1.0);
+    s->addImage("fb", "/Users/gene/bin/misc/stock/arrow.png", 0.46, 0.0, 0.08, 1.0);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/trump/gene_face_test.png", 0.55, 0.0, 0.45, 1.0);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump_gene1.mp4", false, 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("Meat puppet @ ECAL");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump-meatpuppet-pix2pix-ecal.mp4", true, 0.0, 0.0, 1.0, 1.0)->setPosition(0.25);
+    
+    s = slideshow.addSlide("Pix2Pix + webcam (Memo Akten)");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/memo-painting.mp4", true, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("CycleGAN");
+    s->addImage("fb", "/Users/gene/bin/misc/cyclegan/cyclegan.jpg", 0.0, 0.07, 1, 0.95);
+    s->addText(h3, ofColor(100), "Zhu, Park, Isola, Efros (https://junyanz.github.io/CycleGAN/)", 0.00, 0.00, 0.8);
+    
+    s = slideshow.addSlide("CycleGAN");
+    s->addMovie("fb", "/Users/gene/bin/misc/cyclegan/cyclegan_zebra.mp4", true, 0.1, 0.1, 0.8, 0.8);
+    s->addText(h3, ofColor(100), "Zhu, Park, Isola, Efros (https://junyanz.github.io/CycleGAN/)", 0.00, 0.00, 0.8);
+    
+    s = slideshow.addSlide("CycleGAN fail");
+    s->addImage("fb", "/Users/gene/bin/misc/cyclegan/putin_zebra.jpeg", 0.1, 0.1, 0.8, 0.8);
+    s->addText(h3, ofColor(100), "Zhu, Park, Isola, Efros (https://junyanz.github.io/CycleGAN/)", 0.00, 0.00, 0.8);
+    
+    s = slideshow.addSlide("GPU Options");
+    s->addText(h3, ofColor(0), "Amazon EC2, Google Cloud", 0.1, 0.1, 0.8);
+    s->addText(h3, ofColor(0), "FloydHub", 0.1, 0.2, 0.8);
+    s->addText(h3, ofColor(0), "Paperspace", 0.1, 0.3, 0.8);
+    s->addText(h3, ofColor(0), "Buy your own!", 0.1, 0.4, 0.8);
+    
+    s = slideshow.addSlide("Next workshop!");
+    s->addText(h3, ofColor(0), "27 May @ Lacuna Lab", 0.1, 0.15, 0.8);
+    s->addText(h3, ofColor(0), "You guys decide the subject?", 0.1, 0.3, 0.8);
+    
+    
 }

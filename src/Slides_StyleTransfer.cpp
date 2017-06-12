@@ -35,7 +35,7 @@ void ofApp::StyleTransfer() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_rajaravivarma.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Tarsila");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Roy Liechtenstein");
@@ -71,11 +71,11 @@ void ofApp::StyleTransfer() {
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_aurora.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Arabic Calligraphy (1)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/caligraphy.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/caligraphy.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_calligraphy1.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Arabic Calligraphy (2)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/_bin/style-transfer/_inputs/caligraphy2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/caligraphy2.jpg", 0.0, 0.0, 0.55, 1.0);
     s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_calligraphy2.jpg", 0.6, 0.0, 0.4, 1.0);
     
     s = slideshow.addSlide("Mona Lisa x Crab Nebula");
@@ -174,7 +174,7 @@ void ofApp::StyleTransfer() {
     // S) deep forger, twitter, kyle walking through sand + starry night in nyc
     
     s = slideshow.addSlide("Just style (Persian style)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/persian.jpg", 0, 0, 1, 0.5);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/persian.jpg", 0, 0, 1, 0.5);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/persian.jpg", 0, 0.5, 1, 0.5);
     
     s = slideshow.addSlide("Just style (Arabic calligraphy)");
@@ -182,38 +182,38 @@ void ofApp::StyleTransfer() {
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/arabic.jpg", 0, 0.5, 1, 0.5);
     
     s = slideshow.addSlide("Just style (Basquiat)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/basquiat2.jpg", 0, 0, 1, 0.5);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/basquiat2.jpg", 0, 0, 1, 0.5);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/basquiat.jpg", 0, 0.5, 1, 0.5);
     
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 1, 0.5);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 1, 0.5);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps1.jpg", 0, 0.5, 1, 0.5);
     
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 1, 0.5);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 1, 0.5);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps2.jpg", 0, 0.5, 1, 0.5);
     
     s = slideshow.addSlide("Just style (google maps)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/maps.jpg", 0, 0, 1, 0.5);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0, 0, 1, 0.5);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/maps3.jpg", 0, 0.5, 1, 0.5);
     
     s = slideshow.addSlide("Just style (Crab nebula)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/crab.jpg", 0, 0, 1, 0.5);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/crab.jpg", 0, 0, 1, 0.5);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/crab.jpg", 0, 0.5, 1, 0.5);
     
     s = slideshow.addSlide("Just style (Hieroglyphs)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/egypt.jpg", 0, 0, 1, 0.5);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/egypt.jpg", 0, 0, 1, 0.5);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/egypt.jpg", 0, 0.5, 1, 0.5);
     
     s = slideshow.addSlide("Just style (Hokusai)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/hokusai.jpg", 0, 0, 1, 0.5);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/hokusai.jpg", 0, 0, 1, 0.5);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/hokusai.jpg", 0, 0.5, 1, 0.5);
     
     s = slideshow.addSlide("Just style (Kandinsky)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/kandinsky2.jpg", 0, 0, 1, 0.5);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/kandinsky2.jpg", 0, 0, 1, 0.5);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/kandinsky.jpg", 0, 0.5, 1, 0.5);
     
     s = slideshow.addSlide("Just style (Tarsila)");
-    s->addImage("deep-texture", "/Users/gene/bin/_bin/style-transfer/_inputs/tarsilo2.jpg", 0, 0, 1, 0.5);
+    s->addImage("deep-texture", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0, 0, 1, 0.5);
     s->addImage("deep-texture", "/Users/gene/bin/deep-texture/tarsila.jpg", 0, 0.5, 1, 0.5);
 }

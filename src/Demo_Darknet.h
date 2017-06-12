@@ -21,24 +21,21 @@ public:
     void start() {
         if (!loaded) {
             screen.setup(ofGetWidth(), ofGetHeight(), true && !IS_PROJECTING);
-            
-            int deviceIdx = 0;
-            vector<ofVideoDevice> devices = grab.listDevices();
-            for (int i=0; i<devices.size(); i++) {
-                if (devices[i].deviceName == "USB Camera") {
-                    cout << "found "<<devices[i].deviceName << " at " << i << endl;
-                    deviceIdx = i;
-                }
-            }
-            grab.setDeviceID(deviceIdx);
-            grab.initGrabber(640, 480);
-            
             loaded = true;
         }
+        int deviceIdx = 0;
+        vector<ofVideoDevice> devices = grab.listDevices();
+        for (int i=0; i<devices.size(); i++) {
+            if (devices[i].deviceName == "USB Camera") {
+                cout << "found "<<devices[i].deviceName << " at " << i << endl;
+                deviceIdx = i;
+            }
+        }
+        grab.setDeviceID(deviceIdx);
+        grab.initGrabber(640, 480);
     }
     
     void stop() {
-        cout << "close" << endl;
         grab.close();
     }
     
@@ -76,6 +73,8 @@ public:
             ofPushMatrix();
             ofTranslate(box.getX(), box.getY());
 
+            //float ar = float(box.getWidth()) / float(box.getHeight());
+            
             if (isScreenGrab) {
                 screen.draw(0, 0, box.getWidth(), box.getHeight());
             }
