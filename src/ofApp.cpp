@@ -34,7 +34,7 @@ void ofApp::setup(){
     string cfgfile = ofToDataPath( "cfg/yolo9000.cfg" );
     string weightfile = "/Users/gene/Teaching/ML4A/ml4a-ofx/data/darknet/yolo9000.weights";
     string namesfile = ofToDataPath( "cfg/9k.names" );
-//    darknet.init( cfgfile, weightfile, namesfile );
+    darknet.init( cfgfile, weightfile, namesfile );
     
     // Ccv
 //    ccv.setup("/Users/gene/bin/misc/ccv/image-net-2012.sqlite3");
@@ -47,7 +47,8 @@ void ofApp::setup(){
 //    slideshow.loadFromExported();
     
     // CONTENT
-    CIIDOpenTalk();
+//    WorkshopCIIDDeepLearning();
+    WorkshopCIIDCriticalIssues();
     
     // after loading slides
     slideshow.setContentRectangle(20, 56, ofGetWidth()-40, ofGetHeight()-56);
@@ -58,6 +59,20 @@ void ofApp::setup(){
     // export external for distribution
 //    slideshow.exportAssets();
 //    slideshow.exportScreenshots();
+    
+    
+    
+    /*
+     From Pixels to Paragraphs, adapted from CIID Deep Learning lecture
+     
+     
+     GAN architecture
+     BEGAN (faces), InfoGAN, DiscoGAN
+     
+     
+     
+     */
+    
     
     
     // Machine learning for (non-computer) scientists
@@ -95,7 +110,7 @@ void ofApp::update(){
     slideshow.update();
 }
 
-//-----------------------------------------------   ---------------
+//--------------------------------------------------------------
 void ofApp::checkRemoteControl(){
 //    while (osc.hasWaitingMessages()) {
 //        ofxOscMessage msg;

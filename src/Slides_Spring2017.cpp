@@ -3806,12 +3806,6 @@ void ofApp::HEADGeneva(){
     
     
     
-    
-    
-    
-    
-    
-    
     s = slideshow.addSlide("thanks :)");
     s->addMovie("t-SNE convergence", "/Users/gene/bin/tsne/tsne_manual.mp4", true, 0, 0, 1, 1);
     s->addRect(ofColor(255,160), 0.005, 0.19, 0.33, 0.25);

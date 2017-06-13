@@ -474,6 +474,20 @@ void ofApp::WorkshopCIIDDeepLearning() {
     CcvForwardPassDemo *ccvd = new CcvForwardPassDemo(s, "ccv", 0, 0, 1, 1);
     s->addAction(ccvd);
 
+    s = slideshow.addSlide("Which pixels affect the activations?");
+    s->addImage("ZF activation strength", "/Users/gene/bin/misc/stock/activation_strength.png", 0, 0, 1, 1);
+    s->addText(h4, ofColor(0), "http://arxiv.org/abs/1311.2901", 0.0, 0.01, 1);
+    
+    s = slideshow.addSlide("Visualizing convnets (Zeiler + Fergus 2013) [ arxiv.org/abs/1311.2901 ]");
+    s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l1.png", 0.0, 0.1, 1, 0.8);
+    s->addText(h3, ofColor(0), "Image patches which respond most to filters", 0.2, 0.0, 1.0);
+    
+    s = slideshow.addSlide("Visualizing convnets (Zeiler + Fergus 2013) [ arxiv.org/abs/1311.2901 ]");
+    s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l2.png", 0.0, 0.0, 0.5, 1);
+    s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l3.png", 0.5, 0.0, 0.5, 1);
+    s->addText(h3, ofColor(0), "Image patches which respond most to filters", 0.2, 0.0, 1.0);
+    
+    
 
 	s = slideshow.addSlide("ML generative models");
     s->addImage("pca", "/Users/gene/bin/misc/stock/GaussianScatterPCA.svg.png", 0.0, 0, 0.5, 1.0);
@@ -561,10 +575,6 @@ void ofApp::WorkshopCIIDDeepLearning() {
     s->addMovie("bel", "/Users/gene/bin/deepdream/darknet/out_jt_13_3x12_oct4_11.mp4", true, 0.505, 0, 0.5, 1);
     
     s = slideshow.addSlide("Deepdream");
-    s->addMovie("bel", "/Users/gene/bin/deepdream/darknet/out_bel_13_3x12_oct4_11.mp4", true, 0.0, 0, 0.5, 1);
-    s->addMovie("bel", "/Users/gene/bin/deepdream/darknet/out_bel_9_3x12_oct4_11.mp4", true, 0.505, 0, 0.5, 1);
-    
-    s = slideshow.addSlide("Deepdream");
     s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_content/deeptrain2.mp4", true, 0.0, 0.0, 0.6, 0.35);
     s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/testOtherl4_1.mp4", true, 0.0, 0.35, 0.5, 0.65);
     s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/makeMid_blur_2a_imovie.mp4", true, 0.4, 0.0, 0.6, 0.6);
@@ -575,58 +585,6 @@ void ofApp::WorkshopCIIDDeepLearning() {
     s->addText(h4, ofColor(0), "Gatys et al, 2015 (arxiv.org/abs/1508.06576)", 0.002, 0, 1.0);
     s->addText(h4, ofColor(0), "Justin Johnson's neural-style (https://github.com/jcjohnson/neural-style)", 0.002, 0.075, 1.0);
     
-    s = slideshow.addSlide("Mona Lisa x Hokusai");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/hokusai.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_hokusai.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mona Lisa x Tarsila");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mona Lisa x Roy Liechtenstein");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/liechtenstein.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_liechtenstein.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mona Lisa x Wassily Kandinsky");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/kandinsky2.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_kandinsky2.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mona Lisa x Crab Nebula");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/crab.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_crab.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mona Lisa x Egyptian Hieroglyphs");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/egypt.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_egypt.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mona Lisa x Google Maps (1)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mona Lisa x Google Maps (2)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps2.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps2.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mona Lisa x Google Maps (3)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps3.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps3_cw08.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mona Lisa x Google Maps (4)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps3.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps3_cw15.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mona Lisa x Google Maps (5)");
-    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps3.jpg", 0.0, 0.0, 0.55, 1.0);
-    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps3.jpg", 0.6, 0.0, 0.4, 1.0);
-    
-    s = slideshow.addSlide("Mr. Div x Gustav Klimt");
-    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
-    s->addMovie("Mr. Div x Gustav Klimt", "/Users/gene/bin/style-transfer/05_interpolations/klimt-discoball/klimt-discoball.mp4", true, 0, 0, 1, 1);
-    
-    s = slideshow.addSlide("Video style with optical flow loss term (Ruder et al, 2016)");
-    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
-    s->addMovie("video style", "/Users/gene/bin/style-transfer/10_optical_flow/video-style-transfer-x4-reordered.mp4", true, 0, 0, 1, 1);
-
     s = slideshow.addSlide("Image-to-Image Translation with Conditional Adversarial Nets");
     s->addImage("fb", "/Users/gene/bin/pix2pix/teaser_v3a.png", 0.0, 0.04, 1.0, 0.96);
     s->addText(h3, ofColor(100), "phillipi.github.io/pix2pix/", 0.02, 0.00, 0.8);
@@ -650,9 +608,9 @@ void ofApp::WorkshopCIIDDeepLearning() {
     s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/handdrawn1.jpg", 0.0, 0.0, 1.0, 0.5);
     s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/handdrawn2.jpg", 0.0, 0.5, 1.0, 0.5);
     
-    s = slideshow.addSlide("Online drawing tool");
-    s->addMovie("fb", "/Users/gene/bin/pix2pix/invisible_cities/invisible_cities-draw.mp4", false, 0.05, 0.05, 0.9, 0.9);
-    s->addText(h3, ofColor(100), "github.com/genekogan/InvisibleCities/", 0.02, 0.00, 0.8);
+//    s = slideshow.addSlide("Online drawing tool");
+//    s->addMovie("fb", "/Users/gene/bin/pix2pix/invisible_cities/invisible_cities-draw.mp4", false, 0.05, 0.05, 0.9, 0.9);
+//    s->addText(h3, ofColor(100), "github.com/genekogan/InvisibleCities/", 0.02, 0.00, 0.8);
     
     s = slideshow.addSlide("Tiltbrush -> Pix2Pix experiment w/ Sougwen Chung");
     s->addMovie("fb", "/Users/gene/bin/strelka/tiltbrush-venice.mp4", false, 0.05, 0.05, 0.9, 0.9);
@@ -689,17 +647,314 @@ void ofApp::WorkshopCIIDDeepLearning() {
 }
 
 
+void ofApp::CIIDOpenTalk() {
+    
+    s = slideshow.addSlide("CIID, 13 June 2017");
+    s->addText(h2, ofColor(0), "@genekogan", 0.1, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "genekogan.com", 0.1, 0.3, 0.5);
+    s->addText(h2, ofColor(0), "ml4a.github.io", 0.6, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "@ml4a_", 0.6, 0.3, 0.5);
+    s->start();
+    
+    s = slideshow.addSlide("music information retrieval");
+    s->addImage("event detection", "/Users/gene/bin/misc/sourcetone/event_detection.png", 0.0, 0.0, 0.4, 0.38);
+    s->addImage("genre VA", "/Users/gene/bin/misc/sourcetone/genre-AvgVA.jpg", 0.0, 0.4, 0.42, 0.6);
+    s->addImage("LSA tags", "/Users/gene/bin/misc/sourcetone/LSA-tagsSmall-rank10-clust5.jpg", 0.41, 0, 0.59, 1.0);
+    
+    //    s = slideshow.addSlide("Color of Words");
+    //    s->addScrollableImage("color of words", "/Users/gene/bin/misc/stock/color-of-words.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Musical instruments (w/ Jeff Snyder)");
+    s->addImage("tweet", "/Users/gene/Web/genekogan.github.io/_site/images/birl/birl1.jpg", 0.0, 0.0, 1, 0.35);
+    s->addImage("tweet", "/Users/gene/bin/misc/Snyderphonics_Manta.jpg", 0.0, 0.365, 1, 0.64);
+    //
+    //        s = slideshow.addSlide("Generative art");
+    //        s->addImage("star", "/Users/gene/bin/images/stars/star-00001.png", 0, 0, 0.25, 0.5);
+    //        s->addImage("star", "/Users/gene/bin/images/stars/star-00004.png", 0.25, 0, 0.25, 0.5);
+    //        s->addImage("star", "/Users/gene/bin/images/stars/star-00005.png", 0.5, 0, 0.25, 0.5);
+    //        s->addImage("star", "/Users/gene/bin/images/stars/star-00010.png", 0.75, 0, 0.25, 0.5);
+    //        s->addImage("star", "/Users/gene/bin/images/stars/star-00014.png", 0.25, 0.5, 0.25, 0.5);
+    //        s->addImage("star", "/Users/gene/bin/images/stars/star-00016.png", 0.5, 0.5, 0.25, 0.5);
+    //        s->addImage("star", "/Users/gene/bin/images/stars/star-00011.png", 0, 0.5, 0.25, 0.5);
+    //        s->addImage("star", "/Users/gene/bin/images/stars/star-00022.png", 0.75, 0.5, 0.25, 0.5);
+    //
+    s = slideshow.addSlide("Generative art");
+    s->addImage("interference", "/Users/gene/bin/images/interference/interference11.png", 0.0, 0, 0.33, 1);
+    s->addImage("interference", "/Users/gene/bin/images/interference/interference14.png", 0.3333, 0, 0.33, 1);
+    s->addImage("interference", "/Users/gene/bin/images/interference/interference12.png", 0.6666, 0, 0.33, 1);
+    
+    s = slideshow.addSlide("Nature and simulation");
+    s->addMovie("simulation", "/Users/gene/bin/images/Flocking-fast.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Nature and simulation");
+    s->addMovie("simulation", "/Users/gene/bin/images/VertexFields2_01.29.2012.mov", true, 0, 0, 1, 1);
+    
+    //    s = slideshow.addSlide("Nature and simulation");
+    //    s->addMovie("simulation", "/Users/gene/bin/images/Tree.mov", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Nature and simulation");
+    s->addImage("simulation", "/Users/gene/bin/listening-to-the-ocean/listening-to-the-ocean-20.jpg", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Nature and simulation");
+    s->addImage("simulation", "/Users/gene/bin/listening-to-the-ocean/listening-to-the-ocean-10.jpg", 0.505, 0, 0.5, 1);
+    s->addImage("simulation", "/Users/gene/bin/listening-to-the-ocean/generator5.png", 0, 0, 0.5, 1);
+    
+    //    s = slideshow.addSlide("Visual instruments");
+    //    s->addMovie("genart", "/Users/gene/bin/images/instagram/bits.mp4", true, 0, 0, 0.333333, 0.5);
+    //    s->addMovie("genart", "/Users/gene/bin/images/instagram/constellations.mp4", true, 0.3333, 0, 0.33333, 0.5);
+    //    s->addMovie("genart", "/Users/gene/bin/images/instagram/subdivision_2.mp4", true, 0.66666, 0.0, 0.3333, 0.5);
+    //    s->addMovie("genart", "/Users/gene/bin/images/instagram/old/vert1.mp4", true, 0, 0.5, 0.333333, 0.5);
+    //    s->addMovie("genart", "/Users/gene/bin/images/instagram/video/cubes.mp4", true, 0.33333, 0.5, 0.333333, 0.5);
+    //    s->addMovie("genart", "/Users/gene/bin/images/instagram/old/polar_glitch2.mp4", true, 0.66666, 0.5, 0.333333, 0.5);
+    
+    //    s = slideshow.addSlide("Data visualization");
+    //    s->addImage("genart", "/Users/gene/Web/genekogan.github.io/_site/images/audio-sculpture/audio-sculpture2.jpg", 0, 0, 0.36, 1);
+    //    s->addMovie("genart", "/Users/gene/bin/misc/Tennis rankings 1983-2013-HD.mp4", true, 0.4, 0, 0.61, 1);
+    
+    s = slideshow.addSlide("Kinect Projector Toolkit");
+    s->addMovie("KPT", "/Users/gene/bin/opera-toolkit/colin-ribbons-2_nosound.mp4", true, 0.0, 0, 0.5, 0.6);
+    s->addMovie("KPT", "/Users/gene/bin/kinect-projector-toolkit/Silhouettes @ Saigon Ranger_nosound.mp4", true, 0.4, 0.4, 0.64, 0.62);
+    
+    s = slideshow.addSlide("Machine Yearning (2014)");
+    s->addMovie("machine yearning", "/Users/gene/bin/machine-yearning/machine-yearning-gopro.mp4", true, 0.0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Opera Toolkit (2015)");
+    s->addMovie("KPT", "/Users/gene/bin/opera-toolkit/optk_sarah_v1.mp4", true, 0.0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Mass collaboration: EcoHacker-Build");
+    s->addImage("ecohack", "/Users/gene/bin/ecohacker-build/_mg_7093_14926714478_o.jpg", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Deep learning + art");
+    s->addMovie("dcgan", "/Users/gene/bin/autoencoders/_AlecRad_Faces.mp4", true, 0, 0.026, 0.5, 0.47);
+    s->addImage("deepdream", "/Users/gene/bin/misc/stock/building-dreams.png", 0, 0.515, 0.5, 0.48);
+    s->addImage("stylenet", "/Users/gene/bin/misc/stock/stylenet-original.png", 0.5, 0.53, 0.5, 0.47);
+    s->addImage("synthesizing original", "/Users/gene/bin/misc/stock/synthesizing-original.jpg", 0.5, 0.025, 0.5, 0.48);
+    s->addText(h4, ofColor(0), "https://www.youtube.com/watch?v=QYcKCGdZvq4", 0.01, 0.0, 1.0);
+    s->addText(h5, ofColor(0), "research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html", 0.002, 0.475, 1.0);
+    s->addText(h4, ofColor(0), "https://arxiv.org/abs/1508.06576", 0.6, 0.51, 1.0);
+    s->addText(h4, ofColor(0), "http://www.evolvingai.org/synthesizing", 0.6, 0.0, 1.0);
+    //    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
+    //    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    //    s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
+    
+    
+    s = slideshow.addSlide("Deepdream: Leonardo Da Vinci");
+    s->addImage("Da Vinci", "/Users/gene/bin/deepdream/painters/_davinci.jpg", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("Da Vinci", "/Users/gene/bin/deepdream/painters/davinci_drawing(0)0002_i5_o8_os1.1_j32.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Deepdream");
+    s->addMovie("bel", "/Users/gene/bin/images/instagram/JTrain-instagram_start75.mp4", true, 0.0, 0, 0.5, 1);
+    s->addMovie("bel", "/Users/gene/bin/deepdream/darknet/out_jt_13_3x12_oct4_11.mp4", true, 0.505, 0, 0.5, 1);
+    
+    s = slideshow.addSlide("Deepdream");
+    s->addMovie("bel", "/Users/gene/bin/deepdream/darknet/out_bel_13_3x12_oct4_11.mp4", true, 0.0, 0, 0.5, 1);
+    s->addMovie("bel", "/Users/gene/bin/deepdream/darknet/out_bel_9_3x12_oct4_11.mp4", true, 0.505, 0, 0.5, 1);
+    
+    s = slideshow.addSlide("Deepdream");
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_content/deeptrain2.mp4", true, 0.0, 0.0, 0.6, 0.35);
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/testOtherl4_1.mp4", true, 0.0, 0.35, 0.5, 0.65);
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_prototypes/makeMid_blur_2a_imovie.mp4", true, 0.4, 0.0, 0.6, 0.6);
+    s->addMovie("Deepzoom", "/Users/gene/bin/deepdream/video_feedback/theFrame7.mp4", true, 0.5, 0.5, 0.5, 0.5);
+    
+    s = slideshow.addSlide("Recent experiments");
+    s->addImage("Da Vinci", "/Users/gene/bin/lapnorm/initial_experiments/eureka.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Recent experiments");
+    s->addMovie("Deepzoom", "/Users/gene/bin/lapnorm/initial_experiments/kframes (4).mp4", true, 0.0, 0.0, 1, 1);
+    
+    s = slideshow.addSlide("Recent experiments");
+    s->addMovie("Deepzoom", "/Users/gene/bin/lapnorm/initial_experiments/testframes9b0.mp4", true, 0.0, 0.0, 1, 1);
+    
+    
+    s = slideshow.addSlide("Style transfer");
+    s->addImage("Mona Lisa -> Cubist/Expressionist/Impressionist", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_cubist_expressionist_impressionist.jpg", 0, 0.15, 1, 0.85);
+    s->addText(h4, ofColor(0), "Gatys et al, 2015 (arxiv.org/abs/1508.06576)", 0.002, 0, 1.0);
+    s->addText(h4, ofColor(0), "Justin Johnson's neural-style (https://github.com/jcjohnson/neural-style)", 0.002, 0.075, 1.0);
+    
+    //    s = slideshow.addSlide("Mona Lisa x Devajyoti Ray");
+    //    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/devajyoti.jpg", 0.0, 0.0, 0.55, 1.0);
+    //    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_devajyoti.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Hokusai");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/hokusai.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_hokusai.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Tarsila");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/tarsilo2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_tarsila.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Roy Liechtenstein");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/liechtenstein.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_liechtenstein.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Aurora Borealis");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/aurora.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_aurora.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Crab Nebula");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/crab.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_crab.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Egyptian Hieroglyphs (1)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/egypt.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_egypt.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Google Maps (1)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Google Maps (2)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps2.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps2.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Google Maps (3)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps3.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps3_cw08.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Google Maps (4)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps3.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps3_cw15.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mona Lisa x Google Maps (5)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/maps3.jpg", 0.0, 0.0, 0.55, 1.0);
+    s->addImage("Mona Lisa TV noise", "/Users/gene/bin/style-transfer/03_mona-lisa-etc/ml_maps3.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Mr. Div x Gustav Klimt");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addMovie("Mr. Div x Gustav Klimt", "/Users/gene/bin/style-transfer/05_interpolations/klimt-discoball/klimt-discoball.mp4", true, 0, 0, 1, 1);
+    
+//    s = slideshow.addSlide("Picasso x Picasso");
+//    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+//    s->addMovie("Picasso periods", "/Users/gene/bin/style-transfer/05_interpolations/picasso-periods/picasso-periods.mp4", true, 0, 0, 1, 1);
 
+    //    s = slideshow.addSlide("Why is a Raven like a Writing Desk?");
+    //    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    //    s->addMovie("AliceNet", "/Users/gene/bin/style-transfer/04_alice/Alice-Stylenet.mov", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Video style with optical flow loss term (Ruder et al, 2016)");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addMovie("video style", "/Users/gene/bin/style-transfer/10_optical_flow/video-style-transfer-x4-reordered.mp4", true, 0, 0, 1, 1);
+    
+    CubistMirrorDemo *cmd = new CubistMirrorDemo(s, "classifier", 0, 0, 1, 1);
+    s = slideshow.addSlide("What happens when it's real-time?");
+    s->addAction(cmd);
+    cmd->setStyleModel("/Users/gene/bin/style-transfer/models/kandinsky_e2_full512.model");
+    
+    
+    s = slideshow.addSlide("Image-to-Image Translation with Conditional Adversarial Nets");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/teaser_v3a.png", 0.0, 0.04, 1.0, 0.96);
+    s->addText(h4, ofColor(100), "phillipi.github.io/pix2pix/ -> github.com/affinelayer/pix2pix-tensorflow", 0.002, 0.00, 1.0);
+    s->start();
+    
+    s = slideshow.addSlide("Invisible Cities");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_style_transfer_x4.jpg", 0.0, 0.04, 1, 0.96);
+    s->addText(h3, ofColor(100), "opendot.github.io/ml4a-invisible-cities/", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Reconstructing Mapbox tiles");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/venice_reconstructed_all.jpg", 0.0, 0, 1, 1);
+    
+    s = slideshow.addSlide("City style transfer");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/la_x_venice.png", 0.0, 0.0, 1.0, 0.5);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_x_venice.jpg", 0.0, 0.5, 1.0, 0.5);
+    
+    s = slideshow.addSlide("City style transfer");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_x_venice_la.jpg", 0.0, 0.0, 1.0, 1.0);
+    
+    s = slideshow.addSlide("Handrawn satellite imagery");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/handdrawn1.jpg", 0.0, 0.0, 1.0, 0.5);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/handdrawn2.jpg", 0.0, 0.5, 1.0, 0.5);
+    
+    s = slideshow.addSlide("Online drawing tool");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/invisible_cities/invisible_cities-draw.mp4", false, 0.05, 0.05, 0.9, 0.9);
+    s->addText(h3, ofColor(100), "github.com/genekogan/InvisibleCities/", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/trump/trump_face_train.png", 0.0, 0.0, 0.45, 1.0);
+    s->addImage("fb", "/Users/gene/bin/misc/stock/arrow.png", 0.46, 0.0, 0.08, 1.0);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/trump/gene_face_test.png", 0.55, 0.0, 0.45, 1.0);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump_gene1.mp4", false, 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("Meat puppet @ ECAL");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump-meatpuppet-pix2pix-ecal.mp4", true, 0.0, 0.0, 1.0, 1.0)->setPosition(0.25);
+    
+    
+    s = slideshow.addSlide("Having fun");
+    s->addImage("densecap", "/Users/gene/bin/densecap/monalisa-densecap.png", 0, 0.03, 1, 0.94);
+    
+    s = slideshow.addSlide("Dense captioning Atlas, The Next Generation");
+    s->addMovie("densecap", "/Users/gene/bin/densecap/atlas.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Dense captioning Deepdream");
+    s->addMovie("densecap", "/Users/gene/bin/densecap/deepdream.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Dense captioning Pouff's grocery trip");
+    s->addMovie("densecap", "/Users/gene/bin/densecap/deepdream_grocery.mp4", true, 0, 0, 1, 1);
+    s->addText(h4, ofColor(0), "original: https://www.youtube.com/watch?v=DgPaCWJL7XI", 0.01, 0.0, 0.99);
+    
+    s = slideshow.addSlide("YOLO x ScreenGrab");
+    DarknetScreenGrabDemo *dnsgd = new DarknetScreenGrabDemo(s, "Darknet Demo", 0, 0, 1, 1);
+    dnsgd->setDarknetReference(&darknet);
+    s->addAction(dnsgd);
+    
+    s = slideshow.addSlide("Darknet-YOLO x ScreenGrab");
+    s->addImage("yolo", "/Users/gene/bin/ml4a/ReverseImageSearch/yolo-screen1.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Darknet-YOLO x ScreenGrab");
+    s->addImage("yolo", "/Users/gene/bin/ml4a/ReverseImageSearch/yolo-screen2.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Darknet-YOLO x ScreenGrab");
+    s->addImage("yolo", "/Users/gene/bin/ml4a/ReverseImageSearch/yolo-screen3.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Tele-captioning skype");
+    s->addImage("skype1", "/Users/gene/bin/misc/densecap-skype_2.png", 0.32, 0.46, 0.7, 0.65);
+    s->addImage("skype1", "/Users/gene/bin/misc/densecap-skype_1.png", 0, 0.0, 0.7, 0.65);
+    
+    
+    s = slideshow.addSlide("Demos");
+    s->addMovie("transfer learning", "/Users/gene/bin/misc/wekinator-coffee-croissant.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Audio + Text t-SNEs");
+    s->addScrollableImage("wiki t-SNE", "/Users/gene/bin/tsne/wiki-tSNE.png", -0.05, 0.0, 0.72, 0.76);
+    AudioTSNEDemo *attd = new AudioTSNEDemo(s, "audio t-sne", 0.48, 0.39, 0.54, 0.63);
+    s->addAction(attd);
+    s->addText(h4, ofColor(80), "www.genekogan.com/works/wiki-tSNE", 0.03, 0.8, 0.7);
+    s->addText(h4, ofColor(80), "github.com/ml4a/ml4a-ofx", 0.67, 0.3, 0.7);
 
-
+    s = slideshow.addSlide("ml4a.github.io");
+    s->addImage("pyramid", "/Users/gene/bin/misc/stock/pyramid.png", 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("ml4a.github.io");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addMovie("ml4a @ itp", "/Users/gene/bin/ml4a-classes/itp-S16/timelapse/ml4a @ itp-nyu -- timelapse_crop.mp4", true, 0, 0, 1, 1)->setPositionRandom();
+    s->loadAssets();
+    
+    s = slideshow.addSlide("guides, workshops, and code");
+    s->addImage("rachel", "/Users/gene/bin/misc/workshops/opendot/30491978563_c7baa100d2_o.jpg", 0.0, 0.0, 0.5, 0.5);
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/altai.JPG", 0.5, 0.0, 0.5, 0.48);
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/influencers3.jpg", 0.0, 0.5, 0.5, 0.48);
+    s->addImage("workshop", "/Users/gene/Web/genekogan.github.io/images/workshops/nabi2.jpg", 0.5, 0.5, 0.5, 0.48);
+    
+    
+    s = slideshow.addSlide("thanks :)");
+    s->addMovie("t-SNE convergence", "/Users/gene/bin/tsne/tsne_manual.mp4", true, 0, 0, 1, 1);
+    s->addRect(ofColor(255,160), 0.005, 0.19, 0.33, 0.25);
+    s->addRect(ofColor(255,160), 0.595, 0.19, 0.33, 0.25);
+    s->addText(h2, ofColor(0), "@genekogan", 0.1, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "genekogan.com", 0.1, 0.3, 0.5);
+    s->addText(h2, ofColor(0), "ml4a.github.io", 0.6, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "@ml4a_", 0.6, 0.3, 0.5);
+    
+}
 
 
 
 void ofApp::WorkshopCIIDCriticalIssues() {
 
-    // about machine learning and ai
-    s = slideshow.addSlide("AI Spring?");
-    s->addImage("invest", "/Users/gene/bin/misc/stock/hype-investment.jpg", 0.1, 0.1, 0.8, 0.8);
+    s = slideshow.addSlide("Who's afraid of the singularity?");
+    s->addText(h2, ofColor(0), "\"Will robots inherit the earth? Yes, but they will be our children.\" - Marvin Minsky", 0.1, 0.1, 0.7);
+    s->addMovie("millenium fx baby", "/Users/gene/bin/misc/stock/animatronic_baby.mp4", true, 0.1, 0.25, 0.8, 0.7);
+    s->start();
     
     s = slideshow.addSlide("AGI is on people's minds?");
     s->addMovie("Seaquest", "/Users/gene/bin/misc/stock/Deep Q network learning to play Seaquest-5WXVJ1A0k6Q.mp4", true, 0, 0, 0.5, 0.5);
@@ -720,12 +975,101 @@ void ofApp::WorkshopCIIDCriticalIssues() {
     s->addText(h2, ofColor(0), "\"Worrying about killer robots is like worrying about overpopulation on Mars\" - Andrew Ng", 0.05, 0.15, 0.75);
     s->addText(h2, ofColor(0), "\"Worrying about sentient AI as the ice caps melt is like standing on the tracks as the train rushes in, worrying about being hit by lightning\" - Bret Victor", 0.05, 0.35, 0.75);
     
+    // about machine learning and ai
+    s = slideshow.addSlide("AI Spring?");
+    s->addImage("invest", "/Users/gene/bin/misc/stock/hype-investment.jpg", 0.1, 0.1, 0.8, 0.8);
+
+	s = slideshow.addSlide("Backpropaganda");
+ 	s->addImage("invest", "/Users/gene/bin/misc/stock/hype-investment.jpg", 0.42, 0.0, 0.59, 0.7);
+	s->addImage("invest", "/Users/gene/bin/misc/ilsvrc-top5.png", 0.0, 0.05, 0.4, 0.4);
+	s->addImage("invest", "/Users/gene/bin/misc/ILSVRC-nvidia.png", 0.0, 0.55, 0.4, 0.4);
+	s->addText(h3, ofColor(80), "\"Machine learning is a core, transformative way by which we’re rethinking everything we’re doing,\" - Sundar Pichai, Google CEO", 0.45, 0.7, 0.4);
+
+    
     s = slideshow.addSlide("Critical issues in AI");
     s->addImage("napalm", "/Users/gene/bin/misc/stock/napalmgirl_censoredfb.jpg", 0.0, 0.0, 0.5, 0.5);
     s->addImage("drones", "/Users/gene/bin/misc/stock/trumpdrone.jpeg", 0.0, 0.5, 0.5, 0.5);
     s->addImage("pred policing", "/Users/gene/bin/misc/propublica-recidivism.png", 0.5, 0.5, 0.5, 0.5);
     s->addImage("flash crash", "/Users/gene/Pictures/Screenshots/flashcrash_tweet.png", 0.5, 0.0, 0.5, 0.5);
     
+    s = slideshow.addSlide("Manufacturing mood");
+    s->addImage("fb", "/Users/gene/bin/misc/stock/fbthumb.jpg", 0.0, 0.1, 0.5, 0.5);
+    s->addText(h3, ofColor(0), "May 2016: suppress conservative news in trending bars", 0.5, 0.2, 0.4);
+    s->addText(h3, ofColor(0), "June 2016: secret mood study in 2012 with 700k users", 0.5, 0.3, 0.4);
+    s->addText(h3, ofColor(0), "\"We are a tech company, not a media company\" - Mark Zuckerberg", 0.5, 0.4, 0.4);
+    s->addText(h3, ofColor(0), "44% of US adults get their news on Facebook (Pew, 2016)", 0.5, 0.5, 0.4);
+    
+    s = slideshow.addSlide("Algorithmic censorship");
+    s->addImage("napalm", "/Users/gene/bin/misc/stock/napalmgirl.jpg", 0.1, 0.1, 0.55, 0.7);
+    s->addText(h3, ofColor(0), "Facebook censoring Phan Th·ªã Kim Ph√∫c", 0.15, 0.81, 0.75);
+    s->addText(h4, ofColor(0), "https://www.theguardian.com/technology/2016/sep/08/facebook-mark-zuckerberg-napalm-girl-photo-vietnam-war", 0.1, 0.94, 0.8);
+    
+    s = slideshow.addSlide("Selective advertising");
+    s->addText(h3, ofColor(0), "CMU study: women shown fewer high paying job ads on Google", 0.15, 0.21, 0.75);
+    s->addText(h3, ofColor(0), "AdFisher - 17k fake profiles", 0.15, 0.31, 0.75);
+    s->addText(h3, ofColor(0), "We don't know why -- trade secret", 0.15, 0.41, 0.75);
+    s->addText(h3, ofColor(0), "\"How would a woman know to apply for a job she never saw advertised? How might a black community learn that it were being overpoliced by software?\" - Kate Crawford", 0.15, 0.51, 0.75);
+    s->addText(h4, ofColor(0), "http://www.cmu.edu/news/stories/archives/2015/july/online-ads-research.html", 0.15, 0.95, 0.75);
+    
+    s = slideshow.addSlide("Trailblazer");
+    s->addImage("binney", "/Users/gene/bin/misc/stock/binney.jpg", 0.2, 0.1, 0.6, 0.6);
+    s->addText(h2, ofColor(0), "\"It's better than anything that the KGB, the Stasi, or the Gestapo and SS ever had.\"", 0.05, 0.75, 0.75);
+
+    s = slideshow.addSlide("Terror Tuesdays");
+    s->addImage("napalm", "/Users/gene/bin/misc/stock/obama.jpg", 0.0, 0.0, 0.5, 0.5);
+    s->addImage("obama terror fun", "/Users/gene/bin/misc/obama-terror.png", 0.5, 0.0, 0.5, 0.5);
+    s->addImage("obama terror fun", "/Users/gene/bin/misc/stock/nsa-skynet-slide.jpg", 0.5, 0.5, 0.5, 0.5);
+    s->addText(h2, ofColor(0), "NSA Skynet", 0.12, 0.6, 0.82);
+    s->addText(h3, ofColor(0), "\"We kill people based on metadata\" - Michael Hayden", 0.02, 0.7, 0.45);
+    s->addText(h3, ofColor(0), "\"If you torture the data long enough, it will confess\" - Ronald Coase", 0.02, 0.8, 0.45);
+    s->addText(h4, ofColor(0), "https://www.theguardian.com/commentisfree/2016/feb/21/death-from-above-nia-csa-skynet-algorithm-drones-pakistan", 0.05, 0.9, 0.82);
+    
+    s = slideshow.addSlide("\"Can't we just drone this guy?\"");
+    s->addImage("napalm", "/Users/gene/bin/misc/stock/clinton-drones.jpg", 0.0, 0.0, 0.6, 1.0);
+    s->addImage("napalm", "/Users/gene/bin/misc/stock/clinton-drone-assange.jpg", 0.6, 0.0, 0.4, 1.0);
+    
+    s = slideshow.addSlide("Predictive policing");
+    s->addImage("pred policing", "/Users/gene/bin/misc/propublica-recidivism.png", 0.0, 0.0, 1.0, 0.7);
+    s->addText(h2, ofColor(0), "ProPublica vs. Northpointe re: recidivism", 0.12, 0.75, 0.82);
+    s->addText(h3, ofColor(0), "Vicious cycle: more arrests (to meet quotas) make algorithms favor poor areas more", 0.12, 0.82, 0.82);
+    s->addText(h4, ofColor(0), "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing", 0.05, 0.9, 0.82);
+    
+    s = slideshow.addSlide("Criminality prediction");
+    s->addImage("phrenology 2", "/Users/gene/bin/misc/ai_phrenology.png", 0.0, 0.1, 0.5, 0.8);
+    s->addImage("phrenology 1", "/Users/gene/bin/misc/ai_phrenology_2.png", 0.5, 0.1, 0.5, 0.8);
+    s->addText(h3, ofColor(0), "Automated Inference on Criminality using Face Images, 2016\nhttps://arxiv.org/abs/1611.04135", 0.1, 0.0, 0.9);
+    s->addText(h5, ofColor(0), "We find some discriminating structural features for predicting criminality, such as lip curvature, eye inner corner distance, and the so-called nose-mouth angle.", 0.02, 0.9, 0.45);
+    
+    s = slideshow.addSlide("L'uomo delinquente, Cesare Lombroso. 1878");
+    s->addImage("l'homme criminel", "/Users/gene/bin/misc/lhommecriminel2.jpg", 0.0, 0.05, 0.5, 0.9);
+    s->addImage("l'homme criminel", "/Users/gene/bin/misc/lhommecriminel.jpg", 0.5, 0.05, 0.5, 0.9);
+
+    s = slideshow.addSlide("AP Hacking + Flash crash");
+    s->addImage("flash crash", "/Users/gene/Pictures/Screenshots/flashcrash_tweet.png", 0.0, 0.0, 1.0, 0.5);
+    s->addText(h3, ofColor(0), "S&P 500 temporarily lost $136B after the hack", 0.15, 0.6, 0.8);
+    s->addText(h3, ofColor(0), "stock market algorithms are designed to undercut markets by anticipating and acting quickly to make risky transactions", 0.15, 0.7, 0.8);
+    s->addText(h4, ofColor(0), "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2602857", 0.05, 0.9, 0.82);
+    
+    s = slideshow.addSlide("Alternatives");
+    s->addText(h3, ofColor(0), "\"A social-systems approach could investigate, for instance, how the app AiCure ‚ which tracks patients' adherence to taking prescribed medication and transmits records to physicians ‚Äî is changing the doctor-patient relationship. Such an approach could also explore whether the use of historical data to predict where crimes will happen is driving overpolicing of marginalized communities. Or it could investigate why high-rolling investors are given the right to understand the financial decisions made on their behalf by humans and algorithms, whereas low-income loan seekers are often left to wonder why their requests have been rejected.\" - Kate Crawford, Ryan Calo\n\nhttp://www.nature.com/news/there-is-a-blind-spot-in-ai-research-1.20805", 0.02, 0.05, 0.82);
+    
+    s = slideshow.addSlide("AI Effect");
+    s->addText(h3, ofColor(0), "\"Practical AI successes, computational programs that actually achieved intelligent behavior, were soon assimilated into whatever application domain they were found to be useful in, and became silent partners alongside other problem-solving approaches, which left AI researchers to deal only with the \"failures,\" the tough nuts that couldn't yet be cracked.\" - Pamela McCorduck", 0.05, 0.1, 0.85);
+    s->addText(h3, ofColor(0), "\"This paradox resulted from the fact that whenever an AI research project made a useful new discovery, that product usually quickly spun off to form a new scientific or commercial specialty with its own distinctive name. These changes in name led outsiders to ask, Why do we see so little progress in the central field of artificial intelligence?\" - Marvin Minsky", 0.05, 0.5, 0.85);
+    
+    s = slideshow.addSlide("Self driving cars & Trolley problem (Philippa Foot)");
+    s->addImage("trolley", "/Users/gene/bin/misc/stock/trolley.jpg", 0.2, 0.15, 0.6, 0.65);
+    
+    s = slideshow.addSlide("Animals are machines (Descartes)");
+    s->addImage("descartes", "/Users/gene/bin/misc/stock/Descartes.jpg", 0.0, 0.0, 0.4, 1.0);
+    s->addImage("duck", "/Users/gene/bin/misc/stock/Vaucanson-duck.jpg", 0.5, 0.45, 0.5, 0.5);
+    s->addText(h2, ofColor(70), "\"But the greatest of all the prejudices we have retained from infancy is that of believing that brutes think\"\nRene Descartes, De homine (1662), Les passions de l'ame (1649)", 0.425, 0.1, 0.5);
+    s->addText(h4, ofColor(50), "Vaucanson's Digesting Duck", 0.52, 0.95, 0.5);
+
+    s = slideshow.addSlide("Animals are machines");
+    s->addText(h4, ofColor(0), "home.cogeco.ca/~drheault/ee_readings/West/Descartes.pdf", 0.01, 0.01, 0.9);
+    s->addMovie("aspca", "/Users/gene/bin/misc/stock/Robot Lives Matter (ASPCA Commercial).mp4", true, 0.1, 0.2, 0.8, 0.7);
+
 }
 
 
