@@ -50,6 +50,7 @@ public:
 class AudioTSNEDemo : public ofxPPElement {
 public:
     AudioTSNEDemo(ofxPPSlide *parent, string name, float x, float y, float w, float h) : ofxPPElement(parent, name, x, y, w, h) {
+        tsnePath = "/Users/gene/Desktop/bohemian.json";
     }
     
     void start() {
@@ -59,14 +60,16 @@ public:
         }
     }
     
+    void setTsnePath(string tsnePath_) {
+        tsnePath = tsnePath_;
+    }
+    
     void stop() {
     }
     
     void setupTsne() {
-        
-         string file = "/Users/gene/Desktop/bohemian.json";
          ofxJSONElement result;
-         bool parsingSuccessful = result.open(file);
+         bool parsingSuccessful = result.open(tsnePath);
          for (int i=0; i<result.size(); i++) {
              string path = result[i]["path"].asString();
              //float x = result[i]["x"].asFloat();
@@ -114,6 +117,7 @@ public:
         }
     }
     
-    vector<AudioClip> sounds;    
+    vector<AudioClip> sounds;
+    string tsnePath;
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#define IS_PROJECTING true
+#define IS_PROJECTING false
 #define HIDE_CURSOR false
 #define USE_SECOND_SCREEN false
 #define REVIMGFAST true
@@ -46,6 +46,7 @@ public:
     
     void drawBgWhite(ofxPPSlide * & slide);
     void drawBgBlack(ofxPPSlide * & slide);
+    void drawBgNone(ofxPPSlide * & slide);
     
     /* Gui */
     void setupGui();
@@ -161,6 +162,7 @@ public:
     void WorkshopSpektrum3();
     void WorkshopSoundCloud();
     void WorkshopHEAD2();
+    void WorkshopEyeo();
     
     /* ECAL workshop */
     void WorkshopECAL1();
@@ -189,7 +191,7 @@ public:
     bool isPaused;
     
     // Shared
-    ofxDarknet darknet;
+    ofxDarknet darknet, darknet2;
     ofxCcv ccv;
     
     //ofxOscReceiver osc;
