@@ -37,7 +37,7 @@ void ofApp::setup(){
     darknet.init( cfgfile, weightfile, namesfile );
     string cfgfile2 = "/Users/gene/Code/of_v0.9.6_osx_release/addons/ofxDarknet/example-deepdream/bin/data/cfg/vgg-conv.cfg";
     string weightfile2 = "/Users/gene/Teaching/ML4A/ml4a-ofx/data/darknet/vgg-conv.weights";
-    darknet2.init( cfgfile2, weightfile2 );
+    //darknet2.init( cfgfile2, weightfile2 );
 
     
     // Ccv
@@ -51,8 +51,11 @@ void ofApp::setup(){
     //slideshow.loadFromExported();
     
     // CONTENT
-    Eyeo2();
-
+//    WorkshopCIIDAboutMe();
+    WorkshopCIIDDeepLearning2();
+    
+    
+    ///Users/gene/bin/misc/stock/pointcloud-GAN.png
     
     // after loading slides
     slideshow.setContentRectangle(20, 56, ofGetWidth()-40, ofGetHeight()-56);

@@ -83,12 +83,10 @@ public:
             float bw = box.getWidth();
             float bh = box.getHeight();
             if (ar * box.getHeight() < box.getWidth()) {
-                cout << "1"<<endl;
                 bh = box.getHeight();
                 bw = ar * bh;
                 bx = 0.5 * (box.getWidth() - bw);
             } else {
-                cout << "2"<<endl;
                 bw = box.getWidth();
                 bh = bw / ar;
                 by = 0.5 * (box.getHeight() - bh);

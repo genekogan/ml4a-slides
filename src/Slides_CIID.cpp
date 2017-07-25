@@ -4,7 +4,7 @@
 
 void ofApp::WorkshopCIIDAboutMe() {
     
-    s = slideshow.addSlide("hi CIID");
+    s = slideshow.addSlide("hello CIID :)");
     s->addText(h2, ofColor(0), "@genekogan", 0.1, 0.2, 0.5);
     s->addText(h2, ofColor(0), "genekogan.com", 0.1, 0.3, 0.5);
     s->addText(h2, ofColor(0), "ml4a.github.io", 0.6, 0.2, 0.5);
@@ -103,6 +103,15 @@ void ofApp::WorkshopCIIDAboutMe() {
     
     s = slideshow.addSlide("Dense captioning Deepdream");
     s->addMovie("densecap", "/Users/gene/bin/densecap/deepdream.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/trump/trump_face_train.png", 0.0, 0.0, 0.45, 1.0);
+    s->addImage("fb", "/Users/gene/bin/misc/stock/arrow.png", 0.46, 0.0, 0.08, 1.0);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/trump/gene_face_test.png", 0.55, 0.0, 0.45, 1.0);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump_gene1.mp4", false, 0.1, 0.1, 0.8, 0.8);
+
     
     s = slideshow.addSlide("ml4a.github.io");
     s->addImage("pyramid", "/Users/gene/bin/misc/stock/pyramid.png", 0.1, 0.1, 0.8, 0.8);
@@ -646,6 +655,641 @@ void ofApp::WorkshopCIIDDeepLearning() {
        
 }
 
+
+void ofApp::WorkshopCIIDDeepLearning2() {
+    
+    s = slideshow.addSlide("Neural nets hallucinating");
+    s->addMovie("dcgan", "/Users/gene/bin/autoencoders/_AlecRad_Faces.mp4", true, 0, 0.026, 0.5, 0.47);
+    s->addImage("deepdream", "/Users/gene/bin/misc/stock/building-dreams.png", 0, 0.515, 0.5, 0.48);
+    s->addImage("stylenet", "/Users/gene/bin/misc/stock/stylenet-original.png", 0.5, 0.53, 0.5, 0.47);
+    s->addImage("synthesizing original", "/Users/gene/bin/misc/stock/synthesizing-original.jpg", 0.5, 0.025, 0.5, 0.48);
+    s->addText(h4, ofColor(0), "https://www.youtube.com/watch?v=QYcKCGdZvq4", 0.01, 0.0, 1.0);
+    s->addText(h5, ofColor(0), "research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html", 0.002, 0.475, 1.0);
+    s->addText(h4, ofColor(0), "https://arxiv.org/abs/1508.06576", 0.6, 0.51, 1.0);
+    s->addText(h4, ofColor(0), "http://www.evolvingai.org/synthesizing", 0.6, 0.0, 1.0);
+    s->start();
+    
+    s = slideshow.addSlide("Computer vision then vs now");
+    s->addImage("imagenet", "/Users/gene/bin/misc/stock/image-classification-pipeline.jpg", 0, 0.05, 1, 0.45);
+    s->addImage("imagenet", "/Users/gene/bin/misc/stock/image-classification-pipeline-new.jpg", 0, 0.55, 1, 0.45);
+    s->addText(h2, ofColor(0), "1990s + 2000s", 0.4, 0.02, 0.4);
+    s->addText(h2, ofColor(0), "2010s", 0.4, 0.52, 0.4);
+    
+    s = slideshow.addSlide("CNN demo");
+    CcvForwardPassDemo *ccvd = new CcvForwardPassDemo(s, "ccv", 0, 0, 1, 1);
+    s->addAction(ccvd);
+    
+    s = slideshow.addSlide("Which pixels affect the activations?");
+    s->addImage("ZF activation strength", "/Users/gene/bin/misc/stock/activation_strength.png", 0, 0, 1, 1);
+    s->addText(h4, ofColor(0), "http://arxiv.org/abs/1311.2901", 0.0, 0.01, 1);
+    
+    s = slideshow.addSlide("Visualizing convnets (Zeiler + Fergus 2013) [ arxiv.org/abs/1311.2901 ]");
+    s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l1.png", 0.0, 0.1, 1, 0.8);
+    s->addText(h3, ofColor(0), "Image patches which respond most to filters", 0.2, 0.0, 1.0);
+    
+    s = slideshow.addSlide("Visualizing convnets (Zeiler + Fergus 2013) [ arxiv.org/abs/1311.2901 ]");
+    s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l2.png", 0.0, 0.0, 0.5, 1);
+    s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l3.png", 0.5, 0.0, 0.5, 1);
+    s->addText(h3, ofColor(0), "Image patches which respond most to filters", 0.2, 0.0, 1.0);
+    
+
+    s = slideshow.addSlide("What are generative models?");
+    s->addImage("pixelspace", "/Users/gene/bin/misc/stock/GenerativeModels.png", 0.0, 0.2, 1, 0.75);
+    s->addText(h2, ofColor(0), "Discriminative model:   P(y|x)\n\nGenerative model:   P(x,y) or P(x)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("The curse of dimensionality");
+    RandPixDemo *randDemo = new RandPixDemo(s, "randdemo", 0.25, 0.1, 0.5, 0.5);
+    s->addAction(randDemo);
+    s->addText(h3, ofColor(0), "grains of sand on earth: 10^20", 0.1, 0.55, 0.6);
+    s->addText(h3, ofColor(0), "planck times since big bang: 10^62", 0.1, 0.6, 0.6);
+    s->addText(h3, ofColor(0), "atoms in universe: 10^80", 0.1, 0.65, 0.6);
+    s->addText(h3, ofColor(0), "chess boards: 10^120", 0.1, 0.7, 0.6);
+    s->addText(h3, ofColor(0), "go boards: 10^170", 0.1, 0.75, 0.6);
+    s->addText(h3, ofColor(0), "32 x 32 RGB images: 10^7400", 0.1, 0.8, 0.6);
+    
+    s = slideshow.addSlide("Attributes are not independent");
+    s->addImage("pca", "/Users/gene/bin/misc/stock/GaussianScatterPCA.svg.png", 0.0, 0, 0.5, 1.0);
+    s->addImage("pca", "/Users/gene/bin/misc/stock/GaussianScatterPCA.svg-flipped.png", 0.5, 0, 0.5, 1.0);
+    s->addImage("arrow", "/Users/gene/bin/misc/stock/arrow.png", 0.47, 0.0, 0.06, 1.0);
+    
+    s = slideshow.addSlide("Principal component analysis");
+    s->addImage("pca", "/Users/gene/bin/misc/stock/fig_pca_principal_component_analysis.png", 0.0, 0.0, 1, 1);
+    s->addText(h4, ofColor(0), "http://www.nlpca.org/pca_principal_component_analysis.html", 0.1, 0, 0.8);
+    
+    s = slideshow.addSlide("Pixel space");
+    s->addImage("pixelspace", "/Users/gene/bin/misc/stock/pixel_space_small.jpg", 0.0, 0.0, 0.55, 0.7);
+    s->addImage("pixelspace", "/Users/gene/bin/misc/stock/arrow.png", 0.56, 0.0, 0.08, 0.7);
+    s->addImage("pixelspace", "/Users/gene/bin/misc/stock/monalisa_pixelated.png", 0.65, 0.0, 0.3, 0.7);
+    s->addText(h3, ofColor(0), "\"To deal with hyper-planes in a 14-dimensional space, visualize a 3-D space and say “fourteen” to yourself very loudly. Everyone does it.\"\n - Geoffrey Hinton", 0.01, 0.74, 0.8);
+    
+    s = slideshow.addSlide("Faces in the wild");
+    s->addImage("pixelspace", "/Users/gene/bin/ml4a/eigenface/faces_grid_16x9.png", 0.0, 0.0, 1, 1);
+    
+    s = slideshow.addSlide("PCA procedure");
+    s->addImage("pca", "/Users/gene/bin/misc/stock/pca-pixelspace.png", 0.25, 0.1, 0.35, 0.4);
+    s->addImage("pca", "/Users/gene/bin/misc/stock/pca-pcaspace.png", 0.7, 0.1, 0.27, 0.4);
+    s->addImage("pca", "/Users/gene/bin/misc/stock/arrow.png", 0.62, 0.1, 0.06, 0.4);
+    s->addImage("pca", "/Users/gene/bin/misc/stock/pca-calculate.png", 0.02, 0.15, 0.18, 0.1);
+    s->addImage("pca", "/Users/gene/bin/misc/stock/pca-reduce.png", 0.02, 0.25, 0.18, 0.1);
+    s->addText(h2, ofColor(0,180,0), "Compute PC + reduce dimensionality", 0.02, 0.001, 0.8);
+    s->addBreakpoint();
+    s->addText(h2, ofColor(0,180,0), "Reconstruct", 0.02, 0.501, 0.8);
+    s->addImage("pca", "/Users/gene/bin/misc/stock/pca-pcaspace.png", 0.25, 0.6, 0.27, 0.4);
+    s->addImage("pca", "/Users/gene/bin/misc/stock/pca-pixelspace.png", 0.62, 0.6, 0.35, 0.4);
+    s->addImage("pca", "/Users/gene/bin/misc/stock/arrow.png", 0.53, 0.6, 0.06, 0.4);
+    s->addImage("pca", "/Users/gene/bin/misc/stock/pca-reconstruct.png", 0.02, 0.65, 0.18, 0.1);
+    
+    s = slideshow.addSlide("Reconstructions, n = {2000, 1000, 500, 100, 50, 10, 2, 1}");
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_29_original.png", 0.1, 0.15, 0.3, 0.3);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_29_reconstructed.png", 0.0, 0.54, 1, 0.3);
+    s->addText(h4, ofColor(0), "https://github.com/ml4a/ml4a-guides/tree/master/notebooks/Eigenfaces.ipynb", 0.1, 0, 0.8);
+    
+    s = slideshow.addSlide("Reconstructions, n = {2000, 1000, 500, 100, 50, 10, 2, 1}");
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_2_original.png", 0, 0, 0.15, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_2_reconstructed.png", 0.15, 0, 0.85, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_15_original.png", 0, 0.2, 0.15, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_15_reconstructed.png", 0.15, 0.2, 0.85, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_17_original.png", 0, 0.4, 0.15, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_17_reconstructed.png", 0.15, 0.4, 0.85, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_19_original.png", 0, 0.6, 0.15, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_19_reconstructed.png", 0.15, 0.6, 0.85, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_28_original.png", 0, 0.6, 0.15, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_28_reconstructed.png", 0.15, 0.6, 0.85, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_24_original.png", 0, 0.8, 0.15, 0.195);
+    s->addImage("eigenface", "/Users/gene/bin/misc/stock/eigenface_24_reconstructed.png", 0.15, 0.8, 0.85, 0.195);
+    
+    // random numbers?
+    s = slideshow.addSlide("Interpolating between face codes");
+    s->addImage("eigenface", "/Users/gene/bin/ml4a/eigenface/interpolated1.png", 0, 0.05, 1.0, 0.15);
+    s->addImage("eigenface", "/Users/gene/bin/ml4a/eigenface/interpolated2.png", 0, 0.21, 1.0, 0.15);
+    s->addImage("eigenface", "/Users/gene/bin/ml4a/eigenface/interpolated3.png", 0, 0.37, 1.0, 0.15);
+    s->addImage("eigenface", "/Users/gene/bin/ml4a/eigenface/interpolated4.png", 0, 0.53, 1.0, 0.15);
+    s->addImage("eigenface", "/Users/gene/bin/ml4a/eigenface/interpolated5.png", 0, 0.69, 1.0, 0.15);
+    s->addImage("eigenface", "/Users/gene/bin/ml4a/eigenface/interpolated6.png", 0, 0.85, 1.0, 0.15);
+    
+    s = slideshow.addSlide("Hallucinating faces");
+    s->addImage("eigenface", "/Users/gene/bin/ml4a/eigenface/hallucinated_faces.png", 0, 0.055, 1, 0.943);
+    s->addText(h4, ofColor(0), "https://github.com/ml4a/ml4a-guides/tree/master/notebooks/Eigenfaces.ipynb", 0.1, 0, 0.8);
+    
+    s = slideshow.addSlide("Nightmare");
+    s->addMovie("eigenface", "/Users/gene/bin/ml4a/eigenface/eigenface_grid_8x4.mp4", true, 0, 0.06, 1, 0.95);
+    s->addText(h4, ofColor(0), "https://github.com/ml4a/ml4a-guides/tree/master/notebooks/Eigenfaces.ipynb", 0.1, 0, 0.8);
+    
+    s = slideshow.addSlide("Autoencoders");
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/autoencoder.png", 0, 0, 1, 0.3);
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/autoencoder_net.png", 0, 0.3, 1, 0.65);
+    s->addText(h4, ofColor(0), "world's most expensive identity function", 0.01, 0.93, 0.8);
+    
+    // GANS
+    s = slideshow.addSlide("Generative adversarial networks");
+    s->addText(h4, ofColor(0), "Goodfellow et al, 2014 https://arxiv.org/abs/1406.2661", 0.1, 0.0, 0.8);
+    s->addImage("GANs", "/Users/gene/bin/misc/stock/GANs.png", 0.0, 0.1, 1.0, 0.9);
+    
+    
+    s = slideshow.addSlide("Deep convolutional generative adversarial network");
+    s->addImage("Mona Lisa", "/Users/gene/bin/misc/stock/faces_128_filter_samples.png", 0.0, 0.06, 1.0, 0.935);
+    s->addText(h4, ofColor(0), "Radford, Metz, Chintala 2015 (https://arxiv.org/abs/1511.06434)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("Deep convolutional generative adversarial network");
+    s->addImage("smiling arithmetic", "/Users/gene/bin/misc/stock/faces_arithmetic_collage1.png", 0, 0, 1, 1);
+    s->addText(h4, ofColor(0), "Radford, Metz, Chintala (arxiv.org/abs/1511.06434)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("Interpolating faces");
+    s->addMovie("mymov2", "/Users/gene/bin/autoencoders/_AlecRad_Faces.mp4", true, 0, 0, 1, 1);
+    s->addText(h4, ofColor(0), "Radford, Metz, Chintala (arxiv.org/abs/1511.06434)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("\"Interpolating\" numbers");
+    s->addText(h4, ofColor(0), "made with https://github.com/Newmu/dcgan_code", 0.1, 0, 0.8);
+    s->addMovie("MNIST interpolations", "/Users/gene/bin/dcgan/summary/digits.mov", true, 0.2, 0.1, 0.6, 0.6);
+    
+    s = slideshow.addSlide("HIT-OR3C");
+    s->addImage("Mona Lisa", "/Users/gene/bin/dcgan/summary/fakereal.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("A Book from the Sky (Dec 2015)");
+    s->addMovie("zloops", "/Users/gene/bin/dcgan/summary/zloops.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Character interpolations");
+    s->addMovie("interplations", "/Users/gene/bin/dcgan/summary/interpolations.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Radical interpolations");
+    s->addText(h3, ofColor(0), "interpolations across characters sharing the same radical often appear to preserve it", 0.1, 0.0, 0.8);
+    s->addMovie("radical interpolations", "/Users/gene/bin/dcgan/summary/radinterpolation.mp4", true, 0, 0.2, 1, 0.8);
+    
+    s = slideshow.addSlide("DCGAN Manga");
+    s->addImage("manga 1", "/Users/gene/bin/dcgan/public/07_manga_sample1.png", 0, 0.1, 1, 0.9);
+    s->addText(h3, ofColor(0), "https://github.com/mattya/chainer-DCGAN", 0, 0, 1);
+    
+    s = slideshow.addSlide("DCGAN Manga interpolations");
+    s->addImage("manga 2", "/Users/gene/bin/dcgan/public/07_manga_sample2.png", 0, 0.1, 1, 0.9);
+    s->addText(h3, ofColor(0), "https://github.com/mattya/chainer-DCGAN", 0, 0, 1);
+    
+    
+    s = slideshow.addSlide("So many GANs");
+    s->addImage("classvis", "/Users/gene/bin/misc/stock/GANpublications.png", 0, 0, 1, 0.87);
+    s->addText(h3, ofColor(0), "Graph by Bruno Gavranovic, via https://deephunt.in/the-gan-zoo-79597dc8c347", 0.1, 0.9, 0.8);
+    
+    s = slideshow.addSlide("BEGAN");
+    s->addImage("BEGAN", "/Users/gene/bin/misc/stock/BEGAN.png", 0.1, 0.3, 0.8, 0.6);
+    s->addText(h3, ofColor(0), "Boundary Equilibrium GANs (BEGAN)\nBerthelot et al (https://arxiv.org/abs/1703.10717)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("InfoGAN");
+    s->addImage("InfoGAN", "/Users/gene/bin/misc/stock/InfoGAN1.png", 0.0, 0.07, 1.0, 0.4);
+    s->addImage("InfoGAN", "/Users/gene/bin/misc/stock/InfoGAN2.png", 0.0, 0.47, 1.0, 0.53);
+    s->addText(h3, ofColor(0), "Information maximizing GAN (InfoGAN)\nChen et al (https://arxiv.org/abs/1606.03657)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("DiscoGAN");
+    s->addText(h3, ofColor(0), "Discover Cross-Domain Relations (DiscoGAN)\nKim et al (https://arxiv.org/abs/1703.05192)", 0.1, 0.0, 0.8);
+    s->addImage("DiscoGAN", "/Users/gene/bin/misc/stock/DiscoGAN.png", 0.0, 0.09, 1.0, 0.32);
+    s->addImage("DiscoGAN", "/Users/gene/bin/misc/stock/DiscoGAN-gender1.png", 0.0, 0.395, 1.0, 0.29);
+    s->addImage("DiscoGAN", "/Users/gene/bin/misc/stock/DiscoGAN-gender2.png", 0.0, 0.715, 1.0, 0.29);
+    
+    s = slideshow.addSlide("StackGAN");
+    s->addText(h3, ofColor(0), "Text to Photo-realistic Image Synthesis with Stacked GANs\nZhang et al (https://arxiv.org/abs/1612.03242)", 0.1, 0.0, 0.8);
+    s->addImage("StackGAN", "/Users/gene/bin/misc/stock/StackGAN-bird2.jpg", 0.0, 0.12, 1.0, 0.4);
+    s->addImage("StackGAN", "/Users/gene/bin/misc/stock/StackGAN-flower1.jpg", 0.0, 0.53, 1.0, 0.4);
+    s = slideshow.addSlide("StackGAN");
+    s->addText(h3, ofColor(0), "Text to Photo-realistic Image Synthesis with Stacked GANs\nZhang et al (https://arxiv.org/abs/1612.03242)", 0.1, 0.0, 0.8);
+    s->addImage("StackGAN", "/Users/gene/bin/misc/stock/StackGAN-bird_interp.png", 0.0, 0.15, 1.0, 0.8);
+    
+    s = slideshow.addSlide("ArtGAN");
+    s->addImage("classvis", "/Users/gene/bin/misc/stock/ArtGAN-art.png", 0, 0.1, 1, 0.78);
+    s->addImage("classvis", "/Users/gene/bin/misc/stock/ArtGAN-caption.png", 0, 0.88, 1, 0.13);
+    s->addText(h3, ofColor(0), "ArtGAN: Artwork Synthesis with Conditional Categorical GANs\nTan et al (https://arxiv.org/abs/1702.03410)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("GANGogh");
+    s->addImage("classvis", "/Users/gene/bin/misc/stock/GANGogh.png", 0, 0.1, 1, 0.78);
+    s->addText(h3, ofColor(0), "Jones, Bonafilia, Danyluk (https://github.com/rkjones4/GANGogh)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("Creative GAN");
+    s->addImage("classvis", "/Users/gene/bin/misc/stock/Creative-GAN.png", 0, 0.1, 1, 0.9);
+    s->addText(h3, ofColor(0), "Creative Adversarial Networks, deviating from Style Norms\nAhmed Elgammal et al (https://arxiv.org/pdf/1706.07068.pdf)", 0.1, 0.0, 0.8);
+
+    s = slideshow.addSlide("Deep Generator Networks");
+    s->addImage("classvis", "/Users/gene/bin/synthesizing/DGN_architecture.jpg", 0.0, 0.1, 1, 0.41);
+    s->addImage("classvis", "/Users/gene/bin/misc/stock/class-synthesis-deepgen.png", 0.0, 0.52, 1, 0.48);
+    s->addText(h4, ofColor(0), "Nguyen, Dosovitskiy, Yosinski, Brox, Clune [arxiv.org/abs/1605.09304v1]", 0.15, 0.01, 1.0);
+    
+    s = slideshow.addSlide("DGN CaffeNet");
+    s->addScrollableImage("classvis", "/Users/gene/bin/synthesizing/synthesizing-caffenet-tSNE.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("DGN (buttes)");
+    s->addImage("classvis", "/Users/gene/bin/synthesizing/buttes.png", 0.025, 0.025, 0.95, 0.95);
+    
+    s = slideshow.addSlide("DGN (boathouses)");
+    s->addImage("classvis", "/Users/gene/bin/synthesizing/boathouses.png", 0.025, 0.025, 0.95, 0.95);
+    
+    s = slideshow.addSlide("DGN (discotheque)");
+    s->addImage("classvis", "/Users/gene/bin/synthesizing/discotheque.png", 0.025, 0.025, 0.95, 0.95);
+    
+    s = slideshow.addSlide("DGN convergence");
+    ofxPPMovie *mov = s->addMovie("cheeseburger", "/Users/gene/bin/synthesizing/cheeseburgernew.mov", false, 0.02, 0.1, 0.46, 0.8);
+    mov->setLoop(false);
+    ofxPPMovie *mov2 = s->addMovie("teapot", "/Users/gene/bin/synthesizing/teapotnew.mov", false, 0.52, 0.1, 0.46, 0.8);
+    mov2->setLoop(false);
+    
+    s = slideshow.addSlide("@zero_likes (Sam Hains)");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addImage("zero_likes", "/Users/gene/bin/dcgan/zero_likes/zero_likes-selfie.png", 0.0, 0.05, 1, 0.9);
+    
+    s = slideshow.addSlide("@zero_likes (Sam Hains)");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addImage("zero_likes", "/Users/gene/bin/dcgan/zero_likes/zero_likes-doglooks.png", 0.0, 0.05, 1, 0.9);
+    
+    s = slideshow.addSlide("@zero_likes (Sam Hains)");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addImage("zero_likes", "/Users/gene/bin/dcgan/zero_likes/zero_likes-sandwich.png", 0.0, 0.05, 1, 0.9);
+    
+    // vgan
+    s = slideshow.addSlide("Video prediction GANs");
+    s->addMovie("Video GANS", "/Users/gene/bin/dcgan/video_gans.mp4", true, 0.0, 0.03, 1, 1);
+    s->addText(h4, ofColor(0), "Carl Vondrick (http://web.mit.edu/vondrick/tinyvideo/)", 0.0, 0.0, 0.8);
+    
+    s = slideshow.addSlide("loading video gans!");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addMovie("Loading VGAN", "/Users/gene/bin/dcgan/loading_vgan.mp4", true, 0.0, 0.0, 1, 1);
+    
+    
+    // pix2pix + CycleGAN
+    
+    s = slideshow.addSlide("Image-to-Image Translation with Conditional Adversarial Nets");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/teaser_v3a.png", 0.0, 0.04, 1.0, 0.96);
+    s->addText(h3, ofColor(100), "phillipi.github.io/pix2pix/", 0.02, 0.00, 0.8);
+    s->start();
+    
+    s = slideshow.addSlide("Invisible Cities");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_style_transfer_x4.jpg", 0.0, 0.04, 1, 0.96);
+    s->addText(h3, ofColor(100), "opendot.github.io/ml4a-invisible-cities/", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Reconstructing Mapbox tiles");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/venice_reconstructed_all.jpg", 0.0, 0, 1, 1);
+    
+    s = slideshow.addSlide("City style transfer");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/la_x_venice.png", 0.0, 0.0, 1.0, 0.5);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_x_venice.jpg", 0.0, 0.5, 1.0, 0.5);
+    
+    s = slideshow.addSlide("City style transfer");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_x_venice_la.jpg", 0.0, 0.0, 1.0, 1.0);
+    
+    s = slideshow.addSlide("Handrawn satellite imagery");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/handdrawn1.jpg", 0.0, 0.0, 1.0, 0.5);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/handdrawn2.jpg", 0.0, 0.5, 1.0, 0.5);
+    
+    s = slideshow.addSlide("Online drawing tool");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/invisible_cities/invisible_cities-draw.mp4", false, 0.05, 0.05, 0.9, 0.9);
+    s->addText(h3, ofColor(100), "github.com/genekogan/InvisibleCities/", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Edges2Cat + FotoGenerator");
+    s->addImage("sketch2cat", "/Users/gene/bin/pix2pix/foto-generator.png", 0.45, 0.495, 0.55, 0.52);
+    s->addImage("sketch2cat", "/Users/gene/bin/pix2pix/edges2cat.png", 0.0, 0.05, 0.55, 0.53);
+    s->addText(h3, ofColor(100), "Interface by Christopher Hesse (https://affinelayer.com/pixsrv/)", 0.1, 0, 0.8);
+    
+    s = slideshow.addSlide("Tiltbrush -> Pix2Pix experiment w/ Sougwen Chung");
+    s->addMovie("fb", "/Users/gene/bin/strelka/tiltbrush-venice.mp4", false, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("Pix2Pix experiment (Ildar Iakubov)");
+    s->addMovie("fb", "/Users/gene/bin/strelka/ildar-pix2pix.mp4", false, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("Pix2Pix streetview (Jasper van Loenen)");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/jasper-streetview.mp4", false, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("Pix2Pix person-to-person (Brannon Dorsey)");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/brannon-kurzweil.mp4", false, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("Pix2Pix + FaceTracker");
+    s->addMovie("mario", "/Users/gene/bin/pix2pix/quasimondo_facepix2pix.mp4", true, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/trump/trump_face_train.png", 0.0, 0.0, 0.45, 1.0);
+    s->addImage("fb", "/Users/gene/bin/misc/stock/arrow.png", 0.46, 0.0, 0.08, 1.0);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/trump/gene_face_test.png", 0.55, 0.0, 0.45, 1.0);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump_gene1.mp4", false, 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("Meat puppet @ ECAL");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump-meatpuppet-pix2pix-ecal.mp4", true, 0.0, 0.0, 1.0, 1.0)->setPosition(0.25);
+    
+    s = slideshow.addSlide("Pix2Pix + webcam (Memo Akten)");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/memo-painting.mp4", true, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("CycleGAN");
+    s->addImage("fb", "/Users/gene/bin/misc/cyclegan/cyclegan.jpg", 0.0, 0.07, 1, 0.95);
+    s->addText(h3, ofColor(100), "Zhu, Park, Isola, Efros (https://junyanz.github.io/CycleGAN/)", 0.00, 0.00, 0.8);
+    
+    s = slideshow.addSlide("CycleGAN");
+    s->addMovie("fb", "/Users/gene/bin/misc/cyclegan/cyclegan_zebra.mp4", true, 0.1, 0.1, 0.8, 0.8);
+    s->addText(h3, ofColor(100), "Zhu, Park, Isola, Efros (https://junyanz.github.io/CycleGAN/)", 0.00, 0.00, 0.8);
+    
+    s = slideshow.addSlide("CycleGAN fail");
+    s->addImage("fb", "/Users/gene/bin/misc/cyclegan/putin_zebra.jpeg", 0.1, 0.1, 0.8, 0.8);
+    s->addText(h3, ofColor(100), "Zhu, Park, Isola, Efros (https://junyanz.github.io/CycleGAN/)", 0.00, 0.00, 0.8);
+    
+    
+    
+    s = slideshow.addSlide("Generative models in other domains");
+    s->addText(h3, ofColor(100), "Skip-thought vectors\n\nKiros et al, https://arxiv.org/abs/1506.06726", 0.1, 0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/stock/skip-thought-vectors.png", 0, 0.2, 1, 0.6);
+    
+    s = slideshow.addSlide("Neural storyteller");
+    s->addImage("fb", "/Users/gene/bin/misc/stock/neural-storyteller.png", 0, 0.2, 1, 0.6);
+    s->addText(h3, ofColor(100), "https://github.com/ryankiros/neural-storyteller", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Neural Taylor Swift");
+    s->addImage("fb", "/Users/gene/bin/misc/stock/samim-neural-storyteller.jpg", 0, 0.06, 1, 0.95);
+    s->addText(h3, ofColor(100), "https://medium.com/@samim/generating-stories-about-images-d163ba41e4ed", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Pointcloud GAN");
+    s->addImage("classvis", "/Users/gene/bin/misc/stock/pointcloud-GAN.png", 0, 0.1, 1, 0.9);
+    s->addText(h3, ofColor(0), "Representation Learning and Adversarial Generation of 3D Point Clouds\nPanos Achlioptas et al (https://arxiv.org/abs/1707.02392v1)", 0.1, 0.0, 0.8);
+
+    
+    s = slideshow.addSlide("WaveNet");
+    s->addText(h3, ofColor(0), "https://deepmind.com/blog/wavenet-generative-model-raw-audio/", 0.05, 0.01, 0.9);
+    s->addMovie("wavenet zoom", "/Users/gene/bin/wavenet/blogpost/wavenet-zoom.mp4", true, 0.05, 0.1, 0.4, 0.4);
+    s->addMovie("wavenet conv", "/Users/gene/bin/wavenet/blogpost/wavenet-dilated-convolutions.mp4", true, 0.55, 0.1, 0.4, 0.4);
+    s->addSound("wavenet 1", "/Users/gene/bin/wavenet/blogpost/wavenet-1.wav", h4, false, false, 0.05, 0.6, 0.25, 0.04);
+    s->addSound("wavenet 2", "/Users/gene/bin/wavenet/blogpost/wavenet-2.wav", h4, false, false, 0.05, 0.66, 0.25, 0.04);
+    s->addSound("voice 1", "/Users/gene/bin/wavenet/blogpost/avocado-1.wav", h4, false, false, 0.05, 0.76, 0.25, 0.04);
+    s->addSound("voice 2", "/Users/gene/bin/wavenet/blogpost/avocado-2.wav", h4, false, false, 0.05, 0.82, 0.25, 0.04);
+    s->addSound("babble 1", "/Users/gene/bin/wavenet/blogpost/speaker-1.wav", h4, false, false, 0.35, 0.6, 0.25, 0.04);
+    s->addSound("babble 2", "/Users/gene/bin/wavenet/blogpost/speaker-2.wav", h4, false, false, 0.35, 0.66, 0.25, 0.04);
+    s->addSound("babble 3", "/Users/gene/bin/wavenet/blogpost/speaker-3.wav", h4, false, false, 0.35, 0.72, 0.25, 0.04);
+    s->addSound("babble 4", "/Users/gene/bin/wavenet/blogpost/speaker-4.wav", h4, false, false, 0.35, 0.78, 0.25, 0.04);
+    s->addSound("babble 5", "/Users/gene/bin/wavenet/blogpost/speaker-5.wav", h4, false, false, 0.35, 0.84, 0.25, 0.04);
+    s->addSound("babble 6", "/Users/gene/bin/wavenet/blogpost/speaker-6.wav", h4, false, false, 0.35, 0.9, 0.25, 0.04);
+    s->addSound("jazz 1", "/Users/gene/bin/wavenet/blogpost/sample_1.wav", h4, false, false, 0.65, 0.6, 0.25, 0.04);
+    s->addSound("jazz 2", "/Users/gene/bin/wavenet/blogpost/sample_2.wav", h4, false, false, 0.65, 0.66, 0.25, 0.04);
+    s->addSound("jazz 3", "/Users/gene/bin/wavenet/blogpost/sample_3.wav", h4, false, false, 0.65, 0.72, 0.25, 0.04);
+    s->addSound("jazz 4", "/Users/gene/bin/wavenet/blogpost/sample_4.wav", h4, false, false, 0.65, 0.78, 0.25, 0.04);
+    s->addSound("jazz 5", "/Users/gene/bin/wavenet/blogpost/sample_5.wav", h4, false, false, 0.65, 0.84, 0.25, 0.04);
+    s->addSound("jazz 6", "/Users/gene/bin/wavenet/blogpost/sample_6.wav", h4, false, false, 0.65, 0.9, 0.25, 0.04);
+    
+    s = slideshow.addSlide("Reverse-engineering WaveNet");
+    s->addText(h3, ofColor(0), "https://github.com/ibab/tensorflow-wavenet", 0.05, 0.01, 0.9);
+    s->addImage("ibab", "/Users/gene/bin/wavenet/blogpost/ibab-tensorflow.png", 0.1, 0.1, 0.8, 0.5);
+    s->addSound("Il Barbiere di Siviglia wavenet", "/Users/gene/bin/wavenet/barber_25525_fadein.wav", h4, false, false, 0.25, 0.7, 0.5, 0.1);
+    s->addText(h4, ofColor(0), "https://soundcloud.com/genekogan/il-barbiere-di-siviglia-wavenet", 0.26, 0.825, 0.8);
+    
+    s = slideshow.addSlide("Closed-captioning WaveNet");
+    s->addMovie("CC wavenets", "/Users/gene/bin/wavenet/blogpost/wavenet-closedcaps-record.mp4", false, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("NSynth: Neural Audio Synthesis");
+    s->addText(h4, ofColor(0), "https://magenta.tensorflow.org/nsynth", 0.1, 0.0, 0.8);
+    s->addImage("ns", "/Users/gene/bin/misc/stock/NSynth_blog_figs_InterpolateZ.png", 0, 0.04, 1.0, 0.36);
+    s->addImage("ns", "/Users/gene/bin/misc/stock/NSynth_blog_figs_Three_Reconstructions.png", 0, 0.405, 1.0, 0.61);
+    
+    s = slideshow.addSlide("Google Inceptionism classvis");
+    s->addImage("Deepdream classvis", "/Users/gene/bin/deepdream/paper/classvis.png", 0.0, 0.2, 1, 0.8);
+    s->addText(h4, ofColor(0), "Going deeper with Inceptionism (Mordvintsev, Olah, Tyka)", 0.2, 0.0, 1.0);
+    s->addText(h4, ofColor(0), "googleresearch.blogspot.com/2015/06/inceptionism-going-deeper-into-neural.html]", 0.2, 0.1, 1.0);
+    
+    s = slideshow.addSlide("Deepdream");
+    s->addImage("Ibis", "/Users/gene/bin/deepdream/paper/ibis.png", 0.0, 0.0, 1.0, 0.65);
+    s->addImage("Deepdream prototypes", "/Users/gene/bin/deepdream/paper/Funny-Animals.png", 0.0, 0.66, 1.0, 0.33);
+    s->addText(h4, ofColor(0), "googleresearch.blogspot.com/2015/06/inceptionism-going-deeper-into-neural.html]", 0.04, 0.0, 1.0);
+    
+    s = slideshow.addSlide("Deepdream: Leonardo Da Vinci");
+    s->addImage("Da Vinci", "/Users/gene/bin/deepdream/painters/_davinci.jpg", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("Da Vinci", "/Users/gene/bin/deepdream/painters/davinci_drawing(0)0002_i5_o8_os1.1_j32.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Deepdream noise");
+    s->addImage("Tyka noisedream 1", "/Users/gene/bin/deepdream/paper/building-dreams1.png", 0.0, 0.0, 0.5, 1.0);
+    s->addImage("Tyka noisedream 2", "/Users/gene/bin/deepdream/paper/building-dreams2.png", 0.5, 0.0, 0.5, 1.0);
+    s->addText(h3, ofColor(0), "Mike Tyka [mtyka.github.io]", 0.15, 0.0, 1.0);
+    
+    
+    s = slideshow.addSlide("Channel synthesis");
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/_bin/class_generation/harvest.mp4", false, 0.15, 0.15, 0.7, 0.7)->setLoop(false);
+    
+    s = slideshow.addSlide("Channel synthesis");
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/_bin/class_generation/E1-115_n40_o05_r1.33.mp4", false, -0.005, 0.15, 0.5, 0.7)->setLoop(false);
+    //    s->addMovie("class synth", "/Users/gene/bin/lapnorm/_bin/class_generation/H5-89_n50_o09_r1.33.mp4", true, 0.3333, 0.15, 0.32, 0.7)->setLoop(false);
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/_bin/class_generation/E6-63_n50_o05_r1.33.mp4", false, 0.505, 0.15, 0.5, 0.7)->setLoop(false);
+    
+    // low level swatches + high level swatches
+    
+    s = slideshow.addSlide("InceptionV3 conv2d");
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A1-1_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A1-7_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A1-15_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A1-28_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A1-52_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A2-12_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A2-25_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A2-27_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    
+    s = slideshow.addSlide("InceptionV3 mixed3a");
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B1-8_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B1-9_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B1-20_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B1-31_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B2-0_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B2-26_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B2-36_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B2-44_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    
+    s = slideshow.addSlide("InceptionV3 mixed3b");
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C1-95_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C3-0_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C5-9_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C5-53_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C6-5_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C6-30_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C6-38_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C6-54_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    
+    s = slideshow.addSlide("InceptionV3 mixed4a");
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-67_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-86_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-96_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-133_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-144_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-152_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D6-9_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D6-52_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    
+    s = slideshow.addSlide("InceptionV3 mixed4b");
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E1-42_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E2-91_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E3-15_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E3-17_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E6-0_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E6-16_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E6-17_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E6-33_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    
+    s = slideshow.addSlide("InceptionV3 mixed4c");
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F2-32_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F2-41_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F2-64_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F3-187_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F5-7_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F6-17_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F6-29_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F6-54_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    
+    s = slideshow.addSlide("InceptionV3 mixed4d");
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G1-9_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G1-15_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G2-36_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G2-54_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G2-86_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G3-145_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G6-2_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G6-20_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    
+    s = slideshow.addSlide("InceptionV3 mixed4e");
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H1-54_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H1-116_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H1-158_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H3-7_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H3-77_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H3-303_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H4-13_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H6-123_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    
+    s = slideshow.addSlide("InceptionV3 mixed5a");
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/J1-51_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/J1-198_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/J2-69_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/J4-8_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/J5-81_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/J6-16_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/J6-53_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/J6-109_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    
+    //    s = slideshow.addSlide("t-SNE of favorite swatches");
+    //    s->addScrollableImage("t-SNE swatches", "/Users/gene/bin/lapnorm/swatches/favorites/_all_swatches_tsne.png", 0, 0, 1, 1);
+    //
+    s = slideshow.addSlide("t-SNE of all ~7500 swatches");
+    s->addScrollableImage("t-SNE swatches", "/Users/gene/bin/lapnorm/swatches/all/swatches-tsne_large.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/initial_experiments/frame0010 (2).png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/initial_experiments/eureka.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/F6-34+G2-139_n11_o08_r1.33_cr4_b0.60.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/G3-283+F3-26+H1-54_n11_o08_r1.33_cr0_b0.75.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/G3-45+G1-36+H6-23_n15_o08_r1.33_cr5_b0.21.png", 0, 0, 1, 1);
+    // s = slideshow.addSlide("Mixing gradients");
+    // s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/E6-16+L1-55+G2-76_n10_o07_r1.33.png", 0, 0, 1, 1);
+    // s = slideshow.addSlide("Mixing gradients");
+    // s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/F6-34+G6-2_n20_o07_r1.33.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/D1-152+F1-40+H5-34_n40_o07_r1.33.png", 0, 0, 1, 1);
+    // s = slideshow.addSlide("Mixing gradients");
+    // s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/D2-13+D2-50+D5-15_n40_o07_r1.33.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/F6-9+D1-27+D5-15_n10_o08_r1.33_cr3_b0.35.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/D5-15+G1-36+D1-133_n15_o08_r1.33_cr3_b0.46.png", 0, 0, 1, 1);
+    // s = slideshow.addSlide("Mixing gradients");
+    // s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/D6-11+G1-15+D1-189_n40_o07_r1.33.png", 0, 0, 1, 1);
+    // s = slideshow.addSlide("Mixing gradients");
+    // s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/F1-78+D6-52+D1-41_n15_o07_r1.33.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/D3-92+D1-41+F5-40_n15_o08_r1.33_cr4_b0.42.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/G1-85+E6-0+F6-54_n20_o07_r1.33.png", 0, 0, 1, 1);
+    // s = slideshow.addSlide("Mixing gradients");
+    // s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/H3-136+F6-41+H6-72_n40_o07_r1.33.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/large.jpeg", 0, 0, 1, 1);
+    
+    //    D6-12+D3-92+F1-94_n15_o08_r1.33_cr6_b0.22.png
+    //	E2-78+F2-32+G2-38_n10_o08_r1.33_cr5_b0.33.png
+    
+    
+    
+    
+    s = slideshow.addSlide("Feedback and gradient interpolation");
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/initial_experiments/fullfades/hframes2.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Feedback and gradient interpolation");
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/initial_experiments/fullfades/K18-178+L4-61+K19-55+K07-45+K18-35_m3_b4_o5_i36_c0_s10_norm1.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Moving gradients around");
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/initial_experiments/testframes2_.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Moving gradients around");
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/initial_experiments/testframes9b0_.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Constrain to an image");
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/initial_experiments/class38_face3.mp4", false, 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("Gradient masks");
+    // s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/download (4).jpeg", 0, 0, 0.248, 0.5);
+    // s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie00b.png", 0.25, 0, 0.248, 0.5);
+    // s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie2_00.png", 0.5, 0, 0.248, 0.5);
+    // s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie2_18.png", 0.75, 0, 0.248, 0.5);
+    // s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie2_28.png", 0, 0.505, 0.248, 0.5);
+    // s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie03.png", 0.25, 0.505, 0.248, 0.5);
+    // s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie05.png", 0.5, 0.505, 0.248, 0.5);
+    // s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie07b.png", 0.75, 0.505, 0.248, 0.5);
+    s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/download (4).jpeg", -0.005, 0, 0.333, 0.5);
+    s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie00b.png", 0.333, 0, 0.333, 0.5);
+    s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie2_18.png", 0.667, 0, 0.333, 0.5);
+    s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie03.png", -0.005, 0.501, 0.333, 0.5);
+    s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie05.png", 0.3335, 0.501, 0.333, 0.5);
+    s->addImage("mask", "/Users/gene/bin/lapnorm/selfie/myselfie07b.png", 0.667, 0.501, 0.333, 0.5);
+    
+
+    // Style transfer
+    
+    s = slideshow.addSlide("Style transfer");
+    s->addImage("Mona Lisa -> Cubist/Expressionist/Impressionist", "/Users/gene/bin/style-transfer/02_mona-lisa-paintings/ml_cubist_expressionist_impressionist.jpg", 0, 0.15, 1, 0.85);
+    s->addText(h4, ofColor(0), "Gatys et al, 2015 (arxiv.org/abs/1508.06576)", 0.002, 0, 1.0);
+    s->addText(h4, ofColor(0), "Justin Johnson's neural-style (https://github.com/jcjohnson/neural-style)", 0.002, 0.075, 1.0);
+    
+    s = slideshow.addSlide("A neural algorithm of artistic style");
+    s->addScrollableImage("arxiv style paper", "/Users/gene/bin/style-transfer/00_paper/arxiv_page.png", 0.0, 0.3, 0.45, 0.7);
+    s->addScrollableImage("gatys et al", "/Users/gene/bin/style-transfer/00_paper/figure1.png", 0.5, 0.0, 0.5, 1.0);
+    s->addText(h4, ofColor(0), "Gatys, Ecker, Bethge", 0.01, 0.04, 0.48);
+    s->addText(h4, ofColor(0), "published Aug 26, 2015", 0.01, 0.12, 0.48);
+    s->addText(h4, ofColor(0), "[arxiv.org/abs/1508.06576]", 0.01, 0.2, 0.48);
+    
+    s = slideshow.addSlide("Stylenet theory");
+    s->addImage("st theory", "/Users/gene/bin/style-transfer/11_demo/theory_ml_starrynight_1.png", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("st theory", "/Users/gene/bin/style-transfer/11_demo/theory_ml_starrynight_2.png", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("st theory", "/Users/gene/bin/style-transfer/11_demo/theory_ml_starrynight_3.png", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("st theory", "/Users/gene/bin/style-transfer/11_demo/theory_ml_starrynight_4.png", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("st theory", "/Users/gene/bin/style-transfer/11_demo/theory_ml_starrynight_5.png", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("st theory", "/Users/gene/bin/style-transfer/11_demo/theory_ml_starrynight_6.png", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("st theory", "/Users/gene/bin/style-transfer/11_demo/theory_ml_starrynight_7.png", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("st theory", "/Users/gene/bin/style-transfer/11_demo/theory_ml_starrynight_8.png", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("st theory", "/Users/gene/bin/style-transfer/11_demo/theory_ml_starrynight_9.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Stylenet convergence");
+    s->addImage("Mona Lisa", "/Users/gene/bin/style-transfer/_inputs/monalisa.jpg", 0.0, 0.0, 0.5, 0.59);
+    s->addImage("Starry night", "/Users/gene/bin/style-transfer/_inputs/starrynight.jpg", 0.0, 0.6, 0.5, 0.4);
+    s->addMovie("ML starry night", "/Users/gene/bin/style-transfer/11_demo/ml_starrynight_iterations.mp4", true, 0.5, 0.02, 0.5, 0.96);
+    
+    s = slideshow.addSlide("Mr. Div x Gustav Klimt");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addMovie("Mr. Div x Gustav Klimt", "/Users/gene/bin/style-transfer/05_interpolations/klimt-discoball/klimt-discoball.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Video style transfer x3");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addMovie("video style", "/Users/gene/bin/style-transfer/10_optical_flow/video-style-transfer-triptych.mp4", true, 0, 0, 1, 1);
+    
+    CubistMirrorDemo *cmd = new CubistMirrorDemo(s, "classifier", 0, 0, 1, 1);
+    s = slideshow.addSlide("What happens when it's real-time?");
+    s->addAction(cmd);
+    cmd->setStyleModel("/Users/gene/bin/style-transfer/models/kandinsky_e2_full512.model");
+    
+}
 
 void ofApp::CIIDOpenTalk() {
     

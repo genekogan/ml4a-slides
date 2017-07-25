@@ -181,6 +181,7 @@ public:
     void WorkshopCIIDArtProjects();
     void WorkshopCIIDDeepLearning();
     void WorkshopCIIDCriticalIssues();
+    void WorkshopCIIDDeepLearning2();
     void CIIDOpenTalk();
     
     
@@ -226,6 +227,25 @@ public:
         // - learning gradient descent by gradient descent
         // - attention/memory - learning copy/paste
         
+    }
+    
+    void LoopFunkhaus() {
+        
+        // Pauline Oliveros (Nov 16) + Deep listening
+        // Prentis + Buchla
+        // Cage + Xenakis + Randomness/chance
+        // Sourcetone, MIR
+
+        // Early AI and music: "Bach in a box"
+        // Perry Cook + physical models
+        // GRUV/SampleRNN/Wavenets + Magenta + NSynth (new Beatles track)
+    
+        // Ableton + ConvnetRegressor demo + DoodleTunes
+        // Wekinator
+        
+        // Speech synthesis (Lyrebird + Adobe demos + Obama mouth movements + Face2Face)
+        
+        // Sander's work + recommender systems
     }
     
 
