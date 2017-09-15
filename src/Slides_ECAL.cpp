@@ -82,7 +82,7 @@
 
 
 void ofApp::WorkshopECAL1() {
-    s = slideshow.addSlide("ECAL");
+    s = slideshow.addSlide("The Conference @ The Ground");
     s->addText(h2, ofColor(0), "@genekogan", 0.1, 0.2, 0.5);
     s->addText(h2, ofColor(0), "genekogan.com", 0.1, 0.3, 0.5);
     s->addText(h2, ofColor(0), "ml4a.github.io", 0.6, 0.2, 0.5);

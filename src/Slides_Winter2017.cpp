@@ -2030,9 +2030,9 @@ void ofApp::ScopeSessions(){
     s = slideshow.addSlide("Color of Words");
     s->addScrollableImage("color of words", "/Users/gene/bin/misc/stock/color-of-words.png", 0, 0, 1, 1);
     
-    //    s = slideshow.addSlide("Musical instruments (w/ Jeff Snyder)");
-    //    s->addImage("tweet", "/Users/gene/Web/genekogan.github.io/_site/images/birl/birl1.jpg", 0.0, 0.0, 1, 0.35);
-    //    s->addImage("tweet", "/Users/gene/bin/misc/Snyderphonics_Manta.jpg", 0.0, 0.365, 1, 0.64);
+        s = slideshow.addSlide("Musical instruments (w/ Jeff Snyder)");
+        s->addImage("tweet", "/Users/gene/Web/genekogan.github.io/_site/images/birl/birl1.jpg", 0.0, 0.0, 1, 0.35);
+        s->addImage("tweet", "/Users/gene/bin/misc/Snyderphonics_Manta.jpg", 0.0, 0.365, 1, 0.64);
     
     s = slideshow.addSlide("Generative art");
     s->addImage("star", "/Users/gene/bin/images/stars/star-00001.png", 0, 0, 0.25, 0.5);
@@ -2055,8 +2055,8 @@ void ofApp::ScopeSessions(){
     s = slideshow.addSlide("Nature and simulation");
     s->addMovie("simulation", "/Users/gene/bin/images/VertexFields2_01.29.2012.mov", true, 0, 0, 1, 1);
     
-    //    s = slideshow.addSlide("Nature and simulation");
-    //    s->addMovie("simulation", "/Users/gene/bin/images/Tree.mov", true, 0, 0, 1, 1);
+        s = slideshow.addSlide("Nature and simulation");
+        s->addMovie("simulation", "/Users/gene/bin/images/Tree.mov", true, 0, 0, 1, 1);
     
     s = slideshow.addSlide("Nature and simulation");
     s->addImage("simulation", "/Users/gene/bin/listening-to-the-ocean/listening-to-the-ocean-20.jpg", 0, 0, 1, 1);

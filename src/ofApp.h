@@ -115,6 +115,10 @@ public:
     void FromPCAtoPuppySlugs();
     void NYCMLMeetup();
     void Eyeo2();
+    void TheShed();
+    void UXWeek();
+    void TheConference();
+    void ArsElectronica();
     
     /* SchoolOfMaaa Neural Aesthetic */
     void NeuralAesthetic1();
@@ -231,24 +235,54 @@ public:
     
     void LoopFunkhaus() {
         
-        // Pauline Oliveros (Nov 16) + Deep listening
-        // Prentis + Buchla
+
+        // About me
+        //  - how i got into ML
+        //  - Prentis + Buchla
+
+        // Pauline Oliveros (Nov 16) + Deep listening (http://ciufo.org/classes/ae_sp14/reading/deep_listening_intro.pdf)
         // Cage + Xenakis + Randomness/chance
         // Sourcetone, MIR
 
+        // pradeep stretch
+        // GRUV: chopin/coltrane -> vibraphone LSTM
+        // rhapsody bohemian + 1st beat (amber, etc)
+        
         // Early AI and music: "Bach in a box"
         // Perry Cook + physical models
-        // GRUV/SampleRNN/Wavenets + Magenta + NSynth (new Beatles track)
-    
-        // Ableton + ConvnetRegressor demo + DoodleTunes
-        // Wekinator
         
-        // Speech synthesis (Lyrebird + Adobe demos + Obama mouth movements + Face2Face)
+
+        // Demos
+        //  - Wekinator
+        //  - audio t-SNE
+        //  - Ableton + ConvnetRegressor demo + DoodleTunes
+
+        // How neural nets work
+        //  - cat/dog img -> net -> cat/dog classification
+        //  - cat/dog sound -> net -> cat/dog classification
+        //  - how generative models model pobability dists
+        // First image synthesis
+        //  - GANs, ABFTS, Deepdream
+        //  - Deepdream beats demo
+        // Audio synthsis
+        //  - GRUV/SampleRNN/Wavenets + Magenta + NSynth
+        //  - Speech synthesis (Lyrebird + Adobe demos + Obama mouth movements + Face2Face)
+        //  - also works for text + images
         
         // Sander's work + recommender systems
     }
     
+    
+    void WorkshopDecentralizedAI() {
+        // put a blockchain on it
+        // dcai.png
 
+        
+        
+    }
+    
+    
+    
 };
 
 
