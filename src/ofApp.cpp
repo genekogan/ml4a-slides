@@ -39,7 +39,7 @@ void ofApp::setup(){
 
     // Darknet
     string cfgfile = ofToDataPath( "cfg/yolo9000.cfg" );
-    string weightfile = "/Users/gene/Teaching/ML4A/ml4a-ofx/data/darknet/yolo9000.weights";
+    string weightfile = "/Users/gene/Teaching/ML4A/ml4a-ofx/da ta/darknet/yolo9000.weights";
     string namesfile = ofToDataPath( "cfg/9k.names" );
 //    darknet.init( cfgfile, weightfile, namesfile );
     string cfgfile2 = "/Users/gene/Code/of_v0.9.6_osx_release/addons/ofxDarknet/example-deepdream/bin/data/cfg/vgg-conv.cfg";
@@ -53,19 +53,17 @@ void ofApp::setup(){
     // background functions
     slideshow.setBackgroundFunction(this, &ofApp::drawBgWhite);
 //    slideshow.setBackgroundFunction(this, &ofApp::drawBgBlack);
-    
+
     // before loading slides
     //slideshow.loadFromExported();
     
     // CONTENT
     //WorkshopCIIDAboutMe();
     //WorkshopCIIDNeuralNets();
-    ArsElectronica();
+    //WorkshopLunchmeat();
     
-    
-    ///Users/gene/bin/misc/stock/pointcloud-GAN.png
-    
-    
+//    LoopFunkhaus();
+    WorkshopLapnorm();
     
     // after loading slides
     slideshow.setContentRectangle(20, 56, ofGetWidth()-40, ofGetHeight()-56);
@@ -73,7 +71,7 @@ void ofApp::setup(){
     slideshow.wrapNotes();
     slideshow.preloadAssets();
   
-    // export external for distribution
+    // export external for distribution`
     // slideshow.exportAssets();
     // slideshow.exportScreenshots();
     
@@ -247,5 +245,3 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){
 }
-
-
