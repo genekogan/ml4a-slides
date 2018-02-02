@@ -122,7 +122,11 @@ public:
     void Lunchmeat();
     void PPLLondon();
     void LoopFunkhaus();
-
+    void HubBerlin();
+    void RMITSymposium();
+    void DAMGallery();
+    void CTMFestival();
+    
     /* SchoolOfMaaa Neural Aesthetic */
     void NeuralAesthetic1();
     void NeuralAesthetic2();
@@ -174,7 +178,10 @@ public:
     void WorkshopKikk2();
     void WorkshopLapnorm();
     void WorkshopLoop();
-
+    void WorkshopHubBerlin();
+    void WorkshopRMIT();
+	void WorkshopMicrosoftTheGarage();
+    
     /* ECAL workshop */
     void WorkshopECAL1();
     void WorkshopECAL2();
@@ -240,9 +247,10 @@ public:
         
         
         // https://www.youtube.com/watch?v=_KI50AOLSPY
+        
+        //https://www.recode.net/2018/1/19/16911180/sundar-pichai-google-fire-electricity-ai
     }
     
-
     
 };
 
