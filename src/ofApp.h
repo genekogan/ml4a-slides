@@ -126,6 +126,12 @@ public:
     void RMITSymposium();
     void DAMGallery();
     void CTMFestival();
+    void SteinerCMU();
+    void ITPFeb2018();
+    void MLLiteracySFPC();
+    void PrentisFeb();
+    void DattackRiga();
+    void ArsIncognita();
     
     /* SchoolOfMaaa Neural Aesthetic */
     void NeuralAesthetic1();
@@ -181,6 +187,11 @@ public:
     void WorkshopHubBerlin();
     void WorkshopRMIT();
 	void WorkshopMicrosoftTheGarage();
+    void WorkshopCMUPix2Pix();
+    void WorkshopCMULapnorm();
+    void WorkshopMLLiteracyPix2Pix();
+    void WorkshopMLLiteracyLapnorm();
+    
     
     /* ECAL workshop */
     void WorkshopECAL1();
@@ -193,6 +204,12 @@ public:
     void WorkshopStrelkaNeuralNets();
     void WorkshopStrelkaNeuralGenerativeModels();
     
+    /* Strelka 2018 */
+    void WorkshopSpektrumAutonomousArtSystems();
+    void WorkshopStrelka_GenModels();
+    void WorkshopStrelka_DecentralizedAI();
+    void WorkshopStrelka_Pix2Pix();    
+    
     /* CIID workshop */
     void WorkshopCIIDAboutMe();
     void WorkshopCIIDNeuralNets();
@@ -202,6 +219,10 @@ public:
     void WorkshopCIIDDeepLearning2();
     void CIIDOpenTalk();
     
+    /* CIID Costa Rica */
+    void WorkshopCIIDCostaRicaAboutMe();
+    void WorkshopCIIDCostaRicaProjects();
+    void WorkshopCIIDCostaRicaNeuralNets();
     
     ////// Assets
     ofxPwrrPoint slideshow;
@@ -250,6 +271,8 @@ public:
         
         //https://www.recode.net/2018/1/19/16911180/sundar-pichai-google-fire-electricity-ai
     }
+    
+    
     
     
 };

@@ -1810,7 +1810,6 @@ void ofApp::NYCMLMeetup() {
     s = slideshow.addSlide("Having fun");
     s->addMovie("transfer learning", "/Users/gene/bin/misc/wekinator-coffee-croissant.mp4", true, 0, 0, 1, 1);
 
-    
     s = slideshow.addSlide("Wolfenstein Controlled by Sound");
     s->addMovie("wolfenstein", "/Users/gene/bin/ml4a/Wolfenstein 3D controlled by sound.mp4", false, 0, 0.05, 1, 0.96);
     s->addText(h4, ofColor(100), "Støj (Andreas Refsgaard & Lasse Korsgaard) https://vimeo.com/207831279", 0.00, 0.00, 0.8);
