@@ -132,6 +132,9 @@ public:
     void PrentisFeb();
     void DattackRiga();
     void ArsIncognita();
+    void Republica();
+    void CIIDOpenLecture2018();
+    void SonarPlusD();
     
     /* SchoolOfMaaa Neural Aesthetic */
     void NeuralAesthetic1();
@@ -186,12 +189,11 @@ public:
     void WorkshopLoop();
     void WorkshopHubBerlin();
     void WorkshopRMIT();
-	void WorkshopMicrosoftTheGarage();
+	void WorkshopMicrosoftTheGarage();      
     void WorkshopCMUPix2Pix();
     void WorkshopCMULapnorm();
     void WorkshopMLLiteracyPix2Pix();
     void WorkshopMLLiteracyLapnorm();
-    
     
     /* ECAL workshop */
     void WorkshopECAL1();
@@ -223,6 +225,12 @@ public:
     void WorkshopCIIDCostaRicaAboutMe();
     void WorkshopCIIDCostaRicaProjects();
     void WorkshopCIIDCostaRicaNeuralNets();
+
+    /* 2018 */
+    void WorkshopMapping();
+    void ShanghaiTechWorkshop();
+    void ShanghaiTechLecture();
+    
     
     ////// Assets
     ofxPwrrPoint slideshow;

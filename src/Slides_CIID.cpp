@@ -692,6 +692,9 @@ void ofApp::WorkshopCIIDDeepLearning2() {
     s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l3.png", 0.5, 0.0, 0.5, 1);
     s->addText(h3, ofColor(0), "Image patches which respond most to filters", 0.2, 0.0, 1.0);
     
+    s = slideshow.addSlide("Neural networks");
+    s->addImage("vae", "/Users/gene/bin/autoencoders/autoencoder_diagram2.png", 0.1, 0.1, 0.8, 0.8);
+    s->addText(h4, ofColor(100), "https://github.com/yzwxx/vae-celebA", 0.0, 0.95, 0.8);
 
     s = slideshow.addSlide("What are generative models?");
     s->addImage("pixelspace", "/Users/gene/bin/misc/stock/GenerativeModels.png", 0.0, 0.2, 1, 0.75);

@@ -5706,7 +5706,7 @@ void ofApp::WorkshopCMUPix2Pix() {
     
     s = slideshow.addSlide("What tricks ordinary neural nets?");
     s->addImage("CIFAR cats", "/Users/gene/bin/misc/stock/cifar-cats.png", 0.0, 0.02, 1, 0.48);
-    s->addImage("CIFAR-10 linear classifier", "/Users/gene/bin/misc/stock/cifar_weights_linclassifier_cs231n.png", 0.0, 0.52, 1.0, 0.25);
+    s->addImage("CIFAR-10 linear classifier", "/Users/gene/bin/misc/stock/  ", 0.0, 0.52, 1.0, 0.25);
     s->addText(h4, ofColor(0), "CIFAR-10 linear classifier [ cs231n.stanford.edu/slides/winter1516_lecture2.pdf ]", 0.10, 0.8, 1);
     
     s = slideshow.addSlide("Convolutional neural networks");
@@ -6320,5 +6320,694 @@ void ofApp::WorkshopCMULapnorm(){
     s->addText(h3, ofColor(0), "Collab", 0.1, 0.3, 0.8);
     s->addText(h3, ofColor(0), "Make your own!", 0.1, 0.4, 0.8);
     
+    
+}
+
+
+void ofApp::Republica() {
+    
+    
+    s = slideshow.addSlide("Machine Listening: Applications of AI to Music");
+    s->addText(h2, ofColor(225), "@genekogan", 0.1, 0.45, 0.5);
+    s->addText(h2, ofColor(225), "genekogan.com", 0.1, 0.55, 0.5);
+    s->addText(h2, ofColor(225), "ml4a.github.io", 0.6, 0.45, 0.5);
+    s->addText(h2, ofColor(225), "@ml4a_", 0.6, 0.55, 0.5);
+    s->addText(h2, ofColor(255, 185), "re:publica, 2 May 2018", 0.1, 0.1, 0.75);
+    s->start();
+    
+    s = slideshow.addSlide("Music information retrieval");
+    s->addImage("event detection", "/Users/gene/bin/misc/sourcetone/event_detection.png", 0.0, 0.0, 0.4, 0.38);
+    s->addImage("genre VA", "/Users/gene/bin/misc/sourcetone/genre-AvgVA.jpg", 0.0, 0.4, 0.42, 0.6);
+    s->addImage("LSA tags", "/Users/gene/bin/misc/sourcetone/LSA-tagsSmall-rank10-clust5.jpg", 0.41, 0, 0.59, 1.0);
+    
+    //    s = slideshow.addSlide("Gestural Instruments");
+    //    s->addMovie("leap", "/Users/gene/bin/misc/LeapMotion + SuperCollider demo-SD.mp4", true, 0.1, 0.1, 0.8, 0.8);
+    //    s->addText(h3, ofColor(255), "https://github.com/genekogan/LeapMotion-SuperCollider-Instruments", 0.05, 0, 0.85);
+    
+    s = slideshow.addSlide("Musical instruments (w/ Jeff Snyder)");
+    s->addImage("manta", "/Users/gene/bin/misc/Snyderphonics_Manta.jpg", 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("Musical instruments (w/ Jeff Snyder)");
+    s->addImage("birl", "/Users/gene/bin/misc/birl/birl1.jpg", 0.0, 0.0, 1, 0.35);
+    s->addImage("birl", "/Users/gene/bin/misc/birl/birl_interface.png", 0.0, 0.355, 1, 0.65);
+    
+    s = slideshow.addSlide("Musical instruments (w/ Jeff Snyder)");
+    s->addMovie("birl", "/Users/gene/bin/misc/birl/Pedro Eustache tries out the Snyderphonics Birl prototype.mp4", true, 0.1, 0.15, 0.8, 0.8);
+    s->addText(h3, ofColor(255), "Pedtro Eustache on the Birl", 0.05, 0, 0.85);
+    
+    //    s = slideshow.addSlide("RCA Mark II Synthesizer");
+    //    s->addImage("fb", "/Users/gene/bin/misc/stock/buchla_brad.JPG", 0.15, 0.1, 0.7, 0.8);
+    //    s->addText(h3, ofColor(200), "Prentis Hall @ Columbia University, New York, NY", 0.00, 0.0, 0.8);
+    
+    s = slideshow.addSlide("Musique concrète + Electronic Music");
+    s->addImage("fb", "/Users/gene/bin/misc/stock/pierre_henry.jpg", 0.5, 0.0, 0.5, 0.5);
+    s->addImage("fb", "/Users/gene/bin/misc/stock/Electronic-music-of-Brainvoyager-Daphne-Oram-625x426.jpg", 0.0, 0.0, 0.5, 0.5);
+    s->addImage("fb", "/Users/gene/bin/misc/stock/stockhausen.jpeg", 0.0, 0.5, 0.5, 0.5);
+    s->addImage("fb", "/Users/gene/bin/misc/stock/oliveros_buchla.jpg", 0.5, 0.5, 0.5, 0.5);
+    
+    s = slideshow.addSlide("RCA Mark II Synthesizer");
+    s->addImage("fb", "/Users/gene/bin/misc/stock/RCA-Mark-II-Sound-Synthesizer.jpg", 0.15, 0.1, 0.7, 0.8);
+    
+    s = slideshow.addSlide("Physical models");
+    s->addImage("manta", "/Users/gene/bin/misc/stock/phLUTe.jpg", 0.0, 0.0, 0.5, 0.7);
+    s->addImage("manta", "/Users/gene/bin/misc/stock/igdis.jpg", 0.5, 0.3, 0.5, 0.7);
+    s->addText(h3, ofColor(255), "IGDIS (reconstruction of Greek prosody)\nhttp://users.teicrete.gr/taxd/06/greek_singer/greek_singer_eng.htm", 0.05, 0, 0.85);
+    
+    s = slideshow.addSlide("From deep listening to deep learning");
+    s->addImage("lenet", "/Users/gene/bin/misc/stock/lenet.png", 0, 0, 1, 0.4);
+    s->addImage("alexnet", "/Users/gene/bin/misc/stock/alexnet2.png", 0, 0.5, 1, 0.4);
+    s->addText(h3, ofColor(255), "Lenet (LeCun et al, 1998) [http://yann.lecun.com/exdb/lenet/]", 0.05, 0.4, 0.9);
+    s->addText(h3, ofColor(255), "AlexNet 2012 [via https://jeremykarnowski.wordpress.com/2015/07/15/alexnet-visualization/]", 0.05, 0.92, 0.9);
+    
+    s = slideshow.addSlide("Neural nets for classification");
+    s->addImage("mnist1", "/Users/gene/bin/misc/stock/mnist-forward-pass-1.png", 0, 0, 1, 1);
+    s->addBreakpoint();
+    s->addImage("mnist3", "/Users/gene/bin/misc/stock/mnist-forward-pass-3.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Neural nets for speech recognition");
+    s->addImage("speech processing", "/Users/gene/bin/misc/stock/cnn-speech.png", 0.0, 0.1, 1.0, 0.9);
+    s->addText(h3, ofColor(255), "http://recognize-speech.com/acoustic-model/knn/comparing-different-architectures/convolutional-neural-networks-cnns", 0.05, 0, 0.85);
+    
+    s = slideshow.addSlide("Neural nets as generative models");
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/autoencoder.png", 0, 0, 1, 0.3);
+    s->addImage("autoencoder", "/Users/gene/bin/misc/stock/autoencoder_net.png", 0, 0.3, 1, 0.65);
+    
+    s = slideshow.addSlide("Generative adversarial networks (Goodfellow et al)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/misc/stock/GANs.png", 0.0, 0.0, 1.0, 1.0);
+    
+    s = slideshow.addSlide("Synthesis");
+    s->addImage("classvis", "/Users/gene/bin/synthesizing/DGN_places_long.jpg", 0.0, 0.1, 1, 0.9);
+    s->addText(h4, ofColor(255), "Deep Generator Networks\nNguyen, Dosovitskiy, Yosinski, Brox, Clune [arxiv.org/abs/1605.09304v1]", 0.1, 0.01, 1.0);
+    
+    s = slideshow.addSlide("RNNs/LSTMs + GRUV, 2015");
+    s->addImage("nn_simple", "/Users/gene/bin/misc/stock/rnn/nn_simple.png", 0.0, 0.01, 0.52, 0.4);
+    s->addImage("rnn_complex", "/Users/gene/bin/misc/stock/rnn/rnn_simple.png", 0.0, 0.49, 0.25, 0.4);
+    s->addImage("rnn_simple", "/Users/gene/bin/misc/stock/rnn/rnn_complex.png", 0.27, 0.49, 0.25, 0.4);
+    s->addText(h3, ofColor(255), "Feedforward neural net", 0.02, 0.0, 0.5);
+    s->addText(h3, ofColor(255), "Recurrent neural net", 0.02, 0.4, 0.5);
+    s->addSound("Chopin LSTM", "/Users/gene/bin/music-learning/chopin_lstm.wav", h4, false, false, 0.6, 0.4, 0.33, 0.04);
+    s->addSound("Coltrane LSTM", "/Users/gene/bin/music-learning/bluetrain.wav", h4, false, false, 0.6, 0.3, 0.33, 0.04);
+    s->addSound("Vibraphone (original)", "/Users/gene/bin/music-learning/vibraphon.aiff", h4, false, false, 0.6, 0.6, 0.33, 0.04);
+    s->addSound("Vibraphone LSTM", "/Users/gene/bin/music-learning/hypnotic_vibes.wav", h4, false, false, 0.6, 0.68, 0.33, 0.04);
+    
+    s = slideshow.addSlide("WaveNets");
+    s->addText(h3, ofColor(255), "https://deepmind.com/blog/wavenet-generative-model-raw-audio/", 0.05, 0.01, 0.9);
+    s->addMovie("wavenet zoom", "/Users/gene/bin/wavenet/blogpost/wavenet-zoom.mp4", true, 0.05, 0.1, 0.4, 0.4);
+    s->addMovie("wavenet conv", "/Users/gene/bin/wavenet/blogpost/wavenet-dilated-convolutions.mp4", true, 0.55, 0.1, 0.4, 0.4);
+    s->addSound("wavenet 1", "/Users/gene/bin/wavenet/blogpost/wavenet-1.wav", h4, false, false, 0.05, 0.6, 0.25, 0.04);
+    s->addSound("wavenet 2", "/Users/gene/bin/wavenet/blogpost/wavenet-2.wav", h4, false, false, 0.05, 0.66, 0.25, 0.04);
+    s->addSound("voice 1", "/Users/gene/bin/wavenet/blogpost/avocado-1.wav", h4, false, false, 0.05, 0.76, 0.25, 0.04);
+    s->addSound("voice 2", "/Users/gene/bin/wavenet/blogpost/avocado-2.wav", h4, false, false, 0.05, 0.82, 0.25, 0.04);
+    s->addSound("babble 1", "/Users/gene/bin/wavenet/blogpost/speaker-1.wav", h4, false, false, 0.35, 0.6, 0.25, 0.04);
+    s->addSound("babble 2", "/Users/gene/bin/wavenet/blogpost/speaker-2.wav", h4, false, false, 0.35, 0.66, 0.25, 0.04);
+    s->addSound("babble 3", "/Users/gene/bin/wavenet/blogpost/speaker-3.wav", h4, false, false, 0.35, 0.72, 0.25, 0.04);
+    s->addSound("babble 4", "/Users/gene/bin/wavenet/blogpost/speaker-4.wav", h4, false, false, 0.35, 0.78, 0.25, 0.04);
+    s->addSound("babble 5", "/Users/gene/bin/wavenet/blogpost/speaker-5.wav", h4, false, false, 0.35, 0.84, 0.25, 0.04);
+    s->addSound("babble 6", "/Users/gene/bin/wavenet/blogpost/speaker-6.wav", h4, false, false, 0.35, 0.9, 0.25, 0.04);
+    s->addSound("jazz 1", "/Users/gene/bin/wavenet/blogpost/sample_1.wav", h4, false, false, 0.65, 0.6, 0.25, 0.04);
+    s->addSound("jazz 2", "/Users/gene/bin/wavenet/blogpost/sample_2.wav", h4, false, false, 0.65, 0.66, 0.25, 0.04);
+    s->addSound("jazz 3", "/Users/gene/bin/wavenet/blogpost/sample_3.wav", h4, false, false, 0.65, 0.72, 0.25, 0.04);
+    s->addSound("jazz 4", "/Users/gene/bin/wavenet/blogpost/sample_4.wav", h4, false, false, 0.65, 0.78, 0.25, 0.04);
+    s->addSound("jazz 5", "/Users/gene/bin/wavenet/blogpost/sample_5.wav", h4, false, false, 0.65, 0.84, 0.25, 0.04);
+    s->addSound("jazz 6", "/Users/gene/bin/wavenet/blogpost/sample_6.wav", h4, false, false, 0.65, 0.9, 0.25, 0.04);
+    
+    s = slideshow.addSlide("NSynth: Neural Audio Synthesis");
+    s->addText(h4, ofColor(255), "https://magenta.tensorflow.org/nsynth", 0.1, 0.0, 0.8);
+    s->addImage("ns", "/Users/gene/bin/misc/stock/NSynth_blog_figs_InterpolateZ.png", 0, 0.04, 1.0, 0.36);
+    s->addImage("ns", "/Users/gene/bin/misc/stock/NSynth_blog_figs_Three_Reconstructions.png", 0, 0.405, 1.0, 0.61);
+    
+    s = slideshow.addSlide("Reverse-engineering WaveNet");
+    s->addText(h3, ofColor(255), "https://github.com/ibab/tensorflow-wavenet", 0.05, 0.01, 0.9);
+    s->addImage("ibab", "/Users/gene/bin/wavenet/blogpost/ibab-tensorflow.png", 0.1, 0.1, 0.8, 0.5);
+    s->addSound("Il Barbiere di Siviglia wavenet", "/Users/gene/bin/wavenet/barber_25525_fadein.wav", h4, false, false, 0.25, 0.7, 0.5, 0.1);
+    s->addText(h4, ofColor(255), "https://soundcloud.com/genekogan/il-barbiere-di-siviglia-wavenet", 0.26, 0.825, 0.8);
+    
+    s = slideshow.addSlide("SampleRNN");
+    s->addText(h4, ofColor(255), "SampleRNN: An Unconditional End-to-End Neural Audio Generation Model\nMehri et al (https://arxiv.org/abs/1612.07837)", 0.01, 0.0, 0.8);
+    s->addImage("ibab", "/Users/gene/bin/misc/stock/samplernn.png", 0.01, 0.1, 0.98, 0.4);
+    s->addText(h4, ofColor(255), "https://github.com/richardassar/SampleRNN_torch", 0.1, 0.55, 0.8);
+    s->addSound("Mozart", "/Users/gene/bin/music-learning/samplernn-mozart.mp3", h4, false, false, 0.05, 0.65, 0.25, 0.04);
+    s->addSound("Tangerine Dream", "/Users/gene/bin/music-learning/samplernn-tangerinedream.mp3", h4, false, false, 0.05, 0.73, 0.25, 0.04);
+    
+    s = slideshow.addSlide("Symbolic approaches: Composing MIDI with LSTMs");
+    s->addImage("midi-lstm", "/Users/gene/bin/misc/stock/lstm-midi.png", 0, 0, 1, 0.5);
+    s->addText(h4, ofColor(255), "Composing music with recurrent neural nets (Daniel Johnson)", 0.1, 0.55, 0.99);
+    s->addText(h4, ofColor(255), "http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/", 0.1, 0.6, 0.99);
+    s->addText(h4, ofColor(255), "LSTM Realbook: Generation Jazz chord progressions (Keunwoo Choi)", 0.1, 0.7, 0.99);
+    s->addText(h4, ofColor(255), "https://keunwoochoi.wordpress.com/2016/02/19/lstm-realbook/", 0.1, 0.75, 0.99);
+    
+    
+    s = slideshow.addSlide("A brief digression");
+    s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l1_nofilter.png", 0.0, 0.1, 1, 0.8);
+    s->addText(h4, ofColor(255), "What neural nets look for\nVisualizing convnets (Zeiler + Fergus 2013) [ arxiv.org/abs/1311.2901 ]", 0.02, 0.0, 1.0);
+    
+    s = slideshow.addSlide("What neural networks look for");
+    s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l2.png", 0.01, 0.15, 0.45, 0.7);
+    s->addImage("ZF visualizing convnets", "/Users/gene/bin/misc/stock/visualizing-convnets-zf_l3.png", 0.47, 0.15, 0.52, 0.7);
+    s->addText(h4, ofColor(255), "Visualizing convnets (Zeiler + Fergus 2013) [ arxiv.org/abs/1311.2901 ]", 0.02, 0.0, 1.0);
+    
+    s = slideshow.addSlide("Channel synthesis");
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/_bin/class_generation/harvest.mp4", false, 0.15, 0.15, 0.7, 0.7)->setLoop(false);
+    
+    //    s = slideshow.addSlide("Channel synthesis");
+    //    s->addMovie("class synth", "/Users/gene/bin/lapnorm/_bin/class_generation/E1-115_n40_o05_r1.33.mp4", false, -0.005, 0.15, 0.5, 0.7)->setLoop(false);
+    //    //    s->addMovie("class synth", "/Users/gene/bin/lapnorm/_bin/class_generation/H5-89_n50_o09_r1.33.mp4", true, 0.3333, 0.15, 0.32, 0.7)->setLoop(false);
+    //    s->addMovie("class synth", "/Users/gene/bin/lapnorm/_bin/class_generation/E6-63_n50_o05_r1.33.mp4", false, 0.505, 0.15, 0.5, 0.7)->setLoop(false);
+    
+    // low level swatches + high level swatches
+    //
+    //    s = slideshow.addSlide("InceptionV3 conv2d");
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A1-1_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A1-7_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A1-15_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A1-28_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A1-52_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A2-12_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A2-25_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/A2-27_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    //
+    //    s = slideshow.addSlide("InceptionV3 mixed3a");
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B1-8_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B1-9_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B1-20_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B1-31_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B2-0_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B2-26_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B2-36_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/B2-44_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    //
+    //    s = slideshow.addSlide("InceptionV3 mixed3b");
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C1-95_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C3-0_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C5-9_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C5-53_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C6-5_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C6-30_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C6-38_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/C6-54_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    //
+    //    s = slideshow.addSlide("InceptionV3 mixed4a");
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-67_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-86_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-96_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-133_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-144_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D1-152_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D6-9_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/D6-52_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    //
+    //    s = slideshow.addSlide("InceptionV3 mixed4b");
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E1-42_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E2-91_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E3-15_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E3-17_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E6-0_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E6-16_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E6-17_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/E6-33_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    //
+    //    s = slideshow.addSlide("InceptionV3 mixed4c");
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F2-32_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F2-41_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F2-64_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F3-187_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F5-7_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F6-17_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F6-29_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/F6-54_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    //
+    //    s = slideshow.addSlide("InceptionV3 mixed4d");
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G1-9_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G1-15_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G2-36_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G2-54_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G2-86_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G3-145_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G6-2_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/G6-20_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    //
+    //    s = slideshow.addSlide("InceptionV3 mixed4e");
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H1-54_n20_o06_r1.33.png", 0, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H1-116_n20_o06_r1.33.png", 0.25, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H1-158_n20_o06_r1.33.png", 0.5, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H3-7_n20_o06_r1.33.png", 0.75, 0, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H3-77_n20_o06_r1.33.png", 0, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H3-303_n20_o06_r1.33.png", 0.25, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H4-13_n20_o06_r1.33.png", 0.5, 0.505, 0.245, 0.5);
+    //    s->addImage("s","/Users/gene/bin/lapnorm/swatches/favorites/highlights/H6-123_n20_o06_r1.33.png", 0.75, 0.505, 0.245, 0.5);
+    //
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/initial_experiments/eureka.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/G3-283+F3-26+H1-54_n11_o08_r1.33_cr0_b0.75.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/G3-45+G1-36+H6-23_n15_o08_r1.33_cr5_b0.21.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/F6-9+D1-27+D5-15_n10_o08_r1.33_cr3_b0.35.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Feedback and gradient interpolation");
+    //s->addMovie("class synth", "/Users/gene/bin/lapnorm/nips/nips_GeneKogan_snippet.mp4", true, 0, 0, 1, 1);
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/nips/NIPS_GeneKogan_new.mp4", true, 0, 0, 1, 1)->setPosition(0.2);
+    
+    //    s = slideshow.addSlide("Generative Models");
+    //    s->addImage("classvis", "/Users/gene/bin/synthesizing/DGN_places_long.jpg", 0.0, 0.1, 1, 0.9);
+    //    s->addText(h4, ofColor(255), "Deep Generator Networks\nNguyen, Dosovitskiy, Yosinski, Brox, Clune [arxiv.org/abs/1605.09304v1]", 0.1, 0.01, 1.0);
+    //
+    s = slideshow.addSlide("DGN samples");
+    s->addImage("classvis", "/Users/gene/bin/synthesizing/boathouses.png", 0.0, 0.05, 0.57, 0.95);
+    s->addImage("classvis", "/Users/gene/bin/synthesizing/buttes.png", 0.573, 0.05, 0.43, 0.95);
+    s->addText(h4, ofColor(255), "http://genekogan.com/works/synthesizing/", 0.1, 0.00, 1.0);
+    
+    //    s = slideshow.addSlide("DiscoGAN");
+    //    s->addText(h3, ofColor(255), "Discover Cross-Domain Relations (DiscoGAN)\nKim et al (https://arxiv.org/abs/1703.05192)", 0.1, 0.0, 0.8);
+    //    s->addImage("DiscoGAN", "/Users/gene/bin/misc/stock/DiscoGAN.png", 0.0, 0.09, 1.0, 0.32);
+    //    s->addImage("DiscoGAN", "/Users/gene/bin/misc/stock/DiscoGAN-gender1.png", 0.0, 0.425, 1.0, 0.29);
+    //    s->addImage("DiscoGAN", "/Users/gene/bin/misc/stock/DiscoGAN-gender2.png", 0.0, 0.715, 1.0, 0.29);
+    
+    //    s = slideshow.addSlide("Progressive Growing of GANs for Improved Quality, Stability, and Variation");
+    //    s->addMovie("pgan", "/Users/gene/bin/misc/nvidia-progressive-faces.mp4", true, 0, 0, 1, 1)->setLoop(true);
+    //    s->addText(h4, ofColor(255), "Karras et al (NVIDIA), 2017\nhttp://research.nvidia.com/publication/2017-10_Progressive-Growing-of", 0.1, 0.0, 0.8);
+    //
+    //    s = slideshow.addSlide("lol");
+    //    s->addImage("joke", "/Users/gene/bin/misc/DoppelGAN/highlights/rock-zelwegger.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Natural language generation");
+    s->addImage("fb", "/Users/gene/bin/misc/stock/neural-storyteller.png", 0, 0.2, 1, 0.6);
+    s->addText(h3, ofColor(255), "https://github.com/ryankiros/neural-storyteller", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("StackGAN");
+    s->addText(h3, ofColor(255), "Text to Photo-realistic Image Synthesis with Stacked GANs\nZhang et al (https://arxiv.org/abs/1612.03242)", 0.1, 0.0, 0.8);
+    s->addImage("StackGAN", "/Users/gene/bin/misc/stock/StackGAN-bird2.jpg", 0.0, 0.12, 1.0, 0.4);
+    s->addImage("StackGAN", "/Users/gene/bin/misc/stock/StackGAN-flower1.jpg", 0.0, 0.53, 1.0, 0.4);
+    s = slideshow.addSlide("StackGAN");
+    s->addText(h3, ofColor(255), "Text to Photo-realistic Image Synthesis with Stacked GANs\nZhang et al (https://arxiv.org/abs/1612.03242)", 0.1, 0.0, 0.8);
+    s->addImage("StackGAN", "/Users/gene/bin/misc/stock/StackGAN-bird_interp.png", 0.0, 0.15, 1.0, 0.8);
+    
+    s = slideshow.addSlide("PointCloud generation");
+    s->addText(h3, ofColor(255), "Representation Learning and Adversarial Generation of 3D Point Clouds\nAchlioptas et all (https://arxiv.org/abs/1707.02392", 0.1, 0.0, 0.8);
+    s->addImage("PointCloud", "/Users/gene/bin/misc/stock/pointcloud-GAN.png", 0.0, 0.15, 1.0, 0.8);
+    
+    s = slideshow.addSlide("Image-to-Image Translation with Conditional Adversarial Nets");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/teaser_v3a.png", 0.0, 0.04, 1.0, 0.96);
+    s->addText(h4, ofColor(255), "Isola et al (phillipi.github.io/pix2pix/)", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Invisible Cities");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_style_transfer_x4.jpg", 0.0, 0.04, 1, 0.96);
+    s->addText(h4, ofColor(255), "opendot.github.io/ml4a-invisible-cities/", 0.02, 0.00, 0.8);
+    
+    //    s = slideshow.addSlide("CycleGAN");
+    //    s->addImage("fb", "/Users/gene/bin/misc/cyclegan/cyclegan.jpg", 0.0, 0.07, 1, 0.95);
+    //    s->addText(h3, ofColor(200), "Zhu, Park, Isola, Efros (https://junyanz.github.io/CycleGAN/)", 0.00, 0.00, 0.8);
+    //
+    //    s = slideshow.addSlide("CycleGAN");
+    //    s->addMovie("fb", "/Users/gene/bin/misc/cyclegan/cyclegan_zebra.mp4", true, 0.1, 0.1, 0.8, 0.8);
+    //    s->addText(h3, ofColor(200), "Zhu, Park, Isola, Efros (https://junyanz.github.io/CycleGAN/)", 0.00, 0.00, 0.8);
+    //
+    //    s = slideshow.addSlide("CycleGAN fail");
+    //    s->addImage("fb", "/Users/gene/bin/misc/cyclegan/putin_zebra.jpeg", 0.1, 0.1, 0.8, 0.8);
+    //    s->addText(h3, ofColor(255), "Zhu, Park, Isola, Efros (https://junyanz.github.io/CycleGAN/)", 0.00, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump_gene1.mp4", true, 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("pix2pix Angela Merkel");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/dattran-merkel-pix2pix.mp4", true, 0.05, 0.05, 0.9, 0.9)->setLoop(true);
+    
+    s = slideshow.addSlide("Lyrebird.ai");
+    s->addImage("fb", "/Users/gene/bin/misc/stock/lyrebird.jpg", 0.0, 0.00, 1, 0.4);
+    s->addSound("Politicians talking about Lyrebird", "/Users/gene/bin/music-learning/lyrebird/lyrebird-politicians.mp3", h4, false, false, 0.05, 0.45, 0.35, 0.04);
+    s->addSound("Voice demo 11", "/Users/gene/bin/music-learning/lyrebird/lyrebird-2.mp3", h4, false, false, 0.05, 0.6, 0.35, 0.04);
+    s->addText(h4, ofColor(255), "I'm very excited to participate in this year's Loop festival in Berlin!! My talk is called \"Deep Listener: Machine Learning in the Composer's Future Toolkit.\" Later, we will have a machine learning for artists workshop.", 0.05, 0.65, 0.4);
+    s->addSound("Voice demo 2", "/Users/gene/bin/music-learning/lyrebird/lyrebird-1.mp3", h4, false, false, 0.55, 0.6, 0.35, 0.04);
+    s->addText(h4, ofColor(255), "Oak is strong and also gives shade. The pipe began to rust while new. Thieves who rob friends deserve jail. The ripe taste of cheese improves with age. Cats and dogs each hate the other. Move the vat over the hot fire. The hog crawled under the high fence. Act on these orders with great speed.", 0.55, 0.65, 0.4);
+    
+    //        s = slideshow.addSlide("Face2Face");
+    //        s->addMovie("Face2Face", "/Users/gene/bin/misc/stock/Face2Face - Real-time Face Capture and Reenactment of RGB Videos (CVPR 2016 Oral)-ohmajJTcpNk.mp4", true, 0.1, 0.1, 0.8, 0.8);
+    //        s->addText(h4, ofColor(255), "graphics.stanford.edu/~niessner/thies2016face.html", 0.2, 0.05, 0.8);
+    
+    s = slideshow.addSlide("Synthesizing Obama: Learning Lip Sync from Audio (SIGGRAPH 2017)");
+    s->addMovie("Face2Face", "/Users/gene/bin/misc/stock/obama-lipsync.mp4", true, 0.1, 0.1, 0.8, 0.8);
+    s->addText(h4, ofColor(255), "https://grail.cs.washington.edu/projects/AudioToObama/", 0.2, 0.05, 0.8);
+    
+    s = slideshow.addSlide("Audio texture synthesis and style transfer");
+    s->addText(h4, ofColor(255), "by Dmitry Ulyanov and Vadim Lebedev\nhttps://dmitryulyanov.github.io/audio-texture-synthesis-and-style-transfer/", 0.01, 0.0, 0.8);
+    s->addImage("ibab", "/Users/gene/Writing/_Talks/S4AD-Pioneerworks/06_style-transfer/images/ml_egypt_crab_maps.jpg", 0.01, 0.1, 0.98, 0.5);
+    s->addSound("Star Wars Imperial March", "/Users/gene/bin/music-learning/ulyanov/imperial.mp3", h4, false, false, 0.05, 0.65, 0.35, 0.04);
+    s->addSound("Star Spangled Banner", "/Users/gene/bin/music-learning/ulyanov/usa.mp3", h4, false, false, 0.05, 0.72, 0.35, 0.04);
+    s->addSound("Imperial March x Star Spangled Banner", "/Users/gene/bin/music-learning/ulyanov/imperial_usa.mp3", h4, false, false, 0.05, 0.79, 0.35, 0.04);
+    s->addSound("Eminem", "/Users/gene/bin/music-learning/ulyanov/eminem.mp3", h4, false, false, 0.55, 0.65, 0.35, 0.04);
+    s->addSound("Gettysburg Address", "/Users/gene/bin/music-learning/ulyanov/gettysburg.mp3", h4, false, false, 0.55, 0.72, 0.35, 0.04);
+    s->addSound("Eminem x Gettysburg", "/Users/gene/bin/music-learning/ulyanov/eminem_gettysburg.mp3", h4, false, false, 0.55, 0.79, 0.35, 0.04);
+    
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-1.png", 0.0, 0.1, 1, 0.9);
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-2.png", 0.0, 0.1, 1, 0.9);
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-3.png", 0.0, 0.1, 1, 0.9);
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-4.png", 0.0, 0.1, 1, 0.9);
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-5.png", 0.0, 0.1, 1, 0.9);
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-6.png", 0.0, 0.1, 1, 0.9);
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-7.png", 0.0, 0.1, 1, 0.9);
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-8.png", 0.0, 0.1, 1, 0.9);
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-9.png", 0.0, 0.1, 1, 0.9);
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-10.png", 0.0, 0.1, 1, 0.9);
+    s = slideshow.addSlide("Content-based recommendation (Sander Dieleman)");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/sander-11.png", 0.0, 0.1, 1, 0.9);
+    
+    s = slideshow.addSlide("Wavenet optimizing latent factors");
+    s->addText(h4, ofColor(255), "https://benanne.github.io/2014/08/05/spotify-cnns.html ", 0.01, 0.0, 0.8);
+    s->addImage("fb", "/Users/gene/bin/misc/sander-rec/wavenet-recommenders.png", 0.0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Ipod of the future");
+    s->addImage("fb", "/Users/gene/bin/misc/stock/ipod.jpg", 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("Musicians dystopia");
+    s->addImage("fb", "/Users/gene/bin/misc/stock/skleton-musicians.jpg", 0.0, 0, 1, 1);
+    
+    s = slideshow.addSlide("ml4a.github.io");
+    s->addImage("pyramid", "/Users/gene/bin/misc/stock/pyramid.png", 0.1, 0.1, 0.8, 0.8);
+    s->start();
+    
+    s = slideshow.addSlide("ml4a.github.io/guides");
+    s->addImage("workshop", "/Users/gene/bin/ml4a/ml4a-guides-index.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Guides");
+    s->addImage("workshop", "/Users/gene/bin/ml4a/xdegrees_samples.jpg", 0, 0, 0.5, 0.5);
+    // s->addImage("workshop", "/Users/gene/bin/ml4a/nabimusic2.png", 0.51, 0, 0.5, 0.5);
+    s->addMovie("fb", "/Users/gene/bin/misc/DoodleClassifier_tutorial.mp4", true, 0.51, 0, 0.5, 0.5);
+    s->addMovie("fb", "/Users/gene/bin/ml4a/neural-painter/dog-cat-interp.mp4", true, 0.0, 0.51, 0.5, 0.5);
+    s->addImage("workshop", "/Users/gene/bin/tsne/tsne-animals-highlights.png", 0.51, 0.51, 0.5, 0.5);
+    
+    s = slideshow.addSlide("t-SNE :: CalTech-256 animals");
+    s->addScrollableImage("t-SNE animals", "/Users/gene/bin/tsne/grid_animals2.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Audio t-SNE (drum samples)");
+    s->setBackgroundFunction(this, &ofApp::drawBgWhite);
+    AudioTSNEDemo *attd2 = new AudioTSNEDemo(s, "audio t-sne", 0.0, 0, 1, 1);
+    attd2->setTsnePath("/Users/gene/Teaching/ML4A/ml4a-guides/data/example-audio-tSNE-drums.json");
+    s->addAction(attd2);
+    
+    s = slideshow.addSlide("Audio t-SNE (Queen)");
+    s->setBackgroundFunction(this, &ofApp::drawBgWhite);
+    AudioTSNEDemo *attd = new AudioTSNEDemo(s, "audio t-sne", 0.0, 0, 1, 1);
+    s->addAction(attd);
+    
+    s = slideshow.addSlide("Workshops");
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/ecal/ecal1.JPG", 0.0, 0.0, 0.5, 0.5);
+    s->addImage("workshop", "/Users/gene/Pictures/copenhagen/IMG_6195.JPG", 0.5, 0.0, 0.5, 0.48);
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/nabi1.jpg", 0.0, 0.5, 0.5, 0.48);
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/IMG_6301.JPG", 0.5, 0.5, 0.5, 0.48);
+    
+    s = slideshow.addSlide("Workshops");
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/opendot/30491978563_c7baa100d2_o.jpg", 0.0, 0.0, 0.5, 0.5);
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/altai.JPG", 0.5, 0.0, 0.5, 0.48);
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/influencers3.jpg", 0.0, 0.5, 0.5, 0.48);
+    s->addImage("workshop", "/Users/gene/Web/genekogan.github.io/images/workshops/nabi2.jpg", 0.5, 0.5, 0.5, 0.48);
+    
+    s = slideshow.addSlide("ml4a.github.io/classes");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addMovie("ml4a @ itp", "/Users/gene/bin/ml4a-classes/itp-S16/timelapse/ml4a @ itp-nyu -- timelapse_crop.mp4", true, 0, 0, 1, 1)->setPositionRandom();
+    s->loadAssets();
+    
+    s = slideshow.addSlide("Writing");
+    s->addImage("workshop", "/Users/gene/bin/ml4a/ml4a-nn.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Writing");
+    s->addImage("workshop", "/Users/gene/bin/ml4a/ml4a-hnnat.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Demos");
+    s->addMovie("transfer learning", "/Users/gene/bin/misc/wekinator-coffee-croissant.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("thanks :)");
+    s->setBackgroundFunction(this, &ofApp::drawBgWhite);
+    s->addMovie("t-SNE convergence", "/Users/gene/bin/tsne/tsne_manual.mp4", true, 0, 0, 1, 1);
+    s->addRect(ofColor(255,160), 0.005, 0.19, 0.33, 0.25);
+    s->addRect(ofColor(255,160), 0.595, 0.19, 0.33, 0.25);
+    s->addText(h2, ofColor(0), "@genekogan", 0.1, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "genekogan.com", 0.1, 0.3, 0.5);
+    s->addText(h2, ofColor(0), "ml4a.github.io", 0.6, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "@ml4a_", 0.6, 0.3, 0.5);
+    
+    
+}
+
+
+//--------------------------------------------------------------
+void ofApp::CIIDOpenLecture2018(){
+    
+    s = slideshow.addSlide("@CIID, 15 May 2017");
+    s->addText(h2, ofColor(255), "@genekogan", 0.1, 0.2, 0.5);
+    s->addText(h2, ofColor(255), "genekogan.com", 0.1, 0.3, 0.5);
+    s->addText(h2, ofColor(255), "ml4a.github.io", 0.6, 0.2, 0.5);
+    s->addText(h2, ofColor(255), "@ml4a_", 0.6, 0.3, 0.5);
+    s->start();
+    
+    s = slideshow.addSlide("Music information retrieval (~2008-2011)");
+    s->addImage("event detection", "/Users/gene/bin/misc/sourcetone/event_detection.png", 0.0, 0.0, 0.4, 0.38);
+    s->addImage("genre VA", "/Users/gene/bin/misc/sourcetone/genre-AvgVA.jpg", 0.0, 0.4, 0.42, 0.6);
+    s->addImage("LSA tags", "/Users/gene/bin/misc/sourcetone/LSA-tagsSmall-rank10-clust5.jpg", 0.41, 0, 0.59, 1.0);
+    
+    s = slideshow.addSlide("Musical instruments (w/ Jeff Snyder) ~2014");
+    s->addImage("tweet", "/Users/gene/Web/genekogan.github.io/_site/images/birl/birl1.jpg", 0.0, 0.0, 1, 0.35);
+    s->addImage("tweet", "/Users/gene/bin/misc/Snyderphonics_Manta.jpg", 0.0, 0.365, 1, 0.64);
+    
+    s = slideshow.addSlide("Media arts / creative tech");
+    s->addMovie("simulation", "/Users/gene/bin/images/VertexFields2_01.29.2012.mov", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Nature and simulation");
+    s->addImage("simulation", "/Users/gene/bin/listening-to-the-ocean/listening-to-the-ocean-10.jpg", 0.505, 0, 0.5, 1);
+    s->addImage("simulation", "/Users/gene/bin/listening-to-the-ocean/generator5.png", 0, 0, 0.5, 1);
+    s->addText(h3, ofColor(255), "Listening to the Ocean (w/ Phillip Stearns & Dan Tesene)", 0.1, 0.0, 0.9);
+    
+    s = slideshow.addSlide("Kinect Projector Toolkit");
+    s->addMovie("KPT", "/Users/gene/bin/opera-toolkit/colin-ribbons-2_nosound.mp4", true, 0.0, 0, 0.5, 0.6);
+    s->addMovie("KPT", "/Users/gene/bin/kinect-projector-toolkit/Silhouettes @ Saigon Ranger_nosound.mp4", true, 0.4, 0.4, 0.64, 0.62);
+    
+    s = slideshow.addSlide("Machine Yearning (2014)");
+    s->addMovie("machine yearning", "/Users/gene/bin/machine-yearning/machine-yearning-gopro.mp4", true, 0.0, 0, 1, 1);
+    
+    //        s = slideshow.addSlide("Mass collaboration: EcoHacker-Build");
+    //        s->addImage("ecohack", "/Users/gene/bin/ecohacker-build/_mg_7093_14926714478_o.jpg", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Machine learning + visual art (2015->)");
+    s->addMovie("dcgan", "/Users/gene/bin/autoencoders/_AlecRad_Faces.mp4", true, 0, 0.026, 0.5, 0.47);
+    s->addImage("deepdream", "/Users/gene/bin/misc/stock/building-dreams.png", 0, 0.515, 0.5, 0.48);
+    s->addImage("stylenet", "/Users/gene/bin/misc/stock/stylenet-original.png", 0.5, 0.53, 0.5, 0.47);
+    s->addImage("synthesizing original", "/Users/gene/bin/misc/stock/synthesizing-original.jpg", 0.5, 0.025, 0.5, 0.48);
+    s->addText(h4, ofColor(255), "https://www.youtube.com/watch?v=QYcKCGdZvq4", 0.01, 0.0, 1.0);
+    s->addText(h5, ofColor(255), "research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html", 0.002, 0.475, 1.0);
+    s->addText(h4, ofColor(255), "https://arxiv.org/abs/1508.06576", 0.6, 0.51, 1.0);
+    s->addText(h4, ofColor(255), "http://www.evolvingai.org/synthesizing", 0.6, 0.0, 1.0);
+    
+    
+    ////////////////////////////////////////////////////////////////////////
+    /////////  DEEP LEARNING PROJECTS
+    
+    
+    // DCGAN + a book from the sky
+    
+    s = slideshow.addSlide("Deep convolutional generative adversarial network (DCGAN)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/dcgan/public/dcgan-glasses.png", 0.0, 0.06, 1.0, 0.94);
+    s->addText(h4, ofColor(255), "Radford, Metz, Chintala 2015 (https://arxiv.org/abs/1511.06434)", 0.1, 0.0, 0.8);
+    
+    s = slideshow.addSlide("HIT-OR3C dataset (Harbin University)");
+    s->addScrollableImage("Actuals", "/Users/gene/bin/dcgan/summary/actual.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Fake (R) vs. Real (L)");
+    s->addImage("Mona Lisa", "/Users/gene/bin/dcgan/summary/fakereal.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("A Book from the Sky");
+    s->addMovie("zloops", "/Users/gene/bin/dcgan/summary/zloops.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Character interpolations");
+    s->addMovie("interplations", "/Users/gene/bin/dcgan/public/interpolations_3.mp4", true, 0.2, 0.15, 0.6, 0.6);
+    
+    s = slideshow.addSlide("Radical interpolations");
+    s->addText(h3, ofColor(255), "interpolations across characters sharing the same radical often appear to preserve it", 0.1, 0.0, 0.8);
+    s->addMovie("radical interpolations", "/Users/gene/bin/dcgan/summary/radinterpolation.mp4", true, 0, 0.2, 1, 0.8);
+    
+    s = slideshow.addSlide("Arithmetic (this is really stretching it)");
+    s->addMovie("arithmetic", "/Users/gene/bin/dcgan/summary/arithmetic2.mp4", true, 0, 0, 1, 1);
+    
+    // pix2pix + Invisible Cities + meat puppet
+    
+    s = slideshow.addSlide("Image-to-Image Translation with Conditional Adversarial Nets");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/teaser_v3a.png", 0.0, 0.04, 1.0, 0.96);
+    s->addText(h3, ofColor(100), "phillipi.github.io/pix2pix/", 0.02, 0.00, 0.8);
+    s->start();
+    
+    s = slideshow.addSlide("Reconstructing Mapbox tiles");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/venice_reconstructed_all.jpg", 0.0, 0, 1, 1);
+    s->addText(h3, ofColor(100), "opendot.github.io/ml4a-invisible-cities/", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Invisible Cities");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/la_x_venice.png", 0.0, 0.05, 1.0, 0.48);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_x_venice.jpg", 0.0, 0.53, 1.0, 0.48);
+    s->addText(h3, ofColor(100), "opendot.github.io/ml4a-invisible-cities/", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("City style transfer");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/milan_x_venice_la.jpg", 0.0, 0.05, 1.0, 0.95);
+    s->addText(h3, ofColor(100), "opendot.github.io/ml4a-invisible-cities/", 0.02, 0.00, 0.8);
+    
+    s = slideshow.addSlide("Handrawn satellite imagery");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/handdrawn1.jpg", 0.0, 0.0, 1.0, 0.5);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/invisible_cities/handdrawn2.jpg", 0.0, 0.5, 1.0, 0.5);
+    
+    s = slideshow.addSlide("Pix2Pix + FaceTracker");
+    s->addMovie("mario", "/Users/gene/bin/pix2pix/quasimondo_facepix2pix.mp4", true, 0.05, 0.05, 0.9, 0.9);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addImage("fb", "/Users/gene/bin/pix2pix/trump/trump_face_train.png", 0.0, 0.0, 0.45, 1.0);
+    s->addImage("fb", "/Users/gene/bin/misc/stock/arrow.png", 0.46, 0.0, 0.08, 1.0);
+    s->addImage("fb", "/Users/gene/bin/pix2pix/trump/gene_face_test.png", 0.55, 0.0, 0.45, 1.0);
+    
+    s = slideshow.addSlide("Meat puppet");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump_gene1.mp4", true, 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("Meat puppet @ ECAL");
+    s->addMovie("fb", "/Users/gene/bin/pix2pix/trump/trump-meatpuppet-pix2pix-ecal.mp4", true, 0.0, 0.0, 1.0, 1.0)->setPosition(0.25);
+    
+    s = slideshow.addSlide("Cubist Mirror");
+    s->addMovie("altai mirror", "/Users/gene/bin/alt-ai/cubistmirror_v1.mp4", true, 0, 0, 0.61, 0.67);
+    s->addMovie("nabi mirror", "/Users/gene/bin/alt-ai/cubistmirror-nabi.mp4", true, 0.55, 0.2, 0.455, 0.8);
+    
+    CubistMirrorDemo *cmd = new CubistMirrorDemo(s, "classifier", 0, 0, 1, 1);
+    s = slideshow.addSlide("What happens when it's real-time?");
+    s->addAction(cmd);
+    // cmd->setStyleModel("/Users/gene/bin/style-transfer/models/kandinsky_e2_full512.model");
+    cmd->setStyleModel("/Users/gene/bin/style-transfer/models/cubist.model");
+    
+    s = slideshow.addSlide("Cubist Mirror @ TIFF");
+    s->addImage("fb", "/Users/gene/bin/style-transfer/cubist-mirror/cubist-mirror-tiff.jpg", 0.0, 0.00, 1.0, 1.0);
+    
+    s = slideshow.addSlide("Cubist Mirror @ TIFF");
+    s->addMovie("fb", "/Users/gene/bin/style-transfer/cubist-mirror/cubist-mirror-tiff.mp4", true, 0.0, 0.00, 1.0, 1.0);
+    
+    s = slideshow.addSlide("Body Language (Nancy Nowacek, Morgan Hille-Refakis, David Sheinkopf, Caitlin Sikora, Gene Kogan)");
+    s->addMovie("body language", "/Users/gene/bin/misc/morgan-gesture-classifier.mp4", true, 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Nabi hackathon project");
+    s->addImage("fb", "/Users/gene/bin/ml4a/nabimusic2.png", 0.0, 0.00, 1.0, 1.0);
+    
+    s = slideshow.addSlide("DoodleTunes");
+    s->addMovie("fb", "/Users/gene/bin/ml4a/Doodle Tunes-small.mp4", true, 0.0, 0.00, 1.0, 1.0);
+    
+    s = slideshow.addSlide("DoodleClassifier");
+    s->addMovie("fb", "/Users/gene/bin/misc/DoodleClassifier_tutorial.mp4", true, 0.0, 0.00, 1.0, 1.0);
+    
+    s = slideshow.addSlide("Neural synthesis / Deepdream");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/initial_experiments/frame0010 (2).png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Neural synthesis / Deepdream");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/initial_experiments/eureka.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Mixing gradients / Deepdream");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/F6-34+G2-139_n11_o08_r1.33_cr4_b0.60.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Neural synthesis / Deepdream");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/G3-283+F3-26+H1-54_n11_o08_r1.33_cr0_b0.75.png", 0, 0, 1, 1);
+    s = slideshow.addSlide("Neural synthesis / Deepdream");
+    s->addImage("ns", "/Users/gene/bin/lapnorm/_bin/mixed_grad/G3-45+G1-36+H6-23_n15_o08_r1.33_cr5_b0.21.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Neural synthesis / Deepdream");
+    s->addMovie("class synth", "/Users/gene/bin/lapnorm/nips/NIPS_GeneKogan_new.mp4", true, 0, 0, 1, 1);
+    
+    
+    ////////////////////////////////////////////////////////////////////////
+    /////////  ML4A, workshops/guides
+    
+    s = slideshow.addSlide("ml4a.github.io");
+    s->addImage("pyramid", "/Users/gene/bin/misc/stock/pyramid.png", 0.1, 0.1, 0.8, 0.8);
+    
+    s = slideshow.addSlide("Workshops");
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/ecal/ecal1.JPG", 0.0, 0.0, 0.5, 0.5);
+    s->addImage("workshop", "/Users/gene/Pictures/copenhagen/IMG_6195.JPG", 0.5, 0.0, 0.5, 0.48);
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/nabi1.jpg", 0.0, 0.5, 0.5, 0.48);
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/IMG_6301.JPG", 0.5, 0.5, 0.5, 0.48);
+    
+    s = slideshow.addSlide("Workshops");
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/opendot/30491978563_c7baa100d2_o.jpg", 0.0, 0.0, 0.5, 0.5);
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/altai.JPG", 0.5, 0.0, 0.5, 0.48);
+    s->addImage("workshop", "/Users/gene/bin/misc/workshops/influencers3.jpg", 0.0, 0.5, 0.5, 0.48);
+    s->addImage("workshop", "/Users/gene/Web/genekogan.github.io/images/workshops/nabi2.jpg", 0.5, 0.5, 0.5, 0.48);
+    
+    s = slideshow.addSlide("ml4a.github.io/guides");
+    s->addImage("workshop", "/Users/gene/bin/ml4a/ml4a-guides-index.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Guides");
+    s->addImage("workshop", "/Users/gene/bin/ml4a/xdegrees_samples.jpg", 0, 0, 0.5, 0.5);
+    //s->addImage("workshop", "/Users/gene/bin/ml4a/nabimusic2.png", 0.51, 0, 0.5, 0.5);
+    s->addMovie("fb", "/Users/gene/bin/misc/DoodleClassifier_tutorial.mp4", true, 0.51, 0, 0.5, 0.5);
+    s->addMovie("fb", "/Users/gene/bin/ml4a/neural-painter/dog-cat-interp.mp4", true, 0.0, 0.51, 0.5, 0.5);
+    s->addImage("workshop", "/Users/gene/bin/tsne/tsne-animals-highlights.png", 0.51, 0.51, 0.5, 0.5);
+    
+    s = slideshow.addSlide("Hallucinating faces with PCA");
+    s->addMovie("eigenface", "/Users/gene/bin/ml4a/eigenface/eigenface_grid_8x4.mp4", true, 0, 0.06, 1, 0.95);
+    s->addText(h4, ofColor(255), "https://github.com/ml4a/ml4a-guides/tree/master/notebooks/Eigenfaces.ipynb", 0.1, 0, 0.8);
+    
+    s = slideshow.addSlide("t-SNE :: CalTech-256 animals");
+    s->addScrollableImage("t-SNE animals", "/Users/gene/bin/tsne/grid_animals2.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("ml4a-ofx");
+    s->addImage("workshop", "/Users/gene/bin/ml4a/ml4a-ofx.jpg", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Darknet-YOLO x ScreenGrab");
+    s->addImage("yolo", "/Users/gene/bin/ml4a/ReverseImageSearch/yolo-screen1.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Wekinator + Interactivity");
+    s->addMovie("transfer learning", "/Users/gene/bin/misc/wekinator-coffee-croissant.mp4", true, 0, 0, 1, 1);
+    // ableton demo
+    
+    s = slideshow.addSlide("Audio + Text t-SNEs");
+    s->setBackgroundFunction(this, &ofApp::drawBgWhite);
+    s->addScrollableImage("wiki t-SNE", "/Users/gene/bin/tsne/wiki-tSNE.png", -0.05, 0.0, 0.72, 0.76);
+    AudioTSNEDemo *attd = new AudioTSNEDemo(s, "audio t-sne", 0.48, 0.39, 0.54, 0.63);
+    attd->setTsnePath("/Users/gene/Teaching/ML4A/ml4a-guides/data/example-audio-tSNE-drums.json");
+    s->addAction(attd);
+    attd->start();
+    s->addText(h4, ofColor(255), "www.genekogan.com/works/wiki-tSNE", 0.03, 0.8, 0.7);
+    s->addText(h4, ofColor(255), "github.com/ml4a/ml4a-ofx", 0.67, 0.3, 0.7);
+    
+    s = slideshow.addSlide("Writing");
+    s->addImage("workshop", "/Users/gene/bin/ml4a/ml4a-nn.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Writing");
+    s->addImage("workshop", "/Users/gene/bin/ml4a/ml4a-hnnat.png", 0, 0, 1, 1);
+    
+    s = slideshow.addSlide("Machine Learning for Artists @ ITP, Spring 2016");
+    s->setBackgroundFunction(this, &ofApp::drawBgBlack);
+    s->addMovie("ml4a @ itp", "/Users/gene/bin/ml4a-classes/itp-S16/timelapse/ml4a @ itp-nyu -- timelapse_crop.mp4", true, 0, 0, 1, 1)->setPositionRandom();
+    s->loadAssets();
+    
+    s = slideshow.addSlide("Autonomous Generative Spirit");
+    s->addText(h4, ofColor(255), "http://schoolofma.org/autonomous-generative-spirit/", 0.1, 0, 0.8);
+    s->addImage("workshop", "/Users/gene/bin/misc/autonomousGenerative8.jpg", 0.01, 0.2, 0.98, 0.75);
+    
+    
+    s = slideshow.addSlide("thanks :)");
+    s->setBackgroundFunction(this, &ofApp::drawBgWhite);
+    s->addMovie("t-SNE convergence", "/Users/gene/bin/tsne/tsne_manual.mp4", true, 0, 0, 1, 1);
+    s->addRect(ofColor(255,160), 0.005, 0.19, 0.33, 0.25);
+    s->addRect(ofColor(255,160), 0.595, 0.19, 0.33, 0.25);
+    s->addText(h2, ofColor(0), "@genekogan", 0.1, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "genekogan.com", 0.1, 0.3, 0.5);
+    s->addText(h2, ofColor(0), "ml4a.github.io", 0.6, 0.2, 0.5);
+    s->addText(h2, ofColor(0), "@ml4a_", 0.6, 0.3, 0.5);
     
 }
